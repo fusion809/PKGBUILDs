@@ -6,7 +6,7 @@
 
 _pkgname=vim
 pkgname="gvim-git"
-pkgver=7.4.1825
+pkgver=7.4.1831
 pkgrel=1
 pkgdesc="Vim, the text editor. CLI version and GTK2 GUI providing majority of features."
 arch=("i686" "x86_64")
@@ -20,9 +20,11 @@ provides=("gvim" "xxd" "vim-runtime")
 conflicts=("vim-minimal-git" "vim-git" "vim-runtime" "vim-runtime-git"
            "vim-minimal" "vim" "vim-python3" "gvim" "gvim-python3")
 source=("git+https://github.com/vim/vim.git"
-        "gvim.desktop")
+        "gvim.desktop"
+        "perl-5.22.2.patch")
 sha256sums=('SKIP'
-            'b21fa0e4f63c6dc37be4cd5a7b938085449d02596c0dd0e8003cc3ab6277d4d4')
+            'b21fa0e4f63c6dc37be4cd5a7b938085449d02596c0dd0e8003cc3ab6277d4d4'
+            '10cbf10037b299c26b46d7220de1a81ff860a29f54a97152a99e5b4b81bfbffd')
 install=gvim-git.install
 
 pkgver() {
@@ -31,10 +33,11 @@ pkgver() {
 }
 
 prepare() {
-
-    # set global configuration files to /etc/[g]vimrc
-    sed -i 's|^.*\(#define SYS_.*VIMRC_FILE.*"\) .*$|\1|' $_pkgname/src/feature.h
-
+  SRC="$srcdir/${_pkgname}"
+  cd $SRC
+  # set global configuration files to /etc/[g]vimrc
+  sed -i 's|^.*\(#define SYS_.*VIMRC_FILE.*"\) .*$|\1|' src/feature.h
+  patch -p0 -i $srcdir/perl-5.22.2.patch src/if_perl.xs
 }
 
 build() {
