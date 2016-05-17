@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Blockify
+Type=Application
+Exec=blockify-ui
+Icon=blockify
+Categories=Audio;Music;Player;AudioVideo;

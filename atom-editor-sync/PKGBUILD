@@ -1,0 +1,53 @@
+# Maintainer: Brenton Horne <brentonhorne77 at gmail dot com>
+
+_pkgname=atom
+pkgname=atom-editor-sync
+pkgver=1.7.3
+pkgrel=1
+pkgdesc='Hackable text editor for the 21st Century, based on web technologies with package-sync pre-installed.'
+arch=('x86_64' 'i686')
+url='https://github.com/atom/atom'
+license=('MIT')
+depends=('alsa-lib' 'desktop-file-utils' 'gconf' 'gtk2' 'libgnome-keyring' 'libnotify' 'libxtst' 'nodejs' 'nss' 'python2')
+optdepends=('gvfs: file deletion support')
+makedepends=('git' 'npm')
+conflicts=('atom-editor-bin' 'atom-editor-git' 'atom-editor')
+install=atom.install
+source=("v${pkgver}.tar.gz::https://codeload.github.com/atom/atom/tar.gz/v${pkgver}")
+sha256sums=('5074b59ddaca5525eb48098dee6fe63013799cbc77749add314b9e1bc894b8f4')
+
+prepare() {
+  cd "$srcdir/${_pkgname}-$pkgver"
+
+  sed -i -e "/exception-reporting/d" \
+	       -e "/metrics/d" \
+         -e 's/0.36.8/0.36.12/g' \
+         -e 's/"package-generator": "1.0.0",/"package-generator": "1.0.0",\n    "package-sync": "1.1.0",/g' package.json
+
+  chmod 755 -R package.json
+
+  sed -e "s/<%= description %>/$pkgdesc/" \
+         -e "s/<%= appName %>/Atom/g" \
+         -e "s|<%= installDir %>/share/<%= appFileName %>|/usr/bin|g" \
+         -e "s/<%= iconPath %>/atom/g" \
+         -e "s/GNOME;//g" \
+         -e "s|text/plain;|application/javascript;application/json;application/postscript;application/x-csh;application/x-desktop;application/x-httpd-eruby;application/x-httpd-php;application/x-httpd-php3;application/x-httpd-php4;application/x-httpd-php5;application/x-latex;application/x-msdos-program;application/x-ruby;application/x-sh;application/x-shellscript;application/x-sql;application/x-tcl;application/x-tex;application/xhtml+xml;application/xml;application/xml-dtd;application/xslt+xml;text/css;text/csv;text/html;text/plain;text/xml;text/xml-dtd;text/x-asm;text/x-bibtex;text/x-boo;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-c;text/x-chdr;text/x-csh;text/x-csrc;text/x-dsrc;text/x-diff;text/x-eiffel;text/x-fortran;text/x-go;text/x-haskell;text/x-java;text/x-java-source;text/x-lua;text/x-makefile;text/x-markdown;text/x-objc;text/x-pascal;text/x-perl;text/x-php;text/x-python;text/x-ruby;text/x-scala;text/x-scheme;text/x-sh;text/x-tcl;text/x-tex;text/x-vala;text/yaml;inode/directory;|g" \
+         resources/linux/atom.desktop.in > resources/linux/Atom.desktop
+
+}
+
+build() {
+  cd "$srcdir/${_pkgname}-$pkgver"
+  export PYTHON=/usr/bin/python2
+  until ./script/build --build-dir "$srcdir/atom-build"; do :; done
+}
+
+package() {
+  cd "$srcdir/${_pkgname}-$pkgver"
+
+  script/grunt install --build-dir "$srcdir/atom-build" --install-dir "$pkgdir/usr"
+
+  install -Dm644 resources/linux/Atom.desktop "$pkgdir/usr/share/applications/atom.desktop"
+  install -Dm644 resources/app-icons/stable/png/1024.png "$pkgdir/usr/share/pixmaps/atom.png"
+  install -Dm644 LICENSE.md "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
+}
