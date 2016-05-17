@@ -22,4 +22,5 @@ atom
 Shadow
 brackets/brackets/*
 brackets/brackets-shell/*
-vscode
+*/vscode
+*/*/vscode
