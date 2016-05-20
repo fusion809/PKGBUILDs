@@ -14,7 +14,9 @@ provides=('visual-studio-code-git')
 source=("git+https://github.com/Microsoft/vscode"
         "${pkgname}.desktop"
         'product.json'
-        "code.png")
+        "code.png"
+        "ini-package.json"
+        "shell-package.json")
 sha1sums=('SKIP'
           'de838a1c4e6aa37434792c908e042aab90ac421d'
           '534ced051ff7b90c3f7bd01396c55e74055d2516'
@@ -44,8 +46,8 @@ prepare() {
     local _commit=$(cd "${srcdir}/vscode" && git rev-parse HEAD)
     cp $srcdir/product.json .
     sed "s/@commit@/${_commit}/g" -i product.json
-    EVER=$(sed -n 's/"electronVersion": "//p' package.json | sed 's/"//g' | sed 's/,//g' | sed 's/ //g')
-    sed -i -e "s/$EVER/0.37.8/g" package.json
+    cp $srcdir/ini-package.json extensions/ini/package.json
+    cp $srcdir/shell-package.json extensions/shellscript/package.json
 }
 
 build() {
