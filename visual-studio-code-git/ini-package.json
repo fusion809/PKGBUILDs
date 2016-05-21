@@ -6,7 +6,7 @@
 	"contributes": {
 		"languages": [{
 			"id": "ini",
-			"extensions": [ ".ini", ".properties", ".gitconfig", ".desktop"],
+			"extensions": [ ".ini", ".properties", ".gitconfig", ".desktop", ".directory", ".thumbnailer"],
 			"filenames": ["config", ".gitattributes", ".gitconfig", "gitconfig", ".editorconfig"],
 			"aliases": [ "Ini", "ini" ],
 			"configuration": "./ini.configuration.json"
