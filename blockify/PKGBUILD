@@ -1,39 +1,30 @@
-# Maintainer:  Brenton Horne <brentonhorne77 at gmail dot com>
-# Contributor: demian <mikar ατ gmx δοτ de>
-
+# Maintainer: demian <mikar ατ gmx δοτ de>
 pkgname=blockify
 pkgver=3.6.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Mutes Spotify advertisements."
 arch=("any")
 url="https://github.com/mikar/${pkgname}"
 license=("MIT")
 conflicts=("blockify-git")
-depends=("pulseaudio" "alsa-utils" "pygtk"
-         "gst-python" "python-dbus" "python-setuptools" "python-docopt")
-source=("https://github.com/mikar/${pkgname}/archive/v${pkgver}.tar.gz"
-                  "blockify.desktop")
-sha256sums=('7d4bb3a4b759386141ba00513b1d5c7ab98bf0300b8c5558f2d8a2001fccdfe2'
-            'efa3ac9e0d9a9febdb621c741b62a832d398c7509c34d0adfb3e0e54a664495a')
+depends=("spotify"
+         "alsa-utils"
+         "pygtk"
+         "gst-python"
+         "python-dbus"
+         "python-docopt"
+         "wmctrl")
+makedepends=("python-setuptools")
+optdepends=("pulseaudio: mute spotify sink instead of system sound")
+source=("https://github.com/mikar/${pkgname}/archive/v${pkgver}.tar.gz")
+sha256sums=('7d4bb3a4b759386141ba00513b1d5c7ab98bf0300b8c5558f2d8a2001fccdfe2')
 
 package() {
     cd "$srcdir"/${pkgname}-${pkgver}
 
-    python setup.py install --root="${pkgdir}"
-    mkdir -p ${pkgdir}/usr/local/bin
+    python3 setup.py install --root="${pkgdir}"
     mkdir -p ${pkgdir}/usr/share/{applications,licenses,pixmaps}
     install -D -m644 LICENSE.txt "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
     install -D -m644 blockify/data/icon-blue-512.png "${pkgdir}/usr/share/pixmaps/blockify.png"
     install -D -m644 "$srcdir/blockify.desktop" "${pkgdir}/usr/share/applications/blockify.desktop"
-    echo "#!/bin/sh
-
-spotify=/usr/bin/spotify
-
-if [[ -x $spotify && -x /usr/bin/blockify ]];
-then
-blockify &
-block_pid=$!
-$spotify
-trap "kill -9 $block_pid" SIGINT SIGTERM EXIT
-fi" > ${pkgdir}/usr/local/bin/spotify
 }
