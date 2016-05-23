@@ -16,7 +16,7 @@ makedepends=('git' 'npm')
 conflicts=('atom-editor-beta-bin')
 install=atom.install
 source=("https://github.com/atom/atom/archive/v${_pkgver}-beta${_pkgrel}.tar.gz")
-sha256sums=('58c79049787a0b844c434d1364bb25ed2ce8176eaf565efaf9312bc6e68bca99')
+sha256sums=('2983fe7e062a9e8c9d8816ed9030ca17584402b5a90defa1ecb3ff26141e6922')
 
 prepare() {
 	cd "$srcdir/atom-${_pkgver}-beta${_pkgrel}"
