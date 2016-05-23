@@ -2,7 +2,7 @@
 # Maintainer: Brenton Horne <brentonhorne77 at gmail dot com>
 
 pkgname=atom-editor-beta
-_pkgrel=3
+_pkgrel=4
 _pkgver=1.8.0
 pkgver="${_pkgver}.${_pkgrel}"
 pkgrel=1

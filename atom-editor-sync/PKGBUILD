@@ -2,7 +2,7 @@
 
 _pkgname=atom
 pkgname=atom-editor-sync
-pkgver=1.7.3
+pkgver=1.7.4
 pkgrel=1
 pkgdesc='Hackable text editor for the 21st Century, based on web technologies with package-sync pre-installed.'
 arch=('x86_64' 'i686')
@@ -14,7 +14,7 @@ makedepends=('git' 'npm')
 conflicts=('atom-editor-bin' 'atom-editor-git' 'atom-editor')
 install=atom.install
 source=("v${pkgver}.tar.gz::https://codeload.github.com/atom/atom/tar.gz/v${pkgver}")
-sha256sums=('5074b59ddaca5525eb48098dee6fe63013799cbc77749add314b9e1bc894b8f4')
+sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"
