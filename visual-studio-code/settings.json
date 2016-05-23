@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "PKGBUILD":    "shellscript",
+        "*.install":   "shellscript",
+        "*.desktop":   "ini",
+        "*.directory": "ini"
+    }
+}
