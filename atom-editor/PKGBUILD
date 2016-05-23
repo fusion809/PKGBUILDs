@@ -2,7 +2,7 @@
 
 _pkgname=atom
 pkgname=atom-editor
-pkgver=1.7.3
+pkgver=1.7.4
 pkgrel=1
 pkgdesc='Hackable text editor for the 21st Century, based on web technologies.'
 arch=('x86_64' 'i686')
@@ -14,7 +14,7 @@ makedepends=('git' 'npm')
 conflicts=('atom-editor-bin' 'atom-editor-git')
 install=atom.install
 source=("https://github.com/atom/atom/archive/v${pkgver}.tar.gz")
-md5sums=('9d34ba72084c9b54fb585dba4d23b107')
+md5sums=('0e0393c45d500636c99f5d3f078b3d4c')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"
