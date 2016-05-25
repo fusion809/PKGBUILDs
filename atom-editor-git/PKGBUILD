@@ -29,15 +29,9 @@ prepare() {
 	       -e "/metrics/d" \
 				 -e 's/"language-gfm": "0.85.0",/"language-gfm2": "0.88.2",\n    "language-liquid": "0.5.1",/g' package.json
 
+  sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
+  
 	chmod 755 -R package.json
-
-  sed -e "s/<%= description %>/$pkgdesc/" \
-      -e "s|<%= appName %>|Atom Git|"\
-      -e "s|<%= installDir %>/share/<%= appFileName %>/${_pkgname}|/usr/bin/${_pkgname}-${_version}|"\
-      -e "s|<%= iconPath %>|${_pkgname}-${_version}.png|"\
-      -e "s|GNOME;||" \
-      -e "s|text/plain;|application/javascript;application/json;application/postscript;application/x-desktop;application/x-httpd-eruby;application/x-httpd-php;application/x-httpd-php3;application/x-httpd-php4;application/x-httpd-php5;application/x-ruby;application/x-bash;application/x-csh;application/x-sh;application/x-zsh;application/x-shellscript;application/x-sql;application/x-tcl;application/xhtml+xml;application/xml;application/xml-dtd;application/xslt+xml;text/coffeescript;text/css;text/html;text/plain;text/xml;text/xml-dtd;text/x-bash;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-c;text/x-chdr;text/x-csh;text/x-csrc;text/x-dsrc;text/x-diff;text/x-fortran;text/x-go;text/x-java;text/x-java-source;text/x-lua;text/x-makefile;text/x-markdown;text/x-objc;text/x-pascal;text/x-perl;text/x-php;text/x-python;text/x-ruby;text/x-sh;text/x-zsh;text/yaml;inode/directory;|" \
-      resources/linux/${_pkgname}.desktop.in > resources/linux/${_pkgname}-${_version}.desktop
 }
 
 build() {
@@ -64,7 +58,7 @@ package() {
   	rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
 	fi
 
-	install -Dm644 resources/linux/${_pkgname}-${_version}.desktop "$pkgdir/usr/share/applications/${_pkgname}-${_version}.desktop"
-	install -Dm644 resources/app-icons/dev/png/1024.png "$pkgdir/usr/share/pixmaps/${_pkgname}-${_version}.png"
+  install -Dm644 $srcdir/${_pkgname}-${_version}.desktop "$pkgdir/usr/share/applications/${_pkgname}-${_version}.desktop"
+  install -Dm644 resources/app-icons/dev/png/1024.png "$pkgdir/usr/share/pixmaps/${_pkgname}-${_version}.png"
 	install -Dm644 LICENSE.md "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
 }
