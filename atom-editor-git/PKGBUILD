@@ -62,9 +62,7 @@ package() {
 		mv "$pkgdir/usr/bin/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
   fi
 
-	if [[ -f "$pkgdir/usr/bin/apm" ]]; then
-		rm "$pkgdir/usr/bin/apm"
-	fi
+	rm "$pkgdir/usr/bin/apm"
 
 	ln -sf "${pkgdir}/usr/share/${_pkgname}-${_version}/resources/app/apm/node_modules/.bin/apm" "${pkgdir}/usr/bin/apm-${_version}"
 
