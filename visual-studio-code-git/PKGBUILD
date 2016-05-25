@@ -18,7 +18,7 @@ source=("git+https://github.com/Microsoft/vscode"
         "ini-package.json"
         "shell-package.json")
 sha1sums=('SKIP'
-          'de838a1c4e6aa37434792c908e042aab90ac421d'
+          'e247899b7d89c0e6d12ef7c9d68cf6b63b24d103'
           '534ced051ff7b90c3f7bd01396c55e74055d2516'
           '6273c7a03221f2dea7f92604b483da4d70b2a62b'
           '4631d288314af80d0061152e6b5773752341156b'
