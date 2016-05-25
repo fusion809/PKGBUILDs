@@ -54,13 +54,9 @@ package() {
 
 	script/grunt install --build-dir "$srcdir/${_pkgname}-build" --install-dir "$pkgdir/usr"
 
-	if [[ -d "$pkgdir/usr/share/${_pkgname}" ]]; then
-  	mv "$pkgdir/usr/share/${_pkgname}" "$pkgdir/usr/share/${_pkgname}-${_version}"
-	fi
+  mv "$pkgdir/usr/share/${_pkgname}" "$pkgdir/usr/share/${_pkgname}-${_version}"
 
-  if [[ -f "$pkgdir/usr/bin/${_pkgname}" ]]; then
-		mv "$pkgdir/usr/bin/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
-  fi
+	mv "$pkgdir/usr/bin/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
 
 	rm "$pkgdir/usr/bin/apm"
 
