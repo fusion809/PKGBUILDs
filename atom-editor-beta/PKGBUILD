@@ -5,7 +5,7 @@ pkgname=atom-editor-beta
 _pkgrel=4
 _pkgver=1.8.0
 pkgver="${_pkgver}.${_pkgrel}"
-pkgrel=1
+pkgrel=2
 pkgdesc='Chrome-based text editor from GitHub - Beta Channel'
 arch=('x86_64' 'i686')
 url='https://github.com/atom/atom'
@@ -23,7 +23,7 @@ prepare() {
 
 	sed -i -e "/exception-reporting/d" \
 	       -e "/metrics/d" \
-         -e "s/0.36.8/0.36.12/g" package.json
+				 -e 's/"language-gfm": "0.85.0",/"language-gfm2": "0.88.2",\n    "language-liquid": "0.5.1",/g' package.json
 
 	chmod 755 -R package.json
 

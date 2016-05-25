@@ -3,7 +3,7 @@
 
 pkgname=atom-editor-git
 _pkgname=atom
-_pkgrel=1
+_pkgrel=2
 _pkgver=1.9.0
 pkgver=1.6.0.beta0.r1214.g8beb4c2
 pkgrel=1
@@ -26,8 +26,9 @@ pkgver() {
 prepare() {
 	cd "$srcdir/$_pkgname"
 
-	sed -i -e "/exception-reporting/d" \
-	       -e "/metrics/d" package.json
+  sed -i -e "/exception-reporting/d" \
+	       -e "/metrics/d" \
+				 -e 's/"language-gfm": "0.85.0",/"language-gfm2": "0.88.2",\n    "language-liquid": "0.5.1",/g' package.json
 
 	chmod 755 -R package.json
 

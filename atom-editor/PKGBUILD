@@ -3,7 +3,7 @@
 _pkgname=atom
 pkgname=atom-editor
 pkgver=1.7.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Hackable text editor for the 21st Century, based on web technologies.'
 arch=('x86_64' 'i686')
 url='https://github.com/atom/atom'
@@ -21,6 +21,7 @@ prepare() {
 
   sed -i -e "/exception-reporting/d" \
 	       -e "/metrics/d" \
+         -e 's/"language-gfm": "*",/"language-gfm2": "0.88.2",\n    "language-liquid": "0.5.1",/g' \
          -e "s/0.36.8/0.36.12/g" package.json
 
   chmod 755 -R package.json
