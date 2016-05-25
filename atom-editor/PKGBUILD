@@ -25,7 +25,8 @@ prepare() {
          -e "s/0.36.8/0.36.12/g" package.json
 
   chmod 755 -R package.json
-  sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
+
+  sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
 }
 
 build() {
