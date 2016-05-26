@@ -2,7 +2,7 @@
 
 pkgname=visual-studio-code-git
 pkgdesc='Visual Studio Code for Linux, Open Source version from git'
-pkgver=1.1.0.insider.r439.g868570c
+pkgver=1.1.0.insider.r592.ge5ff72f
 pkgrel=1
 arch=('i686' 'x86_64')
 url='https://code.visualstudio.com/'
