@@ -4,8 +4,9 @@
 _pkgname=atom
 _version=git
 pkgname=${_pkgname}-editor-${_version}
-pkgver=1.6.0.beta0.r1321.g82b75b5
-pkgrel=1
+_gitcommit=82b75b5
+pkgver=1.9.0.dev.${_gitcommit}
+pkgrel=2
 pkgdesc='Chrome-based text editor from GitHub - Git'
 arch=('x86_64' 'i686')
 url="https://github.com/${_pkgname}/${_pkgname}"
@@ -21,9 +22,9 @@ sha256sums=('SKIP'
             '7d6b93c38bb3704c62949a53c8c44c9c23b660ec0d15cd82856c63565b0e36bf'
             '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
 
-pkgver() {
+_gitcommit() {
   cd $srcdir/$_pkgname
-  git describe --long | sed 's/\([^-]*-g\)/r\1/;s/-/./g' | sed 's/v1/1/g'
+  git describe --long | sed 's/v1.6.0-beta0//g' | sed 's/-[0-9]*-//g' | sed 's/g//g'
 }
 
 prepare() {
