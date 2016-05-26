@@ -14,8 +14,12 @@ depends=('alsa-lib' 'gconf' 'gtk2' 'libgnome-keyring' 'libnotify' 'libxtst' 'nod
 optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 install=${_pkgname}-${_version}.install
-source=("git+${url}.git")
-sha256sums=('SKIP')
+source=("git+${url}.git"
+"${_pkgname}-${_version}.desktop"
+"${_pkgname}-${_version}")
+sha256sums=('SKIP'
+            '7d6b93c38bb3704c62949a53c8c44c9c23b660ec0d15cd82856c63565b0e36bf'
+            '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
 
 pkgver() {
   cd $srcdir/$_pkgname
@@ -48,7 +52,9 @@ package() {
 
   mv "$pkgdir/usr/share/${_pkgname}" "$pkgdir/usr/share/${_pkgname}-${_version}"
 
-	mv "$pkgdir/usr/bin/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
+	rm "$pkgdir/usr/bin/${_pkgname}"
+
+  install -Dm644 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
 
 	rm "$pkgdir/usr/bin/apm"
 
@@ -58,7 +64,7 @@ package() {
   	rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
 	fi
 
-  install -Dm644 $srcdir/${_pkgname}-${_version}.desktop "$pkgdir/usr/share/applications/${_pkgname}-${_version}.desktop"
-  install -Dm644 resources/app-icons/dev/png/1024.png "$pkgdir/usr/share/pixmaps/${_pkgname}-${_version}.png"
-	install -Dm644 LICENSE.md "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
+  install -Dm644 "$srcdir/${_pkgname}-${_version}.desktop" "$pkgdir/usr/share/applications/${_pkgname}-${_version}.desktop"
+  install -Dm644 "resources/app-icons/dev/png/1024.png" "$pkgdir/usr/share/pixmaps/${_pkgname}-${_version}.png"
+	install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
 }
