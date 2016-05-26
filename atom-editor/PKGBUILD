@@ -4,9 +4,9 @@ _pkgname=atom
 
 # Module Versions
 _about_ver=1.4.2
-_about_arch_ver=1.5.5
+_about_arch_ver=1.5.7
 _language_gfm_ver=0.85.0
-_language_gfm2_ver=0.88.3
+_language_gfm2_ver=0.90.0
 _language_liquid_ver=0.5.1
 _package_generator_ver=1.0.0
 _package_sync_ver=1.1.0
