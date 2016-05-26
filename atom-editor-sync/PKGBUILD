@@ -4,9 +4,7 @@ _pkgname=atom
 _version=sync
 
 # Module Versions
-_about_ver=1.4.2
 _about_arch_ver=1.5.7
-_language_gfm_ver=0.85.0
 _language_gfm2_ver=0.90.2
 _language_liquid_ver=0.5.1
 _package_generator_ver=1.0.0
@@ -37,15 +35,11 @@ prepare() {
   sed -i -e "/exception-reporting/d" \
 	       -e "/metrics/d" \
          -e 's/0.36.8/0.36.12/g' \
-         -e "s/\"language-gfm\": \"${_language_gfm_ver}\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
-         -e "s/\"about\": \"${_about_ver}\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
+         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
          -e "s/\"package-generator\": \"${_package_generator_ver}\",/\"package-generator\": \"${_package_generator_ver}\",\n    \"package-sync\": \"${_package_sync_ver}\",/g" package.json
 
   chmod 755 -R package.json
-
-  if ! [[ -d node_modules ]]; then
-    mkdir node_modules
-  fi
 
   sed -i -e 's@node script/bootstrap@node script/bootstrap --no-quiet@g' \
   ./script/build || die "Fail fixing verbosity of script/build"

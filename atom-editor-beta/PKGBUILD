@@ -30,7 +30,7 @@ install=atom.install
 source=("$url/archive/v${_pkgver}-${_version}${_pkgrel}.tar.gz"
 "${_pkgname}-${_version}.desktop")
 sha256sums=('2983fe7e062a9e8c9d8816ed9030ca17584402b5a90defa1ecb3ff26141e6922'
-            'a131c08d6a41874d750ca3ae987551c994f6b543b687c2ec8f76195d6b8c952a')
+            'defc2739570acced5c712a549b18100715fc7bc6419ea74629fbb3d5a28caaba')
 
 prepare() {
 	cd "$srcdir/${_pkgname}-${_pkgver}-${_version}${_pkgrel}"
@@ -38,11 +38,14 @@ prepare() {
   sed -i -e "/exception-reporting/d" \
 	       -e "/metrics/d" \
          -e 's/0.36.8/0.36.12/g' \
-         -e "s/\"language-gfm\": \"${_language_gfm_ver}\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
-         -e "s/\"about\": \"${_about_ver}\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
+         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
          package.json
 
 	chmod 755 -R package.json
+
+  sed -i -e 's@node script/bootstrap@node script/bootstrap --no-quiet@g' \
+  ./script/build || die "Fail fixing verbosity of script/build"
 
 	sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
 }
