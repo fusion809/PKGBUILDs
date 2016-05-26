@@ -3,11 +3,22 @@ This repository is composed of PKGBUILDs I have written (or modified from existi
 
 While this repository is primarily designed to provide me with the packages I want, I am willing to turn it into a community repo with packages that others want too. Merely start a [new issue](https://github.com/fusion809/PKGBUILDs/issues/new) or file a pull request, if you want a new package added or have modification suggests for existing packages. I am even willing to add suitable packages to my OBSAEB. Despite this, I have written an [article](https://fusion809.github.io/package-development), in [*The Hornery*](https://fusion809.github.io) about how you can set up your own OBS Project and write PKGBUILDs.
 
-## atom-editor
-All PKGBUILDs with the `atom-editor` in their `$pkgname`, in this repository, build the Atom text editor from source and are designed to be installable simultaneously to one another (except for the `atom-editor-sync` and `atom-editor` packages, which conflict with one another). They are also designed (as opposed to the corresponding PKGBUILDs in the AUR) to persevere in their build, in the case of momentary internet glitches.
+## [atom-editor](/atom-editor/)
+All PKGBUILDs with the `atom-editor` in their `$pkgname`, in this repository, build the Atom text editor from source and are designed to be installable simultaneously to one another. If you noticed that previously `atom-editor-git` and the deprecated (and removed) package `atom-editor-dev` would launch `atom-editor`, instead of the respective version of Atom they should have, this has since been fixed on 27 May 2016 (AEST). They are also designed (as opposed to the corresponding PKGBUILDs in the AUR) to persevere in their build, in the case of momentary internet glitches. All these packages also have the following non-default packages installed:
+
+* [`language-gfm2`](https://github.com/fusion809/language-gfm) &mdash; which is provided **instead** of the default package [`language-gfm`](https://github.com/atom/language-gfm) package, as it includes support for Liquid and HTML code (provided `language-liquid` is installed) embedded in markdown files.
+* [`language-liquid`](https://github.com/puranjayjain/language-liquid)
+
+and the following packages deliberately removed:
+
+* [`exception-reporting`](https://github.com/atom/exception-reporting)
+* [`metrics`](https://github.com/atom/metrics)
 
 ### -beta
 The `atom-editor-beta` package, unlike that in the AUR, should also persevere despite intermittent network connectivity issues and **can** be installed alongside `atom-editor` on the same machine. These two packages require Internet access during their build, so I cannot add them to my OBSAEB.
+
+### -git
+The `atom-editor-git` package, uses a different package version than that in the AUR.
 
 ### -sync
 `atom-editor-sync` builds Atom (the latest stable version) with the `package-sync` package pre-installed to allow for the easy installation of packages listed in a `packages.cson` file.

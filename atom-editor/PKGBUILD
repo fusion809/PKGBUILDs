@@ -1,6 +1,16 @@
 # Maintainer: Brenton Horne <brentonhorne77 at gmail dot com>
 
 _pkgname=atom
+
+# Module Versions
+_about_ver=1.4.2
+_about_arch_ver=1.5.5
+_language_gfm_ver=0.85.0
+_language_gfm2_ver=0.88.3
+_language_liquid_ver=0.5.1
+_package_generator_ver=1.0.0
+_package_sync_ver=1.1.0
+
 pkgname=${_pkgname}-editor
 pkgver=1.7.4
 pkgrel=3
@@ -22,9 +32,11 @@ prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"
 
   sed -i -e "/exception-reporting/d" \
-	       -e "/metrics/d" \
-         -e 's/"language-gfm": "0.85.0",/"language-gfm2": "0.88.2",\n    "language-liquid": "0.5.1",/g' \
-         -e "s/0.36.8/0.36.12/g" package.json
+         -e "/metrics/d" \
+         -e 's/0.36.8/0.36.12/g' \
+         -e "s/\"language-gfm\": \"${_language_gfm_ver}\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"about\": \"${_about_ver}\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
+         package.json
 
   chmod 755 -R package.json
 
