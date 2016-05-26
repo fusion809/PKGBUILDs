@@ -1,24 +1,30 @@
 # Arch PKGBUILDs
 
-Table of Contents
-=================
-
-  * [List of Packages](#list-of-packages)
-    * [Text Editors](#text-editors)
-  * [atom-editor](#atom-editor)
-    * [-beta](#-beta)
-    * [-git](#-git)
-    * [-sync](#-sync)
-  * [brackets](#brackets)
-  * [codebox](#codebox)
-  * [komodo-edit/lighttable](#komodo-edit--lighttable)
-  * [linux-ck](#linux-ck)
-  * [messengerfordesktop](#messengerfordesktop)
-  * [shadow-icon-theme-git](#shadow-icon-theme-git)
-  * [textadept](#textadept)
-  * [Vim](#vim)
-  * [visual-studio-code-git](#visual-studio-code-git)
-  * [visual-studio-code-oss](#visual-studio-code-oss)
+<div class="box-shadow:0 1px 3px #757575, 0 1px 2px #5b5b5b; border-radius: 2px; border: 1px solid rgba(51, 51, 51, 100);">
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="#list-of-packages">List of Packages</a></li>
+  <ul>
+    <li><a href="#text-editors">Text Editors</a></li>
+  </ul>
+  <li><a href="#atom-editor">atom-editor</a></li>
+    <ul>
+      <li><a href="#-beta">-beta</a></li>
+      <li><a href="#-git">-git</a></li>
+      <li><a href="#-sync">-sync</a></li>
+    </ul>
+    <li><a href="#brackets">brackets</a></li>
+    <li><a href="#codebox">codebox</a></li>
+    <li><a href="#komodo-edit--lighttable">komodo-edit/lighttable</a></li>
+    <li><a href="#linux-ck">linux-ck</a></li>
+    <li><a href="#messengerfordesktop">messengerfordesktop</a></li>
+    <li><a href="#shadow-icon-theme-git">shadow-icon-theme-git</a></li>
+    <li><a href="#textadept">textadept</a></li>
+    <li><a href="#vim">vim</a></li>
+    <li><a href="#visual-studio-code-git">visual-studio-code-git</a></li>
+    <li><a href="#visual-studio-code-oss">visual-studio-code-oss</a></li>
+  </ul>
+</div>
 
 This repository is composed of PKGBUILDs I have written (or modified from existing packages in the Arch Build Service and Arch User Repository) to help me install packages not in the AUR or pacman repos, or in the case of packages already in either class of repository, these PKGBUILDs have amendments to make them better suit my purposes. The contents of this repository are licensed under GPLv3. Despite this, you should probably be made aware of the fact that some of the packages these PKGBUILDs are for building are not necessarily FOSS. This repository was set up prior to when I set up my **Open Build Service Arch_Extra Branch** (**OBSAEB**) in March 2016. Most PKGBUILDs in this repository ended up being moved to this branch. The only exceptions are those that for whatever reason are unsuitable for my OBSAEB.
 
