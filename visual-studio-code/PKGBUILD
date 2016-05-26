@@ -19,10 +19,10 @@ source_i686=(VSCode-linux32_${pkgver}.zip::https://az764295.vo.msecnd.net/stable
               settings.json
               )
 md5sums_x86_64=('4fcac208668193c80d1eb167f6ccc6be'
-                '53c2e28598c27c8595c79a4ab09b9025'
+                '8f4ae35567787ff607eac9a78fa227ed'
                 '0c55039558263e79449c330a2860b712')
 md5sums_i686=('fb8f777bbbb244ea469808db628a878a'
-              '53c2e28598c27c8595c79a4ab09b9025'
+              '8f4ae35567787ff607eac9a78fa227ed'
               '0c55039558263e79449c330a2860b712')
 package() {
   _pkg=VSCode-linux-x64

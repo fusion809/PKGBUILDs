@@ -6,9 +6,9 @@ pkgver=v1.7.1.r1.g4edafb4
 pkgrel=1
 arch=('any')
 pkgdesc="A flat colourful icon theme for GNOME 3.10+"
-url="http://gnome-look.org/content/show.php/Shadow?content=170398"
+url="http://gnome-look.org/content/show.php/${_pkgname}?content=170398"
 makedepends=('git')
-source=("git+https://github.com/rudrab/Shadow.git")
+source=("git+https://github.com/rudrab/${_pkgname}.git")
 license=('GPL')
 sha256sums=('SKIP')
 
@@ -19,5 +19,5 @@ pkgver () {
 
 package() {
   mkdir -p $pkgdir/usr/share/icons/
-  cp -a "$srcdir/Shadow" "$pkgdir/usr/share/icons/Shadow"
+  cp -a "$srcdir/${_pkgname}" "$pkgdir/usr/share/icons/${_pkgname}"
 }
