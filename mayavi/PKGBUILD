@@ -3,20 +3,20 @@
 
 # Some edits by Bonlin from 4.4.2 to get 4.4.4 working.
 
-pkgname=mayavi
+pkgname=${pkgname}
 pkgver=4.4.4
 pkgrel=1
 pkgdesc="A 3-dimensional visualizer of scientific data"
 arch=('i686' 'x86_64')
-url="https://github.com/enthought/mayavi"
+url="https://github.com/enthought/${pkgname}"
 license=('BSD')
 depends=('ipython2' 'vtk6' 'python2-envisage' 'python2-pyqt4')
 makedepends=('python2-setuptools' 'python2-sphinx' 'python2-twisted' 'xorg-server-xvfb')
-replaces=('python2-mayavi')
-provides=('python2-mayavi')
+replaces=('python2-${pkgname}')
+provides=('python2-${pkgname}')
 options=(!emptydirs)
 
-source=("$pkgname-$pkgver.tar.gz::https://github.com/enthought/mayavi/archive/${pkgver}.tar.gz")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/enthought/${pkgname}/archive/${pkgver}.tar.gz")
 md5sums=('31a95371bdec9affd97b178b311afb9c')
 
 
@@ -25,10 +25,10 @@ prepare() {
   export PYTHONPATH=/opt/vtk6/lib/python2.7/site-packages/:$PYTHONPATH
   export LD_LIBRARY_PATH=/opt/vtk6/lib/:$LD_LIBRARY_PATH
 
-  echo "export ETS_TOOLKIT=\"wx\"" > mayavi.sh
-  echo "setenv ETS_TOOLKIT \"wx\"" > mayavi.csh
+  echo "export ETS_TOOLKIT=\"wx\"" > ${pkgname}.sh
+  echo "setenv ETS_TOOLKIT \"wx\"" > ${pkgname}.csh
 
-  cd "$srcdir"/mayavi-$pkgver
+  cd "$srcdir"/${pkgname}-$pkgver
 
   # force selection of wxpython 3.0
   sed -e "s/wxversion.ensureMinimal('2.8')/wxversion.select('3.0')/g" -i $(find . -name '*.py')
@@ -37,7 +37,7 @@ prepare() {
   sed -i -e 's/sphinx-build/sphinx-build2/' docs/Makefile*
 
   # set path so autodoc can find just built modules
-  echo "sys.path.append('$srcdir/enthought-mayavi-${_githubtag}/build/lib.linux-$CARCH-2.7/')" >> docs/source/mayavi/conf.py
+  echo "sys.path.append('$srcdir/enthought-${pkgname}-${_githubtag}/build/lib.linux-$CARCH-2.7/')" >> docs/source/${pkgname}/conf.py
 
   # fix python->python2
   sed -e "s|#![ ]*/usr/bin/python$|#!/usr/bin/python2|" \
@@ -51,22 +51,22 @@ build() {
   export PYTHONPATH=/opt/vtk6/lib/python2.7/site-packages/:$PYTHONPATH
   export LD_LIBRARY_PATH=/opt/vtk6/lib/:$LD_LIBRARY_PATH
 
-  cd "$srcdir"/mayavi-$pkgver
+  cd "$srcdir"/${pkgname}-$pkgver
   rm -rf build
   mkdir build
-  mkdir -p build/lib.linux-$CARCH-2.7/{tvtk/plugins/scene,mayavi/preferences,mayavi/core}
-  ln -s "$srcdir"/enthought-mayavi-${_githubtag}/tvtk/tvtk_classes.zip \
+  mkdir -p build/lib.linux-$CARCH-2.7/{tvtk/plugins/scene,${pkgname}/preferences,${pkgname}/core}
+  ln -s "$srcdir"/enthought-${pkgname}-${_githubtag}/tvtk/tvtk_classes.zip \
     build/lib.linux-$CARCH-2.7/tvtk/tvtk_classes.zip
-  ln -s "$srcdir"/enthought-mayavi-${_githubtag}/mayavi/preferences/preferences.ini \
-    build/lib.linux-$CARCH-2.7/mayavi/preferences/preferences.ini
-  ln -s "$srcdir"/enthought-mayavi-${_githubtag}/tvtk/plugins/scene/preferences.ini \
+  ln -s "$srcdir"/enthought-${pkgname}-${_githubtag}/${pkgname}/preferences/preferences.ini \
+    build/lib.linux-$CARCH-2.7/${pkgname}/preferences/preferences.ini
+  ln -s "$srcdir"/enthought-${pkgname}-${_githubtag}/tvtk/plugins/scene/preferences.ini \
     build/lib.linux-$CARCH-2.7/tvtk/plugins/scene/preferences.ini
 
   # force using Qt during build
   # export ETS_TOOLKIT=qt4
 
   # now this is ugly, but docs do not build without X. We setup X according to:
-  # http://docs.enthought.com/mayavi/mayavi/tips.html#rendering-using-the-virtual-framebuffer
+  # http://docs.enthought.com/${pkgname}/${pkgname}/tips.html#rendering-using-the-virtual-framebuffer
   export DISPLAY=:69
   Xvfb $DISPLAY &
 
@@ -76,7 +76,7 @@ build() {
   # have to kill the server to proceed, and do other cleanup
   kill `cat /tmp/.X${DISPLAY/:/}-lock`
   rm build/lib.linux-$CARCH-2.7/tvtk/tvtk_classes.zip
-  rm build/lib.linux-$CARCH-2.7/mayavi/preferences/preferences.ini
+  rm build/lib.linux-$CARCH-2.7/${pkgname}/preferences/preferences.ini
   rm build/lib.linux-$CARCH-2.7/tvtk/plugins/scene/preferences.ini
 }
 
@@ -85,7 +85,7 @@ package() {
   export PYTHONPATH=/opt/vtk6/lib/python2.7/site-packages/:$PYTHONPATH
   export LD_LIBRARY_PATH=/opt/vtk6/lib/:$LD_LIBRARY_PATH
 
-  cd "$srcdir"/mayavi-$pkgver
+  cd "$srcdir"/${pkgname}-$pkgver
 
   python2 setup.py install --root="$pkgdir"/ --optimize=1
 
@@ -93,8 +93,8 @@ package() {
 
   # make sure wx is on by default
   install -d "${pkgdir}"/etc/profile.d
-  install -Dm644 "${srcdir}"/mayavi.sh "${pkgdir}"/etc/profile.d/mayavi.sh
-  install -Dm644 "${srcdir}"/mayavi.csh "${pkgdir}"/etc/profile.d/mayavi.csh
+  install -Dm644 "${srcdir}"/${pkgname}.sh "${pkgdir}"/etc/profile.d/${pkgname}.sh
+  install -Dm644 "${srcdir}"/${pkgname}.csh "${pkgdir}"/etc/profile.d/${pkgname}.csh
 
   install -D LICENSE.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
 }
