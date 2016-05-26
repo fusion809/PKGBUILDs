@@ -4,7 +4,7 @@ _pkgname=atom
 _version=sync
 pkgname=${_pkgname}-editor-${_version}
 pkgver=1.7.4
-pkgrel=5
+pkgrel=6
 pkgdesc='Hackable text editor for the 21st Century, based on web technologies with package-sync pre-installed.'
 arch=('x86_64' 'i686')
 url="https://github.com/${_pkgname}/${_pkgname}"
@@ -13,11 +13,13 @@ depends=('alsa-lib' 'desktop-file-utils' 'gconf' 'gtk2' 'libgnome-keyring' 'libn
 optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 conflicts=('atom-editor-bin')
-install=atom.install
+install=atom-sync.install
 source=("$url/archive/v${pkgver}.tar.gz"
-"${_pkgname}-${_version}.desktop")
+"${_pkgname}-${_version}.desktop"
+"${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
-            '1f4c563f1ee3f7e3a9f215bb4f41b905578fb69e8f9573642a53acddd44d03e4')
+            '1f4c563f1ee3f7e3a9f215bb4f41b905578fb69e8f9573642a53acddd44d03e4'
+            '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"
@@ -46,15 +48,17 @@ package() {
 
   mv "$pkgdir/usr/share/${_pkgname}" "$pkgdir/usr/share/${_pkgname}-${_version}"
 
-	mv "$pkgdir/usr/bin/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
+	rm "$pkgdir/usr/bin/${_pkgname}"
 
 	rm "$pkgdir/usr/bin/apm"
+
+  install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
 
 	ln -sf "${pkgdir}/usr/share/${_pkgname}-${_version}/resources/app/apm/node_modules/.bin/apm" "${pkgdir}/usr/bin/apm-${_version}"
 
   rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
 
-  install -Dm644 $srcdir/${_pkgname}-${_version}.desktop "$pkgdir/usr/share/applications/${_pkgname}-${_version}.desktop"
-  install -Dm644 resources/app-icons/stable/png/1024.png "$pkgdir/usr/share/pixmaps/${_pkgname}-${_version}.png"
-  install -Dm644 LICENSE.md "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
+  install -Dm644 "$srcdir/${_pkgname}-${_version}.desktop" "$pkgdir/usr/share/applications/${_pkgname}-${_version}.desktop"
+  install -Dm644 "resources/app-icons/stable/png/1024.png" "$pkgdir/usr/share/pixmaps/${_pkgname}-${_version}.png"
+  install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
 }
