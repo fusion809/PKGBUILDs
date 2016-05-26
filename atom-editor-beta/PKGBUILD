@@ -6,7 +6,7 @@ _version=beta
 
 # Versions
 _about_ver=1.4.2
-_about_arch_ver=1.5.7
+_about_arch_ver=1.5.8
 _language_gfm_ver=0.85.0
 _language_gfm2_ver=0.90.2
 _language_liquid_ver=0.5.1

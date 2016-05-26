@@ -3,7 +3,7 @@
 _pkgname=atom
 
 # Module Versions
-_about_arch_ver=1.5.7
+_about_arch_ver=1.5.8
 _language_gfm2_ver=0.90.2
 _language_liquid_ver=0.5.1
 _package_sync_ver=1.1.0
@@ -21,6 +21,7 @@ makedepends=('git' 'npm')
 conflicts=('atom-editor-bin')
 install=atom.install
 source=("https://github.com/atom/atom/archive/v${pkgver}.tar.gz"
+"https://github.com/fusion809/about-arch/archive/v${_about_arch_ver}.tar.gz"
 "atom.desktop")
 md5sums=('0e0393c45d500636c99f5d3f078b3d4c'
          '8dda085bb7caec51aa89fcf09977f818')
@@ -39,6 +40,12 @@ prepare() {
 
   sed -i -e 's@node script/bootstrap@node script/bootstrap --no-quiet@g' \
   ./script/build || die "Fail fixing verbosity of script/build"
+
+  if ! [[ -d node_modules ]]; then
+    mkdir node_modules
+  fi
+
+  mv $srcdir/about-arch-${_about_arch_ver} node_modules
 
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
 }

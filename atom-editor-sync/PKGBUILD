@@ -4,7 +4,7 @@ _pkgname=atom
 _version=sync
 
 # Module Versions
-_about_arch_ver=1.5.7
+_about_arch_ver=1.5.8
 _language_gfm2_ver=0.90.2
 _language_liquid_ver=0.5.1
 _package_generator_ver=1.0.0
@@ -22,10 +22,12 @@ optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 conflicts=('atom-editor-bin')
 install=atom-sync.install
-source=("$url/archive/v${pkgver}.tar.gz"
+source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
+"about-arch-${_about_arch_ver}.tar.gz::https://github.com/fusion809/about/archive/v${_about_arch_ver}.tar.gz"
 "${_pkgname}-${_version}.desktop"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
+            'f17f938dcf30064d13ef6fde01a1224d4fe3ac7938030ee3b595fe9830a62ac0'
             '1f4c563f1ee3f7e3a9f215bb4f41b905578fb69e8f9573642a53acddd44d03e4'
             '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
 
@@ -43,6 +45,15 @@ prepare() {
 
   sed -i -e 's@node script/bootstrap@node script/bootstrap --no-quiet@g' \
   ./script/build || die "Fail fixing verbosity of script/build"
+
+  if ! [[ -d node_modules ]]; then
+    mkdir node_modules
+  fi
+
+  if ! [[ -d node_modules/about-arch ]]; then
+    mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
+    mv $srcdir/about-arch node_modules
+  fi
 
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
 }
