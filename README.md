@@ -1,7 +1,25 @@
-<script src="https://raw.githubusercontent.com/fusion809/fusion809.github.io/master/js/toc2.js" type="text/javascript"/>
-<div id="toc"></div>
-
 # Arch PKGBUILDs
+
+Table of Contents
+=================
+
+  * [List of Packages](#list-of-packages)
+    * [Text Editors](#text-editors)
+  * [atom-editor](#atom-editor)
+    * [-beta](#-beta)
+    * [-git](#-git)
+    * [-sync](#-sync)
+  * [brackets](#brackets)
+  * [codebox](#codebox)
+  * [komodo-edit/lighttable](#komodo-edit--lighttable)
+  * [linux-ck](#linux-ck)
+  * [messengerfordesktop](#messengerfordesktop)
+  * [shadow-icon-theme-git](#shadow-icon-theme-git)
+  * [textadept](#textadept)
+  * [Vim](#vim)
+  * [visual-studio-code-git](#visual-studio-code-git)
+  * [visual-studio-code-oss](#visual-studio-code-oss)
+
 This repository is composed of PKGBUILDs I have written (or modified from existing packages in the Arch Build Service and Arch User Repository) to help me install packages not in the AUR or pacman repos, or in the case of packages already in either class of repository, these PKGBUILDs have amendments to make them better suit my purposes. The contents of this repository are licensed under GPLv3. Despite this, you should probably be made aware of the fact that some of the packages these PKGBUILDs are for building are not necessarily FOSS. This repository was set up prior to when I set up my **Open Build Service Arch_Extra Branch** (**OBSAEB**) in March 2016. Most PKGBUILDs in this repository ended up being moved to this branch. The only exceptions are those that for whatever reason are unsuitable for my OBSAEB.
 
 While this repository is primarily designed to provide me with the packages I want, I am willing to turn it into a community repo with packages that others want too. Merely start a [new issue](https://github.com/fusion809/PKGBUILDs/issues/new) or file a pull request, if you want a new package added or have modification suggests for existing packages. I am even willing to add suitable packages to my OBSAEB. Despite this, I have written an [article](https://fusion809.github.io/package-development), in [*The Hornery*](https://fusion809.github.io) about how you can set up your own OBS Project and write PKGBUILDs.
