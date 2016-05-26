@@ -54,7 +54,7 @@ package() {
 
 	rm "$pkgdir/usr/bin/${_pkgname}"
 
-  install -Dm644 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
+  install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
 
 	rm "$pkgdir/usr/bin/apm"
 
