@@ -13,8 +13,10 @@ optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 conflicts=('atom-editor-bin')
 install=atom.install
-source=("https://github.com/atom/atom/archive/v${pkgver}.tar.gz")
-md5sums=('0e0393c45d500636c99f5d3f078b3d4c')
+source=("https://github.com/atom/atom/archive/v${pkgver}.tar.gz"
+"atom.desktop")
+md5sums=('0e0393c45d500636c99f5d3f078b3d4c'
+         '8dda085bb7caec51aa89fcf09977f818')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"
