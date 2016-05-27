@@ -16,8 +16,9 @@
   * [shadow-icon-theme-git](#shadow-icon-theme-git)
   * [textadept](#textadept)
   * [Vim](#vim)
-  * [visual-studio-code-git](#visual-studio-code-git)
-  * [visual-studio-code-oss](#visual-studio-code-oss)
+  * [visual-studio-code](#visual-studio-code)
+    * [-git](#visual-studio-code-git)
+    * [-oss](#visual-studio-code-oss)
 
 
 --------------------
@@ -103,10 +104,10 @@ The `gvim-git` package in this repository is a combination of the `gvim-git` and
 The desktop configuration files of [`gvim`](/gvim/), [`gvim-git`](/gvim-git/) and [`gvim-gtk3`](/gvim-gtk3/) have in-built MIME type support for several file formats.
 
 ## [visual-studio-code](/visual-studio-code/)
-This PKGBUILD builds a Visual Studio Code (VScode) package from the pre-compiled Linux zip archives released officially by Microsoft. It is important to note, that while the packages built by `-git` and `-oss` PKGBUILDs are MIT-licensed, this package is **not** and is rather licensed under a proprietary <abbr title="End-User License Agreement">EULA</abbr> license. 
+This PKGBUILD builds a Visual Studio Code (VScode) package from the pre-compiled Linux zip archives released officially by Microsoft. It is important to note, that while the packages built by `-git` and `-oss` PKGBUILDs are MIT-licensed, this package is **not** and is rather licensed under a proprietary <abbr title="End-User License Agreement">EULA</abbr> license.
 
-## [visual-studio-code-git](/visual-studio-code-git/)
+### [-git](/visual-studio-code-git/)
 This PKGBUILD builds the Visual Studio Code (VScode) text editor from the latest source code in its official git repository. It can be installed simultaneously with the stable version mentioned below (unlike the `visual-studio-code-git` package in the AUR which cannot be installed simultaneously with `visual-studio-code-oss`).
 
-## [visual-studio-code-oss](/visual-studio-code-oss/)
+### [-oss](/visual-studio-code-oss/)
 This PKGBUILD builds the latest stable VScode from source code. It fixes an error I noticed in the `visual-studio-code-oss` PKGBUILD of the AUR, that prevented it from building correctly and also provides a desktop configuration file with `MimeType` support for several extra file formats.
