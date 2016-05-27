@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=/usr/bin/visual-studio-code %f
-Icon=visual-studio-code
+Exec=/usr/bin/code %f
+Icon=code
 Terminal=false
 Type=Application
 StartupWMClass=code

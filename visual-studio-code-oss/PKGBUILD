@@ -1,6 +1,7 @@
 # Maintainer: Brenton Horne <brentonhorne77 at gmail dot com>
 
 pkgname=visual-studio-code-oss
+_pkgname=${pkgname//visual-studio-/}
 pkgdesc='Visual Studio Code for Linux, Open Source version'
 _pkgver=1.2.0
 pkgver=$(echo $_pkgver | sed 's/-/./g')
@@ -54,14 +55,14 @@ package() {
 
     # Include symlink in system bin directory
     install -m 0755 -d "${pkgdir}/usr/bin"
-    ln -s '/opt/VSCode-OSS/code-oss' "${pkgdir}/usr/bin/${pkgname}"
+    ln -s "/opt/VSCode-OSS/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
 
     # Get better icon
     install -Dm644 "$srcdir/code.png" "$pkgdir/opt/VSCode-OSS/resources/app/resources/linux/code.png"
 
     # Add .desktop file
-    install -D -m644 "${srcdir}/${pkgname}.desktop" \
-            "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+    install -D -m644 "${srcdir}/${_pkgname}.desktop" \
+            "${pkgdir}/usr/share/applications/${_pkgname}.desktop"
 
     # Install license file
     install -D -m644 "${srcdir}/VSCode-linux-${_vscode_arch}/resources/app/LICENSE.txt" \

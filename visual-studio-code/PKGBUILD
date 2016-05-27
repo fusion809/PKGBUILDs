@@ -1,6 +1,7 @@
 # Maintainer: D. Can Celasun <dcelasun[at]gmail[dot]com>
 
 pkgname=visual-studio-code
+_pkgname=${pkgname//visual-studio-/}
 pkgver=1.1.1
 pkgrel=3
 pkgdesc="Editor for building and debugging modern web and cloud applications"
@@ -19,10 +20,10 @@ source_i686=(VSCode-linux32_${pkgver}.zip::https://az764295.vo.msecnd.net/stable
               settings.json
               )
 md5sums_x86_64=('4fcac208668193c80d1eb167f6ccc6be'
-                '8f4ae35567787ff607eac9a78fa227ed'
+                'c2b9f95785ef3c10c84121bcc8cb15b5'
                 '0c55039558263e79449c330a2860b712')
 md5sums_i686=('fb8f777bbbb244ea469808db628a878a'
-              '8f4ae35567787ff607eac9a78fa227ed'
+              'c2b9f95785ef3c10c84121bcc8cb15b5'
               '0c55039558263e79449c330a2860b712')
 package() {
   _pkg=VSCode-linux-x64
@@ -31,20 +32,20 @@ package() {
   fi
 
   install -d "${pkgdir}/usr/share/licenses/${pkgname}"
-  install -d "${pkgdir}/opt/${pkgname}"
+  install -d "${pkgdir}/opt/VSCode"
   install -d "${pkgdir}/usr/bin"
   install -d "${pkgdir}/usr/share/applications"
   install -d "${pkgdir}/usr/share/icons"
 
   install -m644 "${srcdir}/${_pkg}/resources/app/LICENSE.txt" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-  install -m644 "${srcdir}/${_pkg}/resources/app/resources/linux/code.png" "${pkgdir}/usr/share/icons/${pkgname}.png"
-  install -m644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+  install -m644 "${srcdir}/${_pkg}/resources/app/resources/linux/${_pkgname}.png" "${pkgdir}/usr/share/icons/${_pkgname}.png"
+  install -m644 "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${_pkgname}.desktop"
 
-  install -Dm755 "${srcdir}/settings.json" "${pkgdir}/opt/${pkgname}/settings.json" && printf "An example settings.json is now installed at /opt/${pkgname}/settings.json. To use it copy it to ~/.config/Code/User.\n"
+  install -Dm755 "${srcdir}/settings.json" "${pkgdir}/opt/VSCode/settings.json" && printf "An example settings.json is now installed at /opt/VSCode/settings.json. To use it copy it to ~/.config/Code/User.\n"
 
-  rm -f "${srcdir}"/${pkgname}.desktop
+  rm -f "${srcdir}"/${_pkgname}.desktop
   rm -f "${srcdir}"/${_pkg}.zip
 
-  cp -r "${srcdir}/${_pkg}/"* "${pkgdir}/opt/${pkgname}" -R
-  ln -s /opt/${pkgname}/bin/code "${pkgdir}"/usr/bin/visual-studio-code
+  cp -r "${srcdir}/${_pkg}/"* "${pkgdir}/opt/VSCode" -R
+  ln -s /opt/VSCode/bin/code "${pkgdir}"/usr/bin/${_pkgname}
 }
