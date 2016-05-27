@@ -13,7 +13,7 @@ While this repository is primarily designed to provide me with the packages I wa
     * [-sync](#-sync)
   * [brackets](#brackets)
   * [codebox](#codebox)
-  * [komodo-edit/lighttable](#komodo-edit--lighttable)
+  * [komodo-edit/lighttable/sublime-text{,-dev}](#komodo-edit--lighttable--sublime-text-dev)
   * [linux-ck](#linux-ck)
   * [messengerfordesktop](#messengerfordesktop)
   * [shadow-icon-theme-git](#shadow-icon-theme-git)
@@ -74,7 +74,7 @@ The `brackets` package has a few minor improvements over the one in the AUR. For
 ## [codebox](/codebox/)
 The `codebox` PKGBUILD is provided here with tweaks to make it build properly, unlike the one it is derived from in the AUR.
 
-## [komodo-edit](/komodo-edit/) / [lighttable](/lighttable/)
+## [komodo-edit](/komodo-edit/) / [lighttable](/lighttable/) / [sublime-text](/sublime-text/){,[-dev](/sublime-text-dev/)}
 These PKGBUILDs are designed to provide a desktop configuration file with built-in support for opening a range of different MIME types.
 
 ## [linux-ck](/linux-ck/)
