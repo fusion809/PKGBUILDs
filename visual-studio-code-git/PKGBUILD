@@ -1,6 +1,7 @@
 # Maintainer: Michael Hansen <zrax0111 gmail com>
 
 pkgname=visual-studio-code-git
+_pkgname=${pkgname//visual-studio-/}
 pkgdesc='Visual Studio Code for Linux, Open Source version from git'
 pkgver=1.1.0.insider.r605.g668a4ff
 pkgrel=1
@@ -68,11 +69,11 @@ package() {
 
     # Include symlink in system bin directory
     install -m 0755 -d "${pkgdir}/usr/bin"
-    ln -s '/opt/VSCode-git/code-oss' "${pkgdir}/usr/bin/${pkgname}"
+    ln -s '/opt/VSCode-git/code-oss' "${pkgdir}/usr/bin/${_pkgname}"
 
     # Add .desktop file
     install -D -m644 "${srcdir}/${pkgname}.desktop" \
-            "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+            "${pkgdir}/usr/share/applications/${_pkgname}.desktop"
 
     # Install license file
     install -D -m644 "${srcdir}/VSCode-linux-${_vscode_arch}/resources/app/LICENSE.txt" \
