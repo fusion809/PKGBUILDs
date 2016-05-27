@@ -78,7 +78,7 @@ source=("http://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
 "${_bfqpath}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r11-4.5.0.patch"
 "${_bfqpath}/0002-block-introduce-the-BFQ-v7r11-I-O-sched-for-4.5.0.patch"
 "${_bfqpath}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r11-for.patch")
-sha256sums=('a40defb401e01b37d6b8c8ad5c1bbab665be6ac6310cdeed59950c96b31.5.10c'
+sha256sums=('a40defb401e01b37d6b8c8ad5c1bbab665be6ac6310cdeed59950c96b31.5.11c'
             'SKIP'
             'f25ce19ee44d93eb8b228c0f3df3082b94ea84d9b28a9fb8ba170ecce5acd78c'
             'SKIP'
@@ -89,7 +89,7 @@ sha256sums=('a40defb401e01b37d6b8c8ad5c1bbab665be6ac6310cdeed59950c96b31.5.10c'
             '582faf80f7ee1e6d9844c598893101d0cf941afa92fc2981e909f1382a36710a'
             'cf0f984ebfbb8ca8ffee1a12fd791437064b9ebe0712d6f813fd5681d4840791'
             '5d19ecb91320a64f0abb6c8e70205fef848ada967093faa94e4c0c39c340d0c8'
-            '9c1e11772ff29d37dacc9246f63e24d5154eb61682ba2b7e1.5.10ccbdc7116e1'
+            '9c1e11772ff29d37dacc9246f63e24d5154eb61682ba2b7e1.5.11ccbdc7116e1'
             'e0c9474431b60ca9fc3da04e7610748219da143440f1d7f5152572c7c63b52e0')
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
