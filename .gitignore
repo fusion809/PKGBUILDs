@@ -18,7 +18,7 @@ atom
 *.ebuild
 *.deb
 *.rpm
-*.log
+npm*.log
 Shadow
 brackets/brackets/*
 brackets/brackets-shell/*
