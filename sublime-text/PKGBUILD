@@ -13,8 +13,6 @@ license=('custom')
 depends=("libpng" "gtk2" "bash" "procps-ng" "xdg-utils" "desktop-file-utils"
          "shared-mime-info")
 install="$pkgname.install"
-                        # EULA file is from http://www.sublimetext.com/eula
-                        # converted with 'html2text --ignore-links --body-width=80'
 source=("$pkgname-EULA"
         "$pkgname.desktop"
         "$pkgname.sh"

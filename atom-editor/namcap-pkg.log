@@ -1,0 +1,47 @@
+atom-editor W: .INSTALL file runs a command provided by hooks.
+atom-editor W: Unused shared library '/usr/lib/libcups.so.2' by file ('usr/share/atom/atom')
+atom-editor W: Unused shared library '/usr/lib/libexpat.so.1' by file ('usr/share/atom/atom')
+atom-editor W: Unused shared library '/usr/lib/libgobject-2.0.so.0' by file ('usr/share/atom/chromedriver/chromedriver')
+atom-editor W: Unused shared library '/usr/lib/libsmime3.so' by file ('usr/share/atom/chromedriver/chromedriver')
+atom-editor W: Unused shared library '/usr/lib/libgconf-2.so.4' by file ('usr/share/atom/chromedriver/chromedriver')
+atom-editor W: Unused shared library '/usr/lib/libpthread.so.0' by file ('usr/share/atom/resources/app.asar.unpacked/node_modules/atom-keymap/node_modules/keyboard-layout/build/Release/keyboard-layout-observer.node')
+atom-editor W: Unused shared library '/usr/lib/libpthread.so.0' by file ('usr/share/atom/resources/app.asar.unpacked/node_modules/text-buffer/node_modules/marker-index/build/Release/marker_index.node')
+atom-editor W: Unused shared library '/usr/lib/libpthread.so.0' by file ('usr/share/atom/resources/app.asar.unpacked/node_modules/nslog/build/Release/nslog.node')
+atom-editor W: Unused shared library '/usr/lib/libm.so.6' by file ('usr/share/atom/resources/app.asar.unpacked/node_modules/nodegit/build/Release/nodegit.node')
+atom-editor W: Unused shared library '/usr/lib/libgcc_s.so.1' by file ('usr/share/atom/resources/app.asar.unpacked/node_modules/nodegit/build/Release/nodegit.node')
+atom-editor W: Unused shared library '/usr/lib/libpthread.so.0' by file ('usr/share/atom/resources/app.asar.unpacked/node_modules/scrollbar-style/build/Release/scrollbar-style-observer.node')
+atom-editor W: Unused shared library '/usr/lib/libpthread.so.0' by file ('usr/share/atom/resources/app.asar.unpacked/node_modules/spell-check/node_modules/spellchecker/build/Release/spellchecker.node')
+atom-editor W: Unused shared library '/usr/lib/libpthread.so.0' by file ('usr/share/atom/resources/app.asar.unpacked/node_modules/cached-run-in-this-context/build/Release/cached-run-in-this-context.node')
+atom-editor W: Referenced library 'libnode.so' is an uninstalled dependency
+atom-editor W: Referenced library 'libffmpeg.so' is an uninstalled dependency
+atom-editor W: ELF file ('usr/share/atom/atom') has executable stack.
+atom-editor W: ELF file ('usr/share/atom/resources/app/apm/bin/node') has executable stack.
+atom-editor W: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/nodegit/build/Release/nodegit.node') has executable stack.
+atom-editor E: ELF file ('usr/share/atom/libnode.so') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/libffmpeg.so') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/atom') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/libgcrypt.so.11') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/chromedriver/chromedriver') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app/apm/bin/node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app/apm/node_modules/keytar/build/Release/keytar.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app/apm/node_modules/first-mate/node_modules/oniguruma/build/Release/onig_scanner.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app/apm/node_modules/git-utils/build/Release/git.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/atom-keymap/node_modules/keyboard-layout/build/Release/keyboard-layout-observer.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/text-buffer/node_modules/pathwatcher/build/Release/pathwatcher.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/text-buffer/node_modules/marker-index/build/Release/marker_index.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/pathwatcher/build/Release/pathwatcher.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/nslog/build/Release/nslog.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/nodegit/build/Release/nodegit.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/symbols-view/node_modules/ctags/build/Release/ctags.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/symbols-view/vendor/ctags-linux') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/runas/build/Release/runas.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/git-utils/build/Release/git.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/oniguruma/build/Release/onig_scanner.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/scrollbar-style/build/Release/scrollbar-style-observer.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/spell-check/node_modules/spellchecker/build/Release/spellchecker.node') outside of a valid path.
+atom-editor E: ELF file ('usr/share/atom/resources/app.asar.unpacked/node_modules/cached-run-in-this-context/build/Release/cached-run-in-this-context.node') outside of a valid path.
+atom-editor W: Potential non-FHS man page (usr/share/atom/resources/app/apm/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/man/man3ctype/ctio.3ctype) found.
+atom-editor E: Dependency gnuplot detected and not included (programs ['gnuplot'] needed in scripts ['usr/share/atom/resources/app/apm/node_modules/npm/node_modules/request/node_modules/node-uuid/benchmark/bench.gnu'])
+atom-editor E: Dependency python detected and not included (programs ['python'] needed in scripts ['usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs_test.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/buildbot/buildbot_run.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/gyptest.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/common_test.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/easy_xml_test.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/ninja_test.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/tools/pretty_gyp.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/__init__.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/flock_tool.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/setup.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/samples/samples', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/MSVSSettings_test.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/input_test.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/tools/pretty_vcproj.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/tools/pretty_sln.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/tools/graphviz.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/xcode_test.py', 'usr/share/atom/resources/app/apm/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/mac_tool.py'])
+atom-editor W: Dependency desktop-file-utils included but already satisfied
+atom-editor W: Dependency included and not needed ('python2')
