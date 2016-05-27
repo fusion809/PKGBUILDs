@@ -8,9 +8,8 @@ _version=git
 _about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.15
 _language_gfm2_ver=0.90.2
+_language_ini2_ver=1.17.1
 _language_liquid_ver=0.5.1
-_package_generator_ver=1.0.0
-_package_sync_ver=1.1.0
 
 pkgname=${_pkgname}-editor-${_version}
 _gitcommit=82b75b5
@@ -30,7 +29,7 @@ source=("git+${url}.git"
 "${_pkgname}-${_version}")
 sha256sums=('SKIP'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
-            '7d6b93c38bb3704c62949a53c8c44c9c23b660ec0d15cd82856c63565b0e36bf'
+            'ccdb1937e127199d6e6752f523ae47c5eb4c3cb33349b1101f62c52499cc4064'
             '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
 
 _gitcommit() {
@@ -43,7 +42,7 @@ prepare() {
 
   sed -i -e "/exception-reporting/d" \
 	       -e "/metrics/d" \
-         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-ini2\": \"${_language_ini2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
          -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
          package.json
 

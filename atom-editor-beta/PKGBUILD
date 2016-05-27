@@ -6,13 +6,10 @@ _version=beta
 
 # Versions
 _about_url="https://github.com/fusion809/about"
-_about_ver=1.4.2
 _about_arch_ver=1.5.15
-_language_gfm_ver=0.85.0
 _language_gfm2_ver=0.90.2
+_language_ini2_ver=1.17.1
 _language_liquid_ver=0.5.1
-_package_generator_ver=1.0.0
-_package_sync_ver=1.1.0
 
 pkgname=${_pkgname}-editor-${_version}
 _pkgrel=4
@@ -41,7 +38,7 @@ prepare() {
   sed -i -e "/exception-reporting/d" \
 	       -e "/metrics/d" \
          -e 's/0.36.8/0.36.12/g' \
-         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-ini2\": \"${_language_ini2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
          -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
          package.json
 

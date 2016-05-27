@@ -7,6 +7,7 @@ _version=sync
 _about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.15
 _language_gfm2_ver=0.90.2
+_language_ini2_ver=1.17.1
 _language_liquid_ver=0.5.1
 _package_generator_ver=1.0.0
 _package_sync_ver=1.1.0
@@ -29,7 +30,7 @@ source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
-            '1f4c563f1ee3f7e3a9f215bb4f41b905578fb69e8f9573642a53acddd44d03e4'
+            '673abb7f0517509f5aa1c840b96f73cb0fab56dbcff17fc246a1c476730e4ab7'
             '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
 
 prepare() {
@@ -38,7 +39,7 @@ prepare() {
   sed -i -e "/exception-reporting/d" \
 	       -e "/metrics/d" \
          -e 's/0.36.8/0.36.12/g' \
-         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-ini2\": \"${_language_ini2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
          -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
          -e "s/\"package-generator\": \"${_package_generator_ver}\",/\"package-generator\": \"${_package_generator_ver}\",\n    \"package-sync\": \"${_package_sync_ver}\",/g" package.json
 

@@ -2,12 +2,9 @@
 for i in */
 do
 	cd "$i"
-	pkgver=$(sed -n 's/pkgver=//p' PKGBUILD)
-	pkgrel=$(sed -n 's/pkgrel=//p' PKGBUILD)
 	updpkgsums
-	makepkg -sf --noconfirm || printf "Building $i-$pkgver-$pkgrel failed!"
-	du "*$pkgver-$pkgrel*.pkg.tar.xz" > namcap-$pkgver-$pkgrel-pkg.log
-	namcap "*$pkgver-$pkgrel*.pkg.tar.xz" >> namcap-$pkgver-$pkgrel-pkg.log
-	namcap PKGBUILD >> namcap-$pkgver-$pkgrel-pkgbuild.log
+	du *.pkg.tar.xz > namcap-pkg.log
+	namcap *.pkg.tar.xz >> namcap-pkg.log
+	namcap PKGBUILD >> namcap-pkgbuild.log
 	cd -
 done
