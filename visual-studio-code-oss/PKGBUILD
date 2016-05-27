@@ -2,7 +2,7 @@
 
 pkgname=visual-studio-code-oss
 pkgdesc='Visual Studio Code for Linux, Open Source version'
-_pkgver=1.1.1
+_pkgver=1.2.0
 pkgver=$(echo $_pkgver | sed 's/-/./g')
 pkgrel=1
 arch=('i686' 'x86_64')
@@ -16,15 +16,11 @@ provides=('vscode-oss')
 source=("https://github.com/Microsoft/vscode/archive/${_pkgver}.tar.gz"
         "${pkgname}.desktop"
         "product.json"
-        "code.png"
-        "shell-package.json"
-        "ini-package.json")
-sha1sums=('71547fefd1eaf174ca7484c668f2186d906cfb67'
-          'f6a21d11f0505f256e010da623f9a5a9405e4c91'
+        "code.png")
+sha1sums=('913665f425c8ed513e40afae43556e42fb60e87f'
+          '4632f78b707ecb6c867ea808d3341ce396b9174a'
           'e03a28a10d97476a8697327ae58891cde611f280'
-          '6273c7a03221f2dea7f92604b483da4d70b2a62b'
-          '9b97ec7d45952e72bdda51e51005db596d0b74c8'
-          '4631d288314af80d0061152e6b5773752341156b')
+          '6273c7a03221f2dea7f92604b483da4d70b2a62b')
 
 case "$CARCH" in
     i686)
@@ -43,15 +39,13 @@ prepare() {
     cd "${srcdir}/vscode-${_pkgver}"
 
     cp $srcdir/product.json .
-    cp $srcdir/ini-package.json extensions/ini/package.json
-    cp $srcdir/shell-package.json extensions/shellscript/package.json
 }
 
 build() {
     cd "${srcdir}/vscode-${_pkgver}"
 
     ./scripts/npm.sh install
-    node --max_old_space_size=2000 /usr/bin/gulp vscode-linux-${_vscode_arch}
+    node --max_old_space_size=2048 /usr/bin/gulp vscode-linux-${_vscode_arch}
 }
 
 package() {
