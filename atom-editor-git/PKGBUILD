@@ -5,7 +5,7 @@ _pkgname=atom
 _version=git
 
 # Module Versions
-_about_arch_ver=1.5.9
+_about_arch_ver=1.5.10
 _language_gfm2_ver=0.90.2
 _language_liquid_ver=0.5.1
 _package_generator_ver=1.0.0
