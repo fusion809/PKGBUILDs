@@ -1,6 +1,5 @@
 # Arch PKGBUILDs
 
-----------------------
 ## Table of Contents
 
   * [List of Packages](#list-of-packages)
