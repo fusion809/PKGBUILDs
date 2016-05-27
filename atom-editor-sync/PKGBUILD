@@ -23,7 +23,6 @@ makedepends=('git' 'npm')
 conflicts=('atom-editor-bin')
 install=atom-sync.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
-"about-arch-${_about_arch_ver}.tar.gz::https://github.com/fusion809/about/archive/v${_about_arch_ver}.tar.gz"
 "${_pkgname}-${_version}.desktop"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
@@ -45,15 +44,6 @@ prepare() {
 
   sed -i -e 's@node script/bootstrap@node script/bootstrap --no-quiet@g' \
   ./script/build || die "Fail fixing verbosity of script/build"
-
-  if ! [[ -d node_modules ]]; then
-    mkdir node_modules
-  fi
-
-  if ! [[ -d node_modules/about-arch ]]; then
-    mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
-    mv $srcdir/about-arch node_modules
-  fi
 
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
 }
