@@ -3,7 +3,7 @@
 pkgname=visual-studio-code-git
 _pkgname=${pkgname//visual-studio-/}
 pkgdesc='Visual Studio Code for Linux, Open Source version from git'
-pkgver=1.1.0.insider.r605.g668a4ff
+pkgver=1.2.0
 pkgrel=1
 arch=('i686' 'x86_64')
 url='https://code.visualstudio.com/'
@@ -15,15 +15,11 @@ provides=('visual-studio-code-git')
 source=("git+https://github.com/Microsoft/vscode"
         "${pkgname}.desktop"
         'product.json'
-        "code.png"
-        "ini-package.json"
-        "shell-package.json")
+        "code.png")
 sha1sums=('SKIP'
           '9d934cde0c90f52026f4353d94db598b827ff180'
           '534ced051ff7b90c3f7bd01396c55e74055d2516'
-          '6273c7a03221f2dea7f92604b483da4d70b2a62b'
-          '4631d288314af80d0061152e6b5773752341156b'
-          '9b97ec7d45952e72bdda51e51005db596d0b74c8')
+          '6273c7a03221f2dea7f92604b483da4d70b2a62b')
 
 case "$CARCH" in
     i686)
@@ -49,8 +45,6 @@ prepare() {
     local _commit=$(cd "${srcdir}/vscode" && git rev-parse HEAD)
     cp $srcdir/product.json .
     sed "s/@commit@/${_commit}/g" -i product.json
-    cp $srcdir/ini-package.json extensions/ini/package.json
-    cp $srcdir/shell-package.json extensions/shellscript/package.json
 }
 
 build() {
