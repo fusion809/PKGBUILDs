@@ -3,7 +3,7 @@
 ## Table of Contents
 
   * [List of Packages](#list-of-packages)
-    * [Text Editors](#text-editors)
+    * [Integrated Development Environments / Text Editors](#integrated-development-environments--text-editors)
   * [atom-editor](#atom-editor)
     * [-beta](#-beta)
     * [-git](#-git)
@@ -29,9 +29,24 @@ While this repository is primarily designed to provide me with the packages I wa
 ## List of Packages
 The list of separate packages in this repository includes:
 
-### Text Editors
+### Integrated Development Environments / Text Editors
 * [atom-editor](/atom-editor/)
-* [atom-editor]
+  * [-beta](/atom-editor-beta/)
+  * [-git](/atom-editor-git/)
+  * [-sync](/atom-editor-sync/)
+* [brackets](/brackets/)
+* [codebox](/codebox/)
+* [gvim](/gvim/)
+* [gvim-git](/gvim-git/)
+* [gvim-gtk3](/gvim-gtk3/)
+* [komodo-edit](/komodo-edit/)
+* [lighttable](/lighttable/)
+* [sublime-text](/sublime-text/)
+* [sublime-text-dev](/sublime-text-dev/)
+* [textadept](/textadept/)
+* [visual-studio-code](/visual-studio-code/)
+  * [-git](/visual-studio-code-git/)
+  * [-oss](/visual-studio-code-oss/)
 
 ## [atom-editor](/atom-editor/)
 All PKGBUILDs with the `atom-editor` in their `$pkgname`, in this repository, build the Atom text editor from source and are designed to be installable simultaneously to one another. If you noticed that previously `atom-editor-git` and the deprecated (and removed) package `atom-editor-dev` would launch `atom-editor`, instead of the respective version of Atom they should have, this has since been fixed on 27 May 2016 (AEST). They are also designed (as opposed to the corresponding PKGBUILDs in the AUR) to persevere in their build, in the case of momentary internet glitches. All these packages also have the following non-default packages installed:
