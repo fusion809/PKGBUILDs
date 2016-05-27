@@ -50,7 +50,6 @@ prepare() {
 
   mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
   mv $srcdir/about-arch node_modules
-  sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
 
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
 }
