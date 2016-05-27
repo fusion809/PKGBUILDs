@@ -102,6 +102,9 @@ The `gvim-git` package in this repository is a combination of the `gvim-git` and
 
 The desktop configuration files of [`gvim`](/gvim/), [`gvim-git`](/gvim-git/) and [`gvim-gtk3`](/gvim-gtk3/) have in-built MIME type support for several file formats.
 
+## [visual-studio-code](/visual-studio-code/)
+This PKGBUILD builds a Visual Studio Code (VScode) package from the pre-compiled Linux zip archives released officially by Microsoft. It is important to note, that while the packages built by `-git` and `-oss` PKGBUILDs are MIT-licensed, this package is **not** and is rather licensed under a proprietary <abbr title="End-User License Agreement">EULA</abbr> license. 
+
 ## [visual-studio-code-git](/visual-studio-code-git/)
 This PKGBUILD builds the Visual Studio Code (VScode) text editor from the latest source code in its official git repository. It can be installed simultaneously with the stable version mentioned below (unlike the `visual-studio-code-git` package in the AUR which cannot be installed simultaneously with `visual-studio-code-oss`).
 
