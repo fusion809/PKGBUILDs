@@ -1,7 +1,7 @@
 # Arch PKGBUILDs
 
-<div class="box-shadow:0 1px 3px #757575, 0 1px 2px #5b5b5b; border-radius: 2px; border: 1px solid rgba(51, 51, 51, 100);">
-<div class="font-size: 16px; font-weight: bold;">Table of Contents</div>
+<div style="box-shadow:0 1px 3px #757575, 0 1px 2px #5b5b5b; border-radius: 2px; border: 1px solid rgba(51, 51, 51, 100);">
+<h2>Table of Contents</h2>
 <ul>
   <li><a href="#list-of-packages">List of Packages</a></li>
   <ul>
