@@ -1,15 +1,18 @@
 # Maintainer: Brenton Horne <brentonhorne77 at gmail dot com>
 
 _pkgname=atom
-_version=sync
+_version=fusion
 
 # Module Versions
 _about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.15
 _language_gfm2_ver=0.90.2
+_language_ini2_ver=1.17.1
 _language_liquid_ver=0.5.1
 _package_generator_ver=1.0.0
 _package_sync_ver=1.1.0
+_fusion_ui_ver=0.10.3
+_dark_bint_syntax_ver=0.8.4
 
 pkgname=${_pkgname}-editor-${_version}
 pkgver=1.7.4
@@ -22,25 +25,39 @@ depends=('alsa-lib' 'desktop-file-utils' 'gconf' 'gtk2' 'libgnome-keyring' 'libn
 optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 conflicts=('atom-editor-bin')
-install=atom-sync.install
+install=${_pkgname}-${_version}.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
 "${_pkgname}-${_version}.desktop"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
-            '673abb7f0517509f5aa1c840b96f73cb0fab56dbcff17fc246a1c476730e4ab7'
-            '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
+            '9950c3b490a8c034139cdb8c8d77ece5885e536f627d275ed5d6281387b043ab'
+            '31ee34a87ba2451f23641e2558d8c877a8274c2733fc3335d41305f41b6ecc57')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"
 
   sed -i -e "/exception-reporting/d" \
-	       -e "/metrics/d" \
-         -e 's/0.36.8/0.36.12/g' \
-         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "/metrics/d" \
          -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
-         -e "s/\"package-generator\": \"${_package_generator_ver}\",/\"package-generator\": \"${_package_generator_ver}\",\n    \"package-sync\": \"${_package_sync_ver}\",/g" package.json
+         -e "s/\"electronVersion\": \".*\"/\"electronVersion\": \"${_electron_ver}\"/g" \
+         -e "/\"atom-light-syntax\": \".*\"/i \
+              \"dark-bint-syntax\": \"${_dark_bint_syntax_ver}\"," \
+         -e "/\"atom-light-ui\": \".*\",/i \
+             \"fusion-ui\": \"${_fusion_ui_ver}\"," \
+         -e "s/,\n\"/,\n \s\s\s\s\s \"/g" \
+         -e "/base16-tomorrow-dark-theme/d" \
+         -e "/base16-tomorrow-light-theme/d" \
+         -e "/one-dark-ui/d" \
+         -e "/one-light-ui/d" \
+         -e "/one-dark-syntax/d" \
+         -e "/one-light-syntax/d" \
+         -e "/solarized-dark-syntax/d" \
+         -e "/solarized-light-syntax/d" \
+         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-ini2\": \"${_language_ini2_ver}\",,\n    \"language-\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"language-shellscript\": \".*\"/\"language-shellscript\": \"${_language_shellscript_ver}\"/g" \
+         package.json
 
   chmod 755 -R package.json
 

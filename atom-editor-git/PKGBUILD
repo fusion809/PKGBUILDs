@@ -8,13 +8,12 @@ _version=git
 _about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.15
 _language_gfm2_ver=0.90.2
-_language_ini2_ver=1.17.1
 _language_liquid_ver=0.5.1
 
 pkgname=${_pkgname}-editor-${_version}
 _gitcommit=82b75b5
 pkgver=1.9.0.dev.${_gitcommit}
-pkgrel=2
+pkgrel=3
 pkgdesc='Chrome-based text editor from GitHub - Git'
 arch=('x86_64' 'i686')
 url="https://github.com/${_pkgname}/${_pkgname}"
@@ -42,7 +41,7 @@ prepare() {
 
   sed -i -e "/exception-reporting/d" \
 	       -e "/metrics/d" \
-         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-ini2\": \"${_language_ini2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
          -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
          package.json
 
