@@ -20,10 +20,11 @@ optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 conflicts=('atom-editor-bin')
 install=atom.install
-source=("https://github.com/atom/atom/archive/v${pkgver}.tar.gz"
-"https://github.com/fusion809/about-arch/archive/v${_about_arch_ver}.tar.gz"
+source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/atom/atom/archive/v${pkgver}.tar.gz"
+"about-arch-${_about_arch_ver}.tar.gz::https://github.com/fusion809/about/archive/v${_about_arch_ver}.tar.gz"
 "atom.desktop")
 md5sums=('0e0393c45d500636c99f5d3f078b3d4c'
+         '8930f8b023a3729bd452a533e0720e39'
          '8dda085bb7caec51aa89fcf09977f818')
 
 prepare() {
@@ -42,10 +43,14 @@ prepare() {
   ./script/build || die "Fail fixing verbosity of script/build"
 
   if ! [[ -d node_modules ]]; then
-    mkdir node_modules
+    mkdir -p node_modules
+  else
+    rm -rf node_modules/about-arch
   fi
 
-  mv $srcdir/about-arch-${_about_arch_ver} node_modules
+  mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
+  mv $srcdir/about-arch node_modules
+  sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
 
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
 }

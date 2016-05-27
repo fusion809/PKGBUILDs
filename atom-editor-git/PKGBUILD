@@ -5,6 +5,7 @@ _pkgname=atom
 _version=git
 
 # Module Versions
+_about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.15
 _language_gfm2_ver=0.90.2
 _language_liquid_ver=0.5.1
@@ -24,9 +25,11 @@ optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 install=${_pkgname}-${_version}.install
 source=("git+${url}.git"
+"about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
 "${_pkgname}-${_version}.desktop"
 "${_pkgname}-${_version}")
 sha256sums=('SKIP'
+            'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
             '7d6b93c38bb3704c62949a53c8c44c9c23b660ec0d15cd82856c63565b0e36bf'
             '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
 
@@ -48,6 +51,16 @@ prepare() {
 
   sed -i -e 's@node script/bootstrap@node script/bootstrap --no-quiet@g' \
   ./script/build || die "Fail fixing verbosity of script/build"
+
+  if ! [[ -d node_modules ]]; then
+    mkdir -p node_modules
+  else
+    rm -rf node_modules/about-arch
+  fi
+
+  mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
+  mv $srcdir/about-arch node_modules
+  sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
 
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
 }

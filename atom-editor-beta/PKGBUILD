@@ -5,6 +5,7 @@ _pkgname=atom
 _version=beta
 
 # Versions
+_about_url="https://github.com/fusion809/about"
 _about_ver=1.4.2
 _about_arch_ver=1.5.15
 _language_gfm_ver=0.85.0
@@ -28,8 +29,10 @@ makedepends=('git' 'npm')
 conflicts=('atom-editor-beta-bin')
 install=atom.install
 source=("$url/archive/v${_pkgver}-${_version}${_pkgrel}.tar.gz"
+"about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
 "${_pkgname}-${_version}.desktop")
 sha256sums=('2983fe7e062a9e8c9d8816ed9030ca17584402b5a90defa1ecb3ff26141e6922'
+            'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
             'defc2739570acced5c712a549b18100715fc7bc6419ea74629fbb3d5a28caaba')
 
 prepare() {
@@ -46,6 +49,16 @@ prepare() {
 
   sed -i -e 's@node script/bootstrap@node script/bootstrap --no-quiet@g' \
   ./script/build || die "Fail fixing verbosity of script/build"
+
+  if ! [[ -d node_modules ]]; then
+    mkdir -p node_modules
+  else
+    rm -rf node_modules/about-arch
+  fi
+
+  mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
+  mv $srcdir/about-arch node_modules
+  sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
 
 	sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
 }
