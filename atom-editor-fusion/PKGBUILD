@@ -20,7 +20,7 @@ _language_gentoo_ver=0.9.0
 _language_gfm2_ver=0.90.2
 _language_groovy_ver=0.6.0
 _language_haskell_ver=1.7.15
-_language_ini2_ver=1.17.1
+_language_ini2_ver=1.17.2
 _language_julia_ver=0.6.0
 _language_liquid_ver=0.5.1
 _language_lisp_ver=0.2.0
@@ -31,7 +31,6 @@ _language_viml_ver=1.0.0
 _language_shellscript_ver=0.22.3
 _linter_ver=1.11.4
 _linter_docker_ver=0.1.2
-_markdown_writer_ver=2.3.4
 _minimap_ver=4.24.3
 _nuclide_ver=0.139.0
 _package_sync_ver=1.1.0
@@ -119,7 +118,7 @@ prepare() {
               \"package-sync\": \"${_package_sync_ver}\",\n    \"pigments\": \"${_pigments_ver}\",\n    \"script\": \"${_script_ver}\",\n    \"terminal-plus\": \"${_terminal_plus_ver}\"," package.json
 
   sed -i -e "/\"markdown-preview\": \".*\",/a \
-              \"md-writer\": \"${_markdown_writer_ver}\",\n    \"minimap\": \"${_minimap_ver}\"," package.json
+              \"minimap\": \"${_minimap_ver}\"," package.json
 
   sed -i -e "/\"link\": \".*\",/a \
               \"linter\": \"${_linter_ver}\",\n    \"linter-docker\": \"${_linter_docker_ver}\"," package.json
