@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Nuclide IDE
-Description=<%=Desc=%>
+Comment=<%=Desc=%>
 GenericName=Text Editor
 Exec=/usr/bin/atom-nuclide %U
 Icon=atom

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Atom Git
-Description=<%=Desc=%>
+Comment=<%=Desc=%>
 GenericName=Text Editor
 Exec=/usr/bin/atom-git %U
 Icon=atom-git.png

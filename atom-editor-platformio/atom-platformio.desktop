@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=PlatformIO IDE
-Description=<%=Desc=%>
+Comment=<%=Desc=%>
 GenericName=Text Editor
 Exec=/usr/bin/atom-platformio %U
 Icon=atom

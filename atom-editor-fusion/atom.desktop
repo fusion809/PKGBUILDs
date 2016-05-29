@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Atom Fusion
-Description=<%=Desc=%>
+Name=Atom
+Comment=<%=Desc=%>
 GenericName=Text Editor
 Exec=/usr/bin/atom-fusion %U
 Icon=atom

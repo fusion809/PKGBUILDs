@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Atom
-Description=<%=Desc=%>
+Comment=<%=Desc=%>
 GenericName=Text Editor
 Exec=/usr/bin/atom %U
 Icon=atom

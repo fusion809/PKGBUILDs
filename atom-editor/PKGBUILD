@@ -22,7 +22,7 @@ install=atom.install
 source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/atom/atom/archive/v${pkgver}.tar.gz"
 "atom.desktop")
 md5sums=('0e0393c45d500636c99f5d3f078b3d4c'
-         '6add6502d46da9b135138d2fdae375a8')
+         '367f71ad1cfc2e03e97a48d2e32995fb')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"

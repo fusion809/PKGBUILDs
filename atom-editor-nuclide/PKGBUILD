@@ -27,7 +27,7 @@ source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
-            '85d990d3161457c97fd85fcfb1bdbc9d3eb1ca74f210fd4fdb488231a48711dc'
+            '127f8a7fb61eed0d61a5e55ff87786fa97283e26778857f92333e835c45a1d68'
             '82d45a4dbd3b35d26fc7f10f5a9e0eb7aa8529e955dcc3e4be6840d199e03f06')
 
 prepare() {
