@@ -53,10 +53,8 @@ _linter_shellcheck_ver=1.2.0
 _linter_tslint_ver=0.10.0
 _linter_twig_ver=0.1.1
 _minimap_linter_ver=1.1.1
-_markdown_preview_plus_ver=2.4.0
 _markdown_scroll_sync_ver=2.1.2
 _markdown_toc_ver=0.4.1
-_mdpp_url="https://github.com/Galadirith/markdown-preview-plus"
 _minimap_ver=4.24.3
 _nuclide_ver=0.139.0
 _package_sync_ver=1.1.0
@@ -159,7 +157,7 @@ prepare() {
   mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
   mv $srcdir/about-arch node_modules
   sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
-  
+
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
 }
 
