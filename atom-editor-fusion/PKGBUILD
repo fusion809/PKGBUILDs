@@ -111,9 +111,6 @@ prepare() {
 
   sed -i -e "s/\"language-shellscript\": \".*\"/\"language-shellscript\": \"${_language_shellscript_ver}\"/g" package.json
 
-  ##sed -i -e "/\"notifications\": \".*\",/a \
-  ##            \"nuclide\": \"${_nuclide_ver}\"," package.json # nuclide
-
   sed -i -e "/\"package-generator\": \".*\",/a \
               \"package-sync\": \"${_package_sync_ver}\",\n    \"pigments\": \"${_pigments_ver}\",\n    \"script\": \"${_script_ver}\",\n    \"platformio-ide-terminal\": \"${_platformio_ide_terminal_ver}\"," package.json
 
