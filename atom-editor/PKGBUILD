@@ -6,6 +6,7 @@ _pkgname=atom
 _about_arch_ver=1.5.15
 _language_gfm2_ver=0.90.2
 _language_liquid_ver=0.5.1
+_language_shellscript_ver=0.22.3
 
 pkgname=${_pkgname}-editor
 pkgver=1.7.4
@@ -31,6 +32,7 @@ prepare() {
          -e "/metrics/d" \
          -e 's/0.36.8/0.36.12/g' \
          -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
+         -e "s/\"language-shellscript\": \".*\",/\"language-shellscript\": \"${_language_shellscript_ver}\",/g" \
          -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
          package.json
 

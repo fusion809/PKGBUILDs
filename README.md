@@ -8,7 +8,7 @@ While this repository is primarily designed to provide me with the packages I wa
 
 - [List of Packages](#list-of-packages)
 
-  - [Integrated Development Environments / Text Editors](#integrated-development-environments--text-editors)
+  - [Integrated Development Environments / Text Editors](#integrated-development-environments&mdash;text-editors)
 
 - [atom-editor](#atom-editor)
 
@@ -17,19 +17,27 @@ While this repository is primarily designed to provide me with the packages I wa
   - [-sync](#-sync)
 
 - [brackets](#brackets)
+
 - [codebox](#codebox)
-- [komodo-edit/lighttable/sublime-text{,-dev}](#komodo-edit--lighttable--sublime-text-dev)
+
+- [komodo-edit/lighttable/sublime-text{,-dev}](#komodo-edit&mdash;lighttable&mdash;sublime-text-dev)
+
 - [linux-ck](#linux-ck)
+
 - [messengerfordesktop](#messengerfordesktop)
+
 - [shadow-icon-theme-git](#shadow-icon-theme-git)
+
 - [textadept](#textadept)
+
 - [Vim](#vim)
+
 - [visual-studio-code](#visual-studio-code)
 
   - [-git](#visual-studio-code-git)
   - [-oss](#visual-studio-code-oss)
 
---------------------------------------------------------------------------------
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
 
 ## List of Packages
 
@@ -44,47 +52,72 @@ The list of separate packages in this repository includes:
   - [-sync](/atom-editor-sync/)
 
 - [brackets](/brackets/)
+
 - [codebox](/codebox/)
+
 - [gvim](/gvim/)
 
   - [-git](/gvim-git/)
   - [-gtk3](/gvim-gtk3/)
 
 - [komodo-edit](/komodo-edit/)
+
 - [lighttable](/lighttable/)
+
 - [sublime-text](/sublime-text/)
 
   - [-dev](/sublime-text-dev/)
 
 - [textadept](/textadept/)
+
 - [visual-studio-code](/visual-studio-code/)
 
   - [-git](/visual-studio-code-git/)
   - [-oss](/visual-studio-code-oss/)
 
 ## [atom-editor](/atom-editor/)
+**Note:** <sup>M</sup> *superscript indicates packages/themes I created (worthwhile mentioning to date, however, none of my packages are original, rather they are all forks).*
 
 All PKGBUILDs with the `atom-editor` in their `$pkgname`, in this repository, build the Atom text editor from source and are designed to be installable simultaneously to one another, except for `atom-editor` and other stable `atom-editor` builds like `atom-editor-fusion`, `atom-editor-nuclide` and `atom-editor-sync`. If you noticed that previously `atom-editor-git` and the deprecated (and removed) package `atom-editor-dev` would launch `atom-editor`, instead of the respective version of Atom they should have, this has since been fixed on 27 May 2016 (AEST). They are also designed (as opposed to the corresponding PKGBUILDs in the AUR) to persevere in their build, in the case of momentary internet glitches. All these packages also have the following non-default packages installed:
 
-- [`language-gfm2`](https://github.com/fusion809/language-gfm) -- which is provided **instead** of the default package [`language-gfm`](https://github.com/atom/language-gfm) package, as it includes support for Liquid and HTML code (provided `language-liquid` is installed) embedded in markdown files.
-- [`language-liquid`](https://github.com/puranjayjain/language-liquid)
+- [`language-gfm2`](https://atom.io/packages/language-gfm2)<sup>M</sup> &mdash; which is provided **instead** of the default package [`language-gfm`](https://atom.io/packages//language-gfm) package, as it includes support for Liquid and HTML code (provided `language-liquid` is installed) embedded in markdown files.
+- [`language-liquid`](https://atom.io/packages/language-liquid) &mdash; to, along with the `language-gfm2` package, provide syntax-highlighting support for HTML and Liquid code embedded in markdown files. 
 
-and the following packages deliberately removed:
+stable builds also have the latest version of the [`language-shellscript`](https://atom.io/packages/language-shellscript) package installed (0.22.3 as opposed to the default 0.21.0). and the following packages deliberately removed (both for privacy concerns):
 
-- [`exception-reporting`](https://github.com/atom/exception-reporting)
-- [`metrics`](https://github.com/atom/metrics)
+- [`exception-reporting`](https://atom.io/packages/exception-reporting)
+- [`metrics`](https://atom.io/packages/metrics)
 
 ### [-beta](/atom-editor-beta/)
 
 The `atom-editor-beta` package, unlike that in the AUR, should also persevere despite intermittent network connectivity issues and **can** be installed alongside `atom-editor` on the same machine. These two packages require Internet access during their build, so I cannot add them to my OBSAEB.
 
+### [-fusion](/atom-editor-fusion/)
+
+The `atom-editor-fusion` package has my preferred set of packages and themes pre-installed. The extra pre-installed themes include:
+
+- [`dark-bint-syntax`](https://atom.io/themes/dark-bint-syntax)
+- [`fusion-ui`](https://atom.io/themes/fusion-ui) &mdash;
+
+while the extra pre-installed packages include:
+
+- [`language-ini2`](https://atom.io/packages/)
+
 ### [-git](/atom-editor-git/)
 
 The `atom-editor-git` package, uses a different package version than that in the AUR.
 
+### [-nuclide](/atom-editor-nuclide/)
+
+The `atom-editor-nuclide` PKGBUILD builds Atom with the `nuclide` package (which is developed by Facebook to facilitate web development) pre-installed.
+
 ### [-sync](/atom-editor-sync/)
 
 `atom-editor-sync` builds Atom (the latest stable version) with the `package-sync` package pre-installed to allow for the easy installation of packages listed in a `packages.cson` file.
+
+### [-web](/atom-editor-web/)
+
+`atom-editor-web` builds Atom with several packages intended for web development, pre-installed, to allow for the easy diving into web development after installing Atom. These packages include:
 
 ## [brackets](/brackets/)
 
@@ -121,7 +154,7 @@ I have also included Vim-related packages, as [Vim updates](https://github.com/v
 ```bash
 git clone https://github.com/fusion809/PKGBUILDs
 cd PKGBUILDs/gvim-git
-makepkg -si --noconfirm
+makepkg -si &mdash;noconfirm
 ```
 
 The `gvim-git` package in this repository is a combination of the `gvim-git` and `vim-runtime-git` packages in the AUR. I merged these packages to save bandwidth and disk space, as both PKGBUILDs clone the same [GitHub repository](https://github.com/vim/vim). Likewise the `gvim` package in this repository is also a combination of the `gvim` and `vim-runtime` packages in the `[extra]` pacman repository, except it is updated more frequently. I have also added the `gvim` package to my [OBSAEB](https://build.opensuse.org/package/show/home:fusion809:arch_extra/gvim) it is also here because the OBS usually takes several hours before any commits I push there will result in an updated package in this repository.
@@ -134,7 +167,7 @@ This PKGBUILD builds a Visual Studio Code (VScode) package from the pre-compiled
 
 <abbr title="End-User License Agreement">EULA</abbr>
 
- license.
+license.
 
 ### [-git](/visual-studio-code-git/)
 

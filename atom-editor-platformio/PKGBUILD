@@ -41,6 +41,8 @@ prepare() {
   sed -i -e "/\"notifications\": \".*\",/a \
               \"platformio-ide\": \"${_platformio_ide_ver}\",\n    \"platformio-ide-terminal\": \"${_platformio_ide_terminal_ver}\"," package.json # install nuclide
 
+  sed -i -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",/g" package.json # GFM2
+
   sed -i -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
          -e "s/\"electronVersion\": \".*\"/\"electronVersion\": \"${_electron_ver}\"/g" \
          -e "s|^\"|    \"|g"  package.json # repl. about with about-arch, adjust electron ver (freetype2) and fixing spacing issues

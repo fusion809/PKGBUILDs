@@ -43,12 +43,12 @@ conflicts=('atom-editor-bin' 'atom-editor')
 install=${_pkgname}-${_version}.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
-"markdown-preview-plus-${_markdown_preview_plus_ver}.tar.gz::${_mdpp_url}/archive/v${_markdown_preview_plus_ver}.tar.gz"
 "${_pkgname}.desktop"
-"${_pkgname}")
+"${_pkgname}"
+#"git+https://github.com/skandasoft/browser-plus.git"
+)
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
-            'c79258854e573dd290aa88323e4ef916acc261b224c1b6df16451fe0b955d4b1'
             'fb6527d029c5edffa89a5085cc1d3eaaa892e18cc2aefa8ce855be7612da4788'
             '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
 
@@ -57,20 +57,11 @@ prepare() {
 
   ## package.json edits
   sed -i -e "/exception-reporting/d" \
-           -e "/metrics/d" package.json
+         -e "/metrics/d" package.json
 
   sed -i -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" package.json # switching about with about-arch
 
   sed -i -e "s/\"electronVersion\": \".*\"/\"electronVersion\": \"${_electron_ver}\"/g" package.json              # change electron ver
-
-  sed -i -e "/\"atom-light-syntax\": \".*\"/a \
-              \"dark-bint-syntax\": \"${_dark_bint_syntax_ver}\"," package.json # install dark-bint-syntax
-
-  sed -i -e "/\"atom-light-ui\": \".*\",/a \
-             \"fusion-ui\": \"${_fusion_ui_ver}\"," package.json # install fusion-ui theme
-
-  sed -i -e "/\"archive-view\": \".*\",/a \
-              \"atom-language-rust\": \"${_atom_language_rust_ver}\"," package.json
 
   sed -i -e "/\"find-and-replace\": \".*\",/i \
               \"file-icons\": \"${_file_icons_ver}\"," package.json # file-icons
@@ -91,10 +82,11 @@ prepare() {
   sed -i -e "/\"package-generator\": \".*\",/a \
               \"package-sync\": \"${_package_sync_ver}\",\n    \"pigments\": \"${_pigments_ver}\",\n    \"script\": \"${_script_ver}\",\n    \"platformio-ide-terminal\": \"${_platformio_ide_terminal_ver}\"," package.json
 
-  sed -i -e "s/\"markdown-preview\": \".*\",/\"markdown-preview-plus\": \"${_markdown_preview_plus_ver}\",\n    \"markdown-scroll-sync\": \"${_markdown_scroll_sync_ver}\",\n    \"markdown-toc\": \"${_markdown_toc_ver}\",\n    \"minimap\": \"${_minimap_ver}\",/g" package.json
+  sed -i -e "/\"markdown-preview\": \".*\",/a \
+              \"markdown-scroll-sync\": \"${_markdown_scroll_sync_ver}\",\n    \"markdown-toc\": \"${_markdown_toc_ver}\",\n    \"minimap\": \"${_minimap_ver}\"," package.json
 
-  sed -i -e "/\"timecop\": \".*\",/a \
-              \"tidy-markdown\": \"${_tidy_markdown_ver}\"," package.json
+##  sed -i -e "/\"bracket-matcher\": \".*\",/a \
+  #            \"browser-plus\": \"0.0.60\"," package.json
 
   sed -i -e "s|^\"|    \"|g"  package.json # fixing spacing issues
 
@@ -107,16 +99,14 @@ prepare() {
     mkdir -p node_modules
   else
     rm -rf node_modules/about-arch
+    rm -rf node_modules/markdown-preview-plus
   fi
 
   mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
   mv $srcdir/about-arch node_modules
   sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
 
-  mv $srcdir/markdown-preview-plus-${_markdown_preview_plus_ver} $srcdir/markdown-preview-plus
-  rm node_modules/markdown-preview-plus/assets/macros-template.cson
-
-  sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
+  sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
 }
 
 build() {
@@ -130,11 +120,11 @@ package() {
 
   script/grunt install --build-dir "$srcdir/${_pkgname}-build" --install-dir "$pkgdir/usr"
 
-  install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}"
+  install -Dm755 "$srcdir/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}"
 
   rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
 
-  install -Dm644 "$srcdir/${_pkgname}-${_version}.desktop" "$pkgdir/usr/share/applications/${_pkgname}.desktop"
+  install -Dm644 "$srcdir/${_pkgname}.desktop" "$pkgdir/usr/share/applications/${_pkgname}.desktop"
   install -Dm644 "resources/app-icons/stable/png/1024.png" "$pkgdir/usr/share/pixmaps/${_pkgname}.png"
   install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
 }

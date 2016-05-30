@@ -62,9 +62,7 @@ _nuclide_ver=0.139.0
 _package_sync_ver=1.1.0
 _pigments_ver=0.28.4
 _script_ver=3.7.3
-_tidy_markdown_ver=3.0.1
 _platformio_ide_terminal_ver=2.0.10
-_atom_language_rust_ver=0.8.0
 
 pkgname=${_pkgname}-editor-${_version}
 pkgver=1.7.4
@@ -80,7 +78,6 @@ conflicts=('atom-editor-bin' 'atom-editor')
 install=${_pkgname}-${_version}.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
-"markdown-preview-plus-${_markdown_preview_plus_ver}.tar.gz::${_mdpp_url}/archive/v${_markdown_preview_plus_ver}.tar.gz"
 "${_pkgname}.desktop"
 "${_pkgname}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
@@ -105,9 +102,6 @@ prepare() {
 
   sed -i -e "/\"atom-light-ui\": \".*\",/a \
              \"fusion-ui\": \"${_fusion_ui_ver}\"," package.json # install fusion-ui theme
-
-  sed -i -e "/\"archive-view\": \".*\",/a \
-              \"atom-language-rust\": \"${_atom_language_rust_ver}\"," package.json
 
   sed -i -e "/\"find-and-replace\": \".*\",/i \
               \"file-icons\": \"${_file_icons_ver}\"," package.json # file-icons
@@ -143,13 +137,11 @@ prepare() {
   sed -i -e "/\"package-generator\": \".*\",/a \
               \"package-sync\": \"${_package_sync_ver}\",\n    \"pigments\": \"${_pigments_ver}\",\n    \"script\": \"${_script_ver}\",\n    \"platformio-ide-terminal\": \"${_platformio_ide_terminal_ver}\"," package.json
 
-  sed -i -e "s/\"markdown-preview\": \".*\",/\"markdown-preview-plus\": \"${_markdown_preview_plus_ver}\",\n    \"markdown-scroll-sync\": \"${_markdown_scroll_sync_ver}\",\n    \"markdown-toc\": \"${_markdown_toc_ver}\",\n    \"minimap\": \"${_minimap_ver}\",/g" package.json
+  sed -i -e "/\"markdown-preview\": \".*\",/a \
+              \"markdown-scroll-sync\": \"${_markdown_scroll_sync_ver}\",\n    \"markdown-toc\": \"${_markdown_toc_ver}\",\n    \"minimap\": \"${_minimap_ver}\"," package.json
 
   ##sed -i -e "/\"link\": \".*\",/a \
   ##            \"linter\": \"${_linter_ver}\",\n    \"linter-clojure\": \"${_linter_clojure_ver}\",\n    \"linter-coffeelint\": \"${_linter_coffeelint_ver}\",\n    \"linter-cpplint\": \"${_linter_cpplint_ver}\",\n    \"linter-csslint\": \"${_linter_csslint_ver}\",\n    \"linter-docker\": \"${_linter_docker_ver}\",\n    \"linter-golinter\": \"${_linter_golinter_ver}\",\n    \"linter-htmlhint\": \"${_linter_htmlhint_ver}\",\n    \"linter-javac\": \"${_linter_javac_ver}\",\n    \"linter-jshint\": \"${_linter_jshint_ver}\",\n    \"linter-jsonlint\": \"${_linter_jsonlint_ver}\",\n    \"linter-lua\": \"${_linter_lua_ver}\",\n    \"linter-markdown\": \"${_linter_markdown_ver}\",\n    \"linter-php\": \"${_linter_php_ver}\",\n    \"linter-pylint\": \"${_linter_pylint_ver}\",\n    \"linter-ruby\": \"${_linter_ruby_ver}\",\n    \"linter-rust\": \"${_linter_rust_ver}\",\n    \"linter-scalac\": \"${_linter_scalac_ver}\",\n    \"linter-shellcheck\": \"${_linter_shellcheck_ver}\",\n    \"linter-sass-lint\": \"${_linter_sass_lint_ver}\",\n    \"linter-scss-lint\": \"${_linter_scss_lint_ver}\",\n    \"linter-tslint\": \"${_linter_tslint_ver}\",\n    \"linter-twig\": \"${_linter_twig_ver}\"," package.json
-
-  sed -i -e "/\"timecop\": \".*\",/a \
-              \"tidy-markdown\": \"${_tidy_markdown_ver}\"," package.json
 
   sed -i -e "s|^\"|    \"|g"  package.json # fixing spacing issues
 
@@ -167,11 +159,8 @@ prepare() {
   mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
   mv $srcdir/about-arch node_modules
   sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
-
-  mv $srcdir/markdown-preview-plus-${_markdown_preview_plus_ver} $srcdir/markdown-preview-plus
-  rm node_modules/markdown-preview-plus/assets/macros-template.cson
-
-  sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}-${_version}.desktop
+  
+  sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
 }
 
 build() {
@@ -185,7 +174,7 @@ package() {
 
   script/grunt install --build-dir "$srcdir/${_pkgname}-build" --install-dir "$pkgdir/usr"
 
-  install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}"
+  install -Dm755 "$srcdir/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}"
 
   rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
 

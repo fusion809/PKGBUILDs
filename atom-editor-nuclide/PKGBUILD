@@ -37,6 +37,8 @@ prepare() {
   sed -i -e "/exception-reporting/d" \
          -e "/metrics/d" package.json  # Remove packages with privacy/security concerns
 
+  sed -i -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",/g" package.json # GFM2
+
   sed -i -e "/\"notifications\": \".*\",/a \
               \"nuclide\": \"${_nuclide_ver}\"," package.json # install nuclide
 
