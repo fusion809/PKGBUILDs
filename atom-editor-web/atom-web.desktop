@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Atom
+Name=Atom Web
 Comment=<%=Desc=%>
 GenericName=Text Editor
-Exec=/usr/bin/atom %U
+Exec=/usr/bin/atom-sync %U
 Icon=atom
 Type=Application
 StartupNotify=true

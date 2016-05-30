@@ -1,7 +1,7 @@
 # Maintainer: Brenton Horne <brentonhorne77 at gmail dot com>
 
 _pkgname=atom
-_version=fusion
+_version=web
 
 # Module Versions
 _about_url="https://github.com/fusion809/about"
@@ -13,63 +13,26 @@ _file_icons_ver=1.7.13
 _fusion_ui_ver=0.10.3
 _git_plus_ver=5.14.0
 _git_time_machine_ver=1.5.3
-_language_d_ver=3.2.3
-_language_docker_ver=1.1.6
-_language_fortran_ver=2.0.11
-_language_gentoo_ver=0.9.0
 _language_gfm2_ver=0.90.2
-_language_groovy_ver=0.6.0
-_language_haskell_ver=1.7.15
 _language_ini2_ver=1.17.2
-_language_julia_ver=0.6.0
 _language_liquid_ver=0.5.1
-_language_lisp_ver=0.2.0
 _language_lua_ver=0.9.4
-_language_matlab_ver=0.2.1
-_language_pascal_ver=0.18.1
-_language_viml_ver=1.0.0
 _language_shellscript_ver=0.22.3
-_linter_ver=1.11.4
-_linter_clojure_ver=1.1.2
-_linter_coffeelint_ver=1.1.2
-_linter_cpplint_ver=1.0.1
-_linter_csslint_ver=1.3.2
-_linter_docker_ver=0.1.2
-_linter_golinter_ver=1.2.0
-_linter_htmlhint_ver=1.1.4
-_linter_javac_ver=1.9.3
-_linter_jshint_ver=2.1.0
-_linter_jsonlint_ver=1.2.5
-_linter_lua_ver=1.0.2
-_linter_markdown_ver=1.5.2
-_linter_php_ver=1.2.0
-_linter_pylint_ver=1.2.0
-_linter_ruby_ver=1.2.2
-_linter_rust_ver=0.4.6
-_linter_sass_lint_ver=1.5.0
-_linter_scalac_ver=1.4.0
-_linter_scss_lint_ver=3.0.4
-_linter_shellcheck_ver=1.2.0
-_linter_tslint_ver=0.10.0
-_linter_twig_ver=0.1.1
-_minimap_linter_ver=1.1.1
 _markdown_preview_plus_ver=2.4.0
 _markdown_scroll_sync_ver=2.1.2
 _markdown_toc_ver=0.4.1
 _mdpp_url="https://github.com/Galadirith/markdown-preview-plus"
 _minimap_ver=4.24.3
-_nuclide_ver=0.139.0
 _package_sync_ver=1.1.0
 _pigments_ver=0.28.4
 _script_ver=3.7.3
 _tidy_markdown_ver=3.0.1
 _platformio_ide_terminal_ver=2.0.10
-_atom_language_rust_ver=0.8.0
 
 pkgname=${_pkgname}-editor-${_version}
 pkgver=1.7.4
-pkgrel=8
-pkgdesc='Hackable text editor for the 21st Century, based on web technologies with several custom packages installed.'
+pkgrel=1
+pkgdesc='Hackable text editor for the 21st Century, based on web technologies with several additional web development packages installed. Perfect for bloggers, web admins and web developers.'
 arch=('x86_64' 'i686')
 url="https://github.com/${_pkgname}/${_pkgname}"
 license=('MIT')
@@ -81,12 +44,12 @@ install=${_pkgname}-${_version}.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
 "markdown-preview-plus-${_markdown_preview_plus_ver}.tar.gz::${_mdpp_url}/archive/v${_markdown_preview_plus_ver}.tar.gz"
-"${_pkgname}.desktop"
+"${_pkgname}-${_version}.desktop"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
             'c79258854e573dd290aa88323e4ef916acc261b224c1b6df16451fe0b955d4b1'
-            'fb6527d029c5edffa89a5085cc1d3eaaa892e18cc2aefa8ce855be7612da4788'
+            'a27891039b55d22c2e2988847f6ea2ecf04b4bf668202c16c7d4214b0b00ac36'
             '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
 
 prepare() {
@@ -115,28 +78,13 @@ prepare() {
   sed -i -e "/\"git-diff\": \".*\",/a \
               \"git-plus\": \"${_git_plus_ver}\",\n    \"git-time-machine\": \"${_git_time_machine_ver}\"," package.json # git packages
 
-  sed -i -e "/\"language-css\": \".*\",/a \
-              \"language-d\": \"${_language_d_ver}\",\n    \"language-docker\": \"${_language_docker_ver}\",\n    \"language-fortran\": \"${_language_fortran_ver}\"," package.json
-
   sed -i -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",/g" package.json # GFM2
 
-  sed -i -e "/\"language-gfm2\": \".*\",/i \
-              \"language-gentoo\": \"${_language_gentoo_ver}\"," package.json # gentoo
-
   sed -i -e "/\"language-hyperlink\": \".*\",/a \
-              \"language-ini2\": \"${_language_ini2_ver}\",\n    \"language-julia\": \"${_language_julia_ver}\"," package.json # Julia
+              \"language-ini2\": \"${_language_ini2_ver}\"," package.json # INI2
 
   sed -i -e "/\"language-less\": \".*\",/a \
-              \"language-liquid\": \"${_language_liquid_ver}\",\n    \"language-lisp\": \"${_language_lisp_ver}\",\n    \"language-lua\": \"${_language_lua_ver}\"," package.json # Add Liquid, Lisp, Lua
-
-  sed -i -e "/\"language-makefile\": \".*\",/a \
-              \"language-matlab\": \"${_language_matlab_ver}\"," package.json # MATLAB
-
-  sed -i -e "/\"language-perl\": \".*\",/i \
-              \"language-pascal\": \"${_language_pascal_ver}\"," package.json # pascal
-
-  sed -i -e "/\"language-toml\": \".*\",/a \
-              \"language-viml\": \"${_language_viml_ver}\"," package.json   # Add VimL
+              \"language-liquid\": \"${_language_liquid_ver}\",\n    \"language-lua\": \"${_language_lua_ver}\"," package.json # Add Liquid & Lua
 
   sed -i -e "s/\"language-shellscript\": \".*\"/\"language-shellscript\": \"${_language_shellscript_ver}\"/g" package.json
 
@@ -144,9 +92,6 @@ prepare() {
               \"package-sync\": \"${_package_sync_ver}\",\n    \"pigments\": \"${_pigments_ver}\",\n    \"script\": \"${_script_ver}\",\n    \"platformio-ide-terminal\": \"${_platformio_ide_terminal_ver}\"," package.json
 
   sed -i -e "s/\"markdown-preview\": \".*\",/\"markdown-preview-plus\": \"${_markdown_preview_plus_ver}\",\n    \"markdown-scroll-sync\": \"${_markdown_scroll_sync_ver}\",\n    \"markdown-toc\": \"${_markdown_toc_ver}\",\n    \"minimap\": \"${_minimap_ver}\",/g" package.json
-
-  ##sed -i -e "/\"link\": \".*\",/a \
-  ##            \"linter\": \"${_linter_ver}\",\n    \"linter-clojure\": \"${_linter_clojure_ver}\",\n    \"linter-coffeelint\": \"${_linter_coffeelint_ver}\",\n    \"linter-cpplint\": \"${_linter_cpplint_ver}\",\n    \"linter-csslint\": \"${_linter_csslint_ver}\",\n    \"linter-docker\": \"${_linter_docker_ver}\",\n    \"linter-golinter\": \"${_linter_golinter_ver}\",\n    \"linter-htmlhint\": \"${_linter_htmlhint_ver}\",\n    \"linter-javac\": \"${_linter_javac_ver}\",\n    \"linter-jshint\": \"${_linter_jshint_ver}\",\n    \"linter-jsonlint\": \"${_linter_jsonlint_ver}\",\n    \"linter-lua\": \"${_linter_lua_ver}\",\n    \"linter-markdown\": \"${_linter_markdown_ver}\",\n    \"linter-php\": \"${_linter_php_ver}\",\n    \"linter-pylint\": \"${_linter_pylint_ver}\",\n    \"linter-ruby\": \"${_linter_ruby_ver}\",\n    \"linter-rust\": \"${_linter_rust_ver}\",\n    \"linter-scalac\": \"${_linter_scalac_ver}\",\n    \"linter-shellcheck\": \"${_linter_shellcheck_ver}\",\n    \"linter-sass-lint\": \"${_linter_sass_lint_ver}\",\n    \"linter-scss-lint\": \"${_linter_scss_lint_ver}\",\n    \"linter-tslint\": \"${_linter_tslint_ver}\",\n    \"linter-twig\": \"${_linter_twig_ver}\"," package.json
 
   sed -i -e "/\"timecop\": \".*\",/a \
               \"tidy-markdown\": \"${_tidy_markdown_ver}\"," package.json
@@ -186,10 +131,10 @@ package() {
   script/grunt install --build-dir "$srcdir/${_pkgname}-build" --install-dir "$pkgdir/usr"
 
   install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}"
-  
+
   rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
 
-  install -Dm644 "$srcdir/${_pkgname}.desktop" "$pkgdir/usr/share/applications/${_pkgname}.desktop"
+  install -Dm644 "$srcdir/${_pkgname}-${_version}.desktop" "$pkgdir/usr/share/applications/${_pkgname}.desktop"
   install -Dm644 "resources/app-icons/stable/png/1024.png" "$pkgdir/usr/share/pixmaps/${_pkgname}.png"
   install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
 }

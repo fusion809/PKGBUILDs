@@ -11,7 +11,7 @@ _nuclide_ver=0.139.0
 
 pkgname=${_pkgname}-editor-${_version}
 pkgver=1.7.4
-pkgrel=7
+pkgrel=1
 pkgdesc="Facebook's Nuclide IDE, built on GitHub's Atom text editor."
 arch=('x86_64' 'i686')
 url="https://github.com/${_pkgname}/${_pkgname}"
@@ -28,7 +28,7 @@ source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
             '127f8a7fb61eed0d61a5e55ff87786fa97283e26778857f92333e835c45a1d68'
-            '82d45a4dbd3b35d26fc7f10f5a9e0eb7aa8529e955dcc3e4be6840d199e03f06')
+            '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"

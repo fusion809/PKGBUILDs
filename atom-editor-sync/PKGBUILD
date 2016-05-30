@@ -21,16 +21,16 @@ license=('MIT')
 depends=('alsa-lib' 'desktop-file-utils' 'gconf' 'gtk2' 'libgnome-keyring' 'libnotify' 'libxtst' 'nodejs' 'nss' 'python2')
 optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
-conflicts=('atom-editor-bin')
+conflicts=('atom-editor-bin' 'atom-editor')
 install=atom-sync.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
-"${_pkgname}-${_version}.desktop"
+"${_pkgname}.desktop"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
-            'd666a9a06f494b4c8e9edf81c9bfc233c73a0502c2e0a7c1cff14e2a28c562d9'
-            '012ef71ce4e048f61c018676a0a5112428855f515fb55bf8fa2072a1b364d999')
+            'fb6527d029c5edffa89a5085cc1d3eaaa892e18cc2aefa8ce855be7612da4788'
+            '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"
@@ -71,19 +71,9 @@ package() {
 
   script/grunt install --build-dir "$srcdir/${_pkgname}-build" --install-dir "$pkgdir/usr"
 
-  mv "$pkgdir/usr/share/${_pkgname}" "$pkgdir/usr/share/${_pkgname}-${_version}"
+  install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}"
 
-	rm "$pkgdir/usr/bin/${_pkgname}"
-
-	rm "$pkgdir/usr/bin/apm"
-
-  install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
-
-	ln -sf "${pkgdir}/usr/share/${_pkgname}-${_version}/resources/app/apm/node_modules/.bin/apm" "${pkgdir}/usr/bin/apm-${_version}"
-
-  rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
-
-  install -Dm644 "$srcdir/${_pkgname}-${_version}.desktop" "$pkgdir/usr/share/applications/${_pkgname}-${_version}.desktop"
-  install -Dm644 "resources/app-icons/stable/png/1024.png" "$pkgdir/usr/share/pixmaps/${_pkgname}-${_version}.png"
+  install -Dm644 "$srcdir/${_pkgname}-${_version}.desktop" "$pkgdir/usr/share/applications/${_pkgname}.desktop"
+  install -Dm644 "resources/app-icons/stable/png/1024.png" "$pkgdir/usr/share/pixmaps/${_pkgname}.png"
   install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
 }

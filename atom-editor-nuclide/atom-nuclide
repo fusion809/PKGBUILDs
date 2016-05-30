@@ -1,17 +1,4 @@
 #!/bin/bash
-
-if [ "$(basename $0)" == 'atom-beta' ]; then
-  BETA_VERSION=true
-elif [ "$(basename $0)" == 'atom-nuclide' ]; then
-  NUCLIDE_VERSION=true
-elif [ "$(basename $0)" == 'atom-git' ]; then
-  GIT_VERSION=true
-else
-  BETA_VERSION=
-  NUCLIDE_VERSION=
-  GIT_VERSION=
-fi
-
 while getopts ":wtfvh-:" opt; do
   case "$opt" in
     -)
@@ -52,15 +39,7 @@ fi
 SCRIPT=$(readlink -f "$0")
 USR_DIRECTORY=$(readlink -f $(dirname $SCRIPT)/..)
 
-if [ -n "$BETA_VERSION" ]; then
-  ATOM_PATH="$USR_DIRECTORY/share/atom-beta/atom"
-elif [ -n "$GIT_VERSION" ]; then
-  ATOM_PATH="$USR_DIRECTORY/share/atom-git/atom"
-elif [ -n "$NUCLIDE_VERSION" ]; then
-  ATOM_PATH="$USR_DIRECTORY/share/atom-nuclide/atom"
-else
-  ATOM_PATH="$USR_DIRECTORY/share/atom/atom"
-fi
+ATOM_PATH="$USR_DIRECTORY/share/atom/atom"
 
 ATOM_HOME="${ATOM_HOME:-$HOME/.atom}"
 mkdir -p "$ATOM_HOME"
