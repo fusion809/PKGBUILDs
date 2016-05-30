@@ -4,7 +4,7 @@ _pkgname=atom
 
 # Module Versions
 _about_arch_ver=1.5.16
-_language_gfm2_ver=0.90.2
+_language_gfm2_ver=0.90.3
 _language_liquid_ver=0.5.1
 _language_shellscript_ver=0.22.3
 

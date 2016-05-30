@@ -1,0 +1,5 @@
+31c31,32
+<     "eslint-config-airbnb": "^5.0.0"
++++
+>     "eslint-config-airbnb": "^5.0.0",
+>     "coffee-script": "^1.7.0"

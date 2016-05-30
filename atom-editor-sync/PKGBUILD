@@ -6,7 +6,7 @@ _version=sync
 # Module Versions
 _about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.16
-_language_gfm2_ver=0.90.2
+_language_gfm2_ver=0.90.3
 _language_liquid_ver=0.5.1
 _package_generator_ver=1.0.0
 _package_sync_ver=1.1.0

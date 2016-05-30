@@ -98,11 +98,12 @@ The `atom-editor-beta` package, unlike that in the AUR, should also persevere de
 The `atom-editor-fusion` package has my preferred set of packages and themes pre-installed. The extra pre-installed themes include:
 
 - [`dark-bint-syntax`](https://atom.io/themes/dark-bint-syntax)
-- [`fusion-ui`](https://atom.io/themes/fusion-ui) &mdash;
+- [`fusion-ui`](https://atom.io/themes/fusion-ui)<sup>M</sup> &mdash; my custom theme.
 
 while the extra pre-installed packages include:
 
-- [`language-ini2`](https://atom.io/packages/)
+- [`file-icons`](https://atom.io/packages/file-icons) &mdash; a package that provides assigns icons to files in the tree view, according to their file type. 
+- [`language-ini2`](https://atom.io/packages/language-ini2)<sup>M</sup> &mdash; my own fork of the [`language-ini`](https://atom.io/packages/language-ini) package with better syntax-highlighting of desktop configuration files.
 
 ### [-git](/atom-editor-git/)
 
