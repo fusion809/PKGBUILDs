@@ -26,7 +26,7 @@ install=atom-sync.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
 "${_pkgname}.desktop"
-"${_pkgname}-${_version}")
+"${_pkgname}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
             'fb6527d029c5edffa89a5085cc1d3eaaa892e18cc2aefa8ce855be7612da4788'

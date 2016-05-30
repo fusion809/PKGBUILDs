@@ -44,12 +44,12 @@ install=${_pkgname}-${_version}.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
 "markdown-preview-plus-${_markdown_preview_plus_ver}.tar.gz::${_mdpp_url}/archive/v${_markdown_preview_plus_ver}.tar.gz"
-"${_pkgname}-${_version}.desktop"
-"${_pkgname}-${_version}")
+"${_pkgname}.desktop"
+"${_pkgname}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
             'c79258854e573dd290aa88323e4ef916acc261b224c1b6df16451fe0b955d4b1'
-            'a27891039b55d22c2e2988847f6ea2ecf04b4bf668202c16c7d4214b0b00ac36'
+            'fb6527d029c5edffa89a5085cc1d3eaaa892e18cc2aefa8ce855be7612da4788'
             '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
 
 prepare() {

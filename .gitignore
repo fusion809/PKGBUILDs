@@ -14,7 +14,7 @@ Moksha*
 vim
 vim-pathogen
 vundle-git/vundle-git
-atom
+atom/
 *.ebuild
 *.deb
 *.rpm
