@@ -28,7 +28,7 @@ source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             'de170455e00c684c452acdda5dbfa1182370cd2025990f944bfa48e0df685c6d'
-            '2202363f2b9b48fd20de8442b9c8d12162230e2a3b3c8b4bcf54790c0d476cc9'
+            '6af4ce391155e0f3198566ed21a60a5840c2edcecf403d805ee4746b34fbd135'
             'b5d8abe7b068ea6a6cd2d4eaffdb608cd951fda85e08e4460f00bdb48715040c')
 
 prepare() {
@@ -76,15 +76,7 @@ package() {
 
   script/grunt install --build-dir "$srcdir/${_pkgname}-build" --install-dir "$pkgdir/usr"
 
-  mv "$pkgdir/usr/share/${_pkgname}" "$pkgdir/usr/share/${_pkgname}-${_version}"
-
-	rm "$pkgdir/usr/bin/${_pkgname}"
-
-	rm "$pkgdir/usr/bin/apm"
-
-  install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}-${_version}"
-
-	ln -sf "${pkgdir}/usr/share/${_pkgname}-${_version}/resources/app/apm/node_modules/.bin/apm" "${pkgdir}/usr/bin/apm-${_version}"
+  install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}"
 
   rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
 

@@ -2,7 +2,7 @@
 Name=Nuclide IDE
 Comment=<%=Desc=%>
 GenericName=Text Editor
-Exec=/usr/bin/atom-nuclide %U
+Exec=/usr/bin/atom %U
 Icon=atom
 Type=Application
 StartupNotify=true

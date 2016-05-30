@@ -2,7 +2,7 @@
 Name=PlatformIO IDE
 Comment=<%=Desc=%>
 GenericName=Text Editor
-Exec=/usr/bin/atom-platformio %U
+Exec=/usr/bin/atom %U
 Icon=atom
 Type=Application
 StartupNotify=true
