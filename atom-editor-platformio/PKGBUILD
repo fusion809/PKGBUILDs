@@ -5,7 +5,7 @@ _version=platformio
 
 # Module Versions
 _about_url="https://github.com/fusion809/about"
-_about_arch_ver=1.5.15
+_about_arch_ver=1.5.16
 _electron_ver=0.36.12
 _platformio_ide_ver=1.2.2
 _platformio_ide_terminal_ver=2.0.10
