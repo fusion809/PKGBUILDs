@@ -29,6 +29,7 @@ _language_lisp_ver=0.2.0
 _language_lua_ver=0.9.4
 _language_matlab_ver=0.2.1
 _language_pascal_ver=0.18.1
+_language_patch2_ver=0.1.1
 _language_rpm_spec_ver=0.9.0
 _rpm_spec_url="https://github.com/waveclaw/language-rpm-spec"
 _language_viml_ver=1.0.0
@@ -115,7 +116,7 @@ prepare() {
               \"language-matlab\": \"${_language_matlab_ver}\"," package.json # MATLAB
 
   sed -i -e "/\"language-perl\": \".*\",/i \
-              \"language-pascal\": \"${_language_pascal_ver}\"," package.json # pascal
+              \"language-pascal\": \"${_language_pascal_ver}\",\n    \"language-patch2\": \"${_language_patch2_ver}\"," package.json # pascal
 
   sed -i -e "/\"language-toml\": \".*\",/a \
               \"language-viml\": \"${_language_viml_ver}\"," package.json   # Add VimL
