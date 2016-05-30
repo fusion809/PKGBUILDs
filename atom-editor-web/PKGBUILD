@@ -18,15 +18,12 @@ _language_ini2_ver=1.17.2
 _language_liquid_ver=0.5.1
 _language_lua_ver=0.9.4
 _language_shellscript_ver=0.22.3
-_markdown_preview_plus_ver=2.4.0
 _markdown_scroll_sync_ver=2.1.2
 _markdown_toc_ver=0.4.1
-_mdpp_url="https://github.com/Galadirith/markdown-preview-plus"
 _minimap_ver=4.24.3
 _package_sync_ver=1.1.0
 _pigments_ver=0.28.4
 _script_ver=3.7.3
-_tidy_markdown_ver=3.0.1
 _platformio_ide_terminal_ver=2.0.10
 
 pkgname=${_pkgname}-editor-${_version}
@@ -99,7 +96,6 @@ prepare() {
     mkdir -p node_modules
   else
     rm -rf node_modules/about-arch
-    rm -rf node_modules/markdown-preview-plus
   fi
 
   mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
