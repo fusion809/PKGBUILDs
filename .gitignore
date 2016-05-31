@@ -25,6 +25,6 @@ brackets/brackets-shell/*
 */vscode
 */*/vscode
 node_modules
-browser-plus
+browser-plus*
 language-rpm-spec
 linter
