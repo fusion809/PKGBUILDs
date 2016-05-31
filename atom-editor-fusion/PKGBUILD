@@ -23,13 +23,14 @@ _language_gfm2_ver=0.90.3
 _language_groovy_ver=0.6.0
 _language_haskell_ver=1.7.15
 _language_ini2_ver=1.17.2
+_language_ini2_url="https://github.com/fusion809/atom-language-ini"
 _language_julia_ver=0.6.0
 _language_liquid_ver=0.5.1
 _language_lisp_ver=0.2.0
 _language_lua_ver=0.9.4
 _language_matlab_ver=0.2.1
 _language_pascal_ver=0.18.1
-_language_patch2_ver=0.1.1
+_language_patch2_url="https://github.com/fusion809/language-patch2"
 _language_rpm_spec_ver=0.9.0
 _rpm_spec_url="https://github.com/waveclaw/language-rpm-spec"
 _language_viml_ver=1.0.0
@@ -116,7 +117,13 @@ prepare() {
               \"language-matlab\": \"${_language_matlab_ver}\"," package.json # MATLAB
 
   sed -i -e "/\"language-perl\": \".*\",/i \
-              \"language-pascal\": \"${_language_pascal_ver}\",\n    \"language-patch2\": \"${_language_patch2_ver}\"," package.json # pascal
+              \"language-pascal\": \"${_language_pascal_ver}\",\n    \"language-patch2\": \"0.1.2\"," package.json # pascal
+
+  sed -i -e "/\"dependencies\": {/a \
+              \"language-patch2\": \"${_language_patch2_url}\"," package.json
+
+  sed -i -e "/\"dependencies\": {/a \
+              \"language-ini2\": \"${_language_ini2_url}\"," package.json
 
   sed -i -e "/\"language-toml\": \".*\",/a \
               \"language-viml\": \"${_language_viml_ver}\"," package.json   # Add VimL

@@ -25,7 +25,7 @@ source=(lighttable
         LICENSE)
 md5sums=('cad9cb77799f087aef08f0436b853412'
          '7e4efcce58f2f4a44edb5bde6f5a91db'
-         '568ddc06e04101ea927ded8044a67bca'
+         '568ddc06e0.1.2ea927ded8044a67bca'
          'f8c055be2f047ff4aaffdd028f62f027'
          '8870b5e12f58e6a19a53f4fa938755e8')
 PKGEXT=".pkg.tar"
