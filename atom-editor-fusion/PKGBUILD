@@ -7,8 +7,6 @@ _version=fusion
 _about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.16
 _atom_typescript_ver=8.10.2
-_browser_plus_fix_ver=0.1.3
-_browser_plus_fix_url="https://github.com/fusion809/browser-plus-fix"
 _dark_bint_syntax_ver=0.8.4
 _electron_ver=0.36.12
 _file_icons_ver=1.7.13
@@ -61,12 +59,11 @@ conflicts=('atom-editor-bin' 'atom-editor')
 install=${_pkgname}-${_version}.install
 source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
-"browser-plus-fix-${_browser_plus_fix_ver}.tar.gz::${_browser_plus_fix_url}/archive/v${_browser_plus_fix_ver}.tar.gz"
+#"browser-plus-fix-${_browser_plus_fix_ver}.tar.gz::${_browser_plus_fix_url}/archive/v${_browser_plus_fix_ver}.tar.gz"
 "${_pkgname}.desktop"
 "${_pkgname}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             '1f9d3d560ab6374b38644e9c55a7c8fa0f8f581758fb2ee0b18c3f8c53aee44f'
-            '20a5904d792679dac481c6c8860f27b8e83526769c08f1d77181eb1e4f3d6c87'
             'fb6527d029c5edffa89a5085cc1d3eaaa892e18cc2aefa8ce855be7612da4788'
             '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
 
@@ -136,9 +133,6 @@ prepare() {
   sed -i -e "/\"markdown-preview\": \".*\",/a \
               \"markdown-scroll-sync\": \"${_markdown_scroll_sync_ver}\",\n    \"markdown-toc\": \"${_markdown_toc_ver}\",\n    \"minimap\": \"${_minimap_ver}\"," package.json
 
- sed -i -e "/\"bracket-matcher\": \".*\",/a \
-              \"browser-plus-fix\": \"${_browser_plus_fix_ver}\"," package.json
-
  sed -i -e "s|^\"|    \"|g"  package.json # fixing spacing issues
 
  chmod 755 -R package.json
@@ -159,11 +153,6 @@ prepare() {
   mv $srcdir/about-arch node_modules
   sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
-
-  mv $srcdir/browser-plus-fix-${_browser_plus_fix_ver} node_modules/browser-plus-fix
-  cd node_modules/browser-plus-fix
-  apm install .
-  cd -
 }
 
 build() {
