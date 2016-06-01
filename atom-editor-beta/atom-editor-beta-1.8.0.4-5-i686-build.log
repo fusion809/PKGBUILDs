@@ -1,0 +1,1355 @@
+Node: v6.2.0
+npm: v3.9.3
+Installing build modules...
+npm WARN deprecated graceful-fs@3.0.8: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+npm WARN deprecated graceful-fs@1.2.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+npm WARN deprecated wrench@1.5.4: wrench.js is deprecated! You should check out fs-extra (https://github.com/jprichardson/node-fs-extra) for any operations you were using wrench for. Thanks for all the usage over the years.
+npm WARN deprecated lodash@1.1.1: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0.
+npm WARN deprecated lodash@2.1.0: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0.
+npm WARN prefer global coffee-script@1.10.0 should be installed with -g
+npm WARN prefer global marked@0.3.5 should be installed with -g
+
+> minidump@0.9.0 install /build/atom-editor-beta/src/atom-1.8.0-beta4/build/node_modules/minidump
+> node-gyp rebuild
+
+make: Entering directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/build/node_modules/minidump/build'
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/dwarf/bytereader.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/dwarf_cfi_to_module.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/dwarf_cu_to_module.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/dwarf/dwarf2diehandler.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/dwarf/dwarf2reader.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/dwarf_line_to_module.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/language.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/linux/crc32.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/linux/dump_symbols.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/linux/elf_symbols_to_module.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/linux/elfutils.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/linux/file_id.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/linux/linux_libc_support.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/linux/memory_mapped_file.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/module.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/stabs_reader.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/common/stabs_to_module.o
+  CXX(target) Release/obj.target/dump_syms/deps/breakpad/src/tools/linux/dump_syms/dump_syms.o
+  LINK(target) Release/dump_syms
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/basic_code_modules.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/basic_source_line_resolver.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/binarystream.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/call_stack.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/cfi_frame_info.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/disassembler_x86.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/dump_context.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/dump_object.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/logging.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/pathname_stripper.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/process_state.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/simple_symbol_supplier.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/source_line_resolver_base.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stack_frame_cpu.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stack_frame_symbolizer.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalk_common.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker_amd64.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker_arm.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker_arm64.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker_mips.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker_ppc.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker_ppc64.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker_sparc.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/stackwalker_x86.o
+  CXX(target) Release/obj.target/stackwalk_common/deps/breakpad/src/processor/tokenize.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/ia32_implicit.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/ia32_insn.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/ia32_invariant.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/ia32_modrm.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/ia32_opcode_tables.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/ia32_operand.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/ia32_reg.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/ia32_settings.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/x86_disasm.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/x86_format.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/x86_imm.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/x86_insn.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/x86_misc.o
+  CC(target) Release/obj.target/stackwalk_common/deps/breakpad/src/third_party/libdisasm/x86_operand_list.o
+  AR(target) Release/obj.target/deps/breakpad/stackwalk_common.a
+  COPY Release/stackwalk_common.a
+  CXX(target) Release/obj.target/minidump_stackwalk/deps/breakpad/src/processor/exploitability.o
+  CXX(target) Release/obj.target/minidump_stackwalk/deps/breakpad/src/processor/exploitability_linux.o
+  CXX(target) Release/obj.target/minidump_stackwalk/deps/breakpad/src/processor/exploitability_win.o
+  CXX(target) Release/obj.target/minidump_stackwalk/deps/breakpad/src/processor/minidump.o
+  CXX(target) Release/obj.target/minidump_stackwalk/deps/breakpad/src/processor/minidump_processor.o
+  CXX(target) Release/obj.target/minidump_stackwalk/deps/breakpad/src/processor/minidump_stackwalk.o
+  LINK(target) Release/minidump_stackwalk
+  TOUCH Release/obj.target/minidump.stamp
+make: Leaving directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/build/node_modules/minidump/build'
+
+> runas@3.1.1 install /build/atom-editor-beta/src/atom-1.8.0-beta4/build/node_modules/runas
+> node-gyp rebuild
+
+make: Entering directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/build/node_modules/runas/build'
+  CXX(target) Release/obj.target/runas/src/main.o
+  CXX(target) Release/obj.target/runas/src/runas_posix.o
+  CXX(target) Release/obj.target/runas/src/fork.o
+  SOLINK_MODULE(target) Release/obj.target/runas.node
+  COPY Release/runas.node
+make: Leaving directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/build/node_modules/runas/build'
+atom-build@ /build/atom-editor-beta/src/atom-1.8.0-beta4/build
++-- asar@0.8.3 
+| +-- chromium-pickle-js@0.1.0 
+| +-- commander@2.3.0 
+| +-- cuint@0.1.5 
+| +-- minimatch@2.0.4 
+| | `-- brace-expansion@1.1.4 
+| |   +-- balanced-match@0.4.1 
+| |   `-- concat-map@0.0.1 
+| +-- mkdirp@0.5.1 
+| | `-- minimist@0.0.8 
+| `-- mksnapshot@0.1.0 
+|   +-- decompress-zip@0.1.0 
+|   | +-- nopt@3.0.6 
+|   | `-- touch@0.0.3 
+|   |   `-- nopt@1.0.10 
+|   +-- fs-extra@0.18.2 
+|   | `-- jsonfile@2.3.1 
+|   `-- request@2.55.0 
+|     +-- caseless@0.9.0 
+|     +-- forever-agent@0.6.1 
+|     +-- har-validator@1.8.0 
+|     | `-- commander@2.9.0 
+|     |   `-- graceful-readlink@1.0.1 
+|     +-- hawk@2.3.1 
+|     | +-- boom@2.10.1 
+|     | +-- cryptiles@2.0.5 
+|     | +-- hoek@2.16.3 
+|     | `-- sntp@1.0.9 
+|     +-- isstream@0.1.2 
+|     +-- mime-types@2.0.14 
+|     | `-- mime-db@1.12.0 
+|     +-- oauth-sign@0.6.0 
+|     `-- qs@2.4.2 
++-- async@0.2.10 
++-- aws-sdk@2.3.16 
+| +-- jmespath@0.15.0 
+| +-- sax@1.1.5 
+| +-- xml2js@0.4.15 
+| `-- xmlbuilder@2.6.2 
+|   `-- lodash@3.5.0 
++-- babel-eslint@5.0.4 
+| +-- acorn-to-esprima@2.0.8 
+| +-- babel-traverse@6.9.0 
+| | +-- babel-code-frame@6.8.0 
+| | | `-- js-tokens@1.0.3 
+| | +-- babel-messages@6.8.0 
+| | +-- babel-runtime@6.9.2 
+| | | +-- core-js@2.4.0 
+| | | `-- regenerator-runtime@0.9.5 
+| | +-- debug@2.2.0 
+| | | `-- ms@0.7.1 
+| | +-- globals@8.18.0 
+| | +-- invariant@2.2.1 
+| | | `-- loose-envify@1.2.0 
+| | `-- lodash@4.13.1 
+| +-- babel-types@6.9.1 
+| | +-- esutils@2.0.2 
+| | +-- lodash@4.13.1 
+| | `-- to-fast-properties@1.0.2 
+| +-- babylon@6.8.0 
+| +-- lodash.assign@3.2.0 
+| | +-- lodash._baseassign@3.2.0 
+| | | `-- lodash._basecopy@3.0.1 
+| | +-- lodash._createassigner@3.1.1 
+| | | `-- lodash._isiterateecall@3.0.9 
+| | `-- lodash.keys@3.1.2 
+| |   +-- lodash._getnative@3.9.1 
+| |   +-- lodash.isarguments@3.0.8 
+| |   `-- lodash.isarray@3.0.4 
+| `-- lodash.pick@3.1.0 
+|   +-- lodash._baseflatten@3.1.4 
+|   +-- lodash._bindcallback@3.0.1 
+|   +-- lodash._pickbyarray@3.0.2 
+|   +-- lodash._pickbycallback@3.0.0 
+|   | +-- lodash._basefor@3.0.3 
+|   | `-- lodash.keysin@3.0.8 
+|   `-- lodash.restparam@3.6.1 
++-- donna@1.0.13 
+| +-- builtins@0.0.4 
+| +-- coffee-script@1.10.0 
+| +-- optimist@0.6.1 
+| | `-- wordwrap@0.0.3 
+| +-- source-map@0.1.29 
+| | `-- amdefine@1.0.0 
+| +-- underscore@1.8.3 
+| +-- underscore.string@3.3.4 
+| | +-- sprintf-js@1.0.3 
+| | `-- util-deprecate@1.0.2 
+| `-- walkdir@0.0.11 
++-- escope@3.3.0 
+| +-- es6-map@0.1.3 
+| | +-- d@0.1.1 
+| | +-- es5-ext@0.10.11 
+| | +-- es6-iterator@2.0.0 
+| | +-- es6-set@0.1.4 
+| | +-- es6-symbol@3.0.2 
+| | `-- event-emitter@0.3.4 
+| +-- es6-weak-map@2.0.1 
+| +-- esrecurse@3.1.1 
+| | `-- estraverse@3.1.0 
+| `-- estraverse@4.2.0 
++-- formidable@1.0.17 
++-- fs-plus@2.9.1 
+| `-- mkdirp@0.3.5 
++-- github-releases@0.3.2 
+| +-- minimatch@0.2.12 
+| | +-- lru-cache@2.7.3 
+| | `-- sigmund@1.0.1 
+| +-- optimist@0.4.0 
+| +-- prettyjson@1.1.3 
+| | +-- colors@1.1.2 
+| | `-- minimist@1.2.0 
+| `-- request@2.51.0 
+|   +-- aws-sign2@0.5.0 
+|   +-- bl@0.9.5 
+|   | `-- readable-stream@1.0.34 
+|   +-- caseless@0.8.0 
+|   +-- combined-stream@0.0.7 
+|   | `-- delayed-stream@0.0.5 
+|   +-- forever-agent@0.5.2 
+|   +-- form-data@0.2.0 
+|   | `-- async@0.9.2 
+|   +-- hawk@1.1.1 
+|   | +-- boom@0.4.2 
+|   | +-- cryptiles@0.2.2 
+|   | +-- hoek@0.9.1 
+|   | `-- sntp@0.2.4 
+|   +-- mime-types@1.0.2 
+|   +-- oauth-sign@0.5.0 
+|   +-- qs@2.3.3 
+|   +-- stringstream@0.0.5 
+|   +-- tough-cookie@2.2.2 
+|   `-- tunnel-agent@0.4.3 
++-- glob@5.0.15 
+| +-- inflight@1.0.5 
+| | `-- wrappy@1.0.2 
+| +-- inherits@2.0.1 
+| +-- once@1.3.3 
+| `-- path-is-absolute@1.0.0 
++-- grunt@0.4.5 
+| +-- async@0.1.22 
+| +-- coffee-script@1.3.3 
+| +-- colors@0.6.2 
+| +-- dateformat@1.0.2-1.2.3 
+| +-- eventemitter2@0.4.14 
+| +-- exit@0.1.2 
+| +-- findup-sync@0.1.3 
+| | +-- glob@3.2.11 
+| | | `-- minimatch@0.3.0 
+| | `-- lodash@2.4.2 
+| +-- getobject@0.1.0 
+| +-- glob@3.1.21 
+| | +-- graceful-fs@1.2.3 
+| | `-- inherits@1.0.2 
+| +-- grunt-legacy-log@0.1.3 
+| | +-- grunt-legacy-log-utils@0.1.1 
+| | | +-- lodash@2.4.2 
+| | | `-- underscore.string@2.3.3 
+| | +-- lodash@2.4.2 
+| | `-- underscore.string@2.3.3 
+| +-- grunt-legacy-util@0.2.0 
+| | +-- async@0.1.22 
+| | +-- lodash@0.9.2 
+| | `-- underscore.string@2.2.1 
+| +-- hooker@0.2.3 
+| +-- iconv-lite@0.2.11 
+| +-- js-yaml@2.0.5 
+| | +-- argparse@0.1.16 
+| | | +-- underscore@1.7.0 
+| | | `-- underscore.string@2.4.0 
+| | `-- esprima@1.0.4 
+| +-- lodash@0.9.2 
+| +-- minimatch@0.2.14 
+| +-- nopt@1.0.10 
+| | `-- abbrev@1.0.7 
+| +-- underscore.string@2.2.1 
+| `-- which@1.0.9 
++-- grunt-babel@5.0.3 
+| `-- babel-core@5.8.38 
+|   +-- babel-plugin-constant-folding@1.0.1 
+|   +-- babel-plugin-dead-code-elimination@1.0.2 
+|   +-- babel-plugin-eval@1.0.1 
+|   +-- babel-plugin-inline-environment-variables@1.0.1 
+|   +-- babel-plugin-jscript@1.0.4 
+|   +-- babel-plugin-member-expression-literals@1.0.1 
+|   +-- babel-plugin-property-literals@1.0.1 
+|   +-- babel-plugin-proto-to-assign@1.0.4 
+|   | `-- lodash@3.10.1 
+|   +-- babel-plugin-react-constant-elements@1.0.3 
+|   +-- babel-plugin-react-display-name@1.0.3 
+|   +-- babel-plugin-remove-console@1.0.1 
+|   +-- babel-plugin-remove-debugger@1.0.1 
+|   +-- babel-plugin-runtime@1.0.7 
+|   +-- babel-plugin-undeclared-variables-check@1.0.2 
+|   | `-- leven@1.0.2 
+|   +-- babel-plugin-undefined-to-void@1.1.6 
+|   +-- babylon@5.8.38 
+|   +-- bluebird@2.10.2 
+|   +-- convert-source-map@1.2.0 
+|   +-- core-js@1.2.6 
+|   +-- detect-indent@3.0.1 
+|   | `-- minimist@1.2.0 
+|   +-- fs-readdir-recursive@0.1.2 
+|   +-- globals@6.4.1 
+|   +-- home-or-tmp@1.0.0 
+|   | `-- user-home@1.1.1 
+|   +-- is-integer@1.0.6 
+|   +-- js-tokens@1.0.1 
+|   +-- json5@0.4.0 
+|   +-- lodash@3.10.1 
+|   +-- output-file-sync@1.1.1 
+|   +-- path-exists@1.0.0 
+|   +-- private@0.1.6 
+|   +-- regenerator@0.8.40 
+|   | +-- commoner@0.10.4 
+|   | | +-- commander@2.9.0 
+|   | | +-- detective@4.3.1 
+|   | | | `-- defined@1.0.0 
+|   | | +-- graceful-fs@4.1.4 
+|   | | `-- iconv-lite@0.4.13 
+|   | +-- defs@1.1.1 
+|   | | +-- alter@0.2.0 
+|   | | | `-- stable@0.1.5 
+|   | | +-- ast-traverse@0.1.1 
+|   | | +-- breakable@1.0.0 
+|   | | +-- esprima-fb@15001.1001.0-dev-harmony-fb 
+|   | | +-- simple-fmt@0.1.0 
+|   | | +-- simple-is@0.2.0 
+|   | | +-- stringmap@0.2.2 
+|   | | +-- stringset@0.2.1 
+|   | | +-- tryor@0.1.2 
+|   | | `-- yargs@3.27.0 
+|   | |   +-- camelcase@1.2.1 
+|   | |   +-- cliui@2.1.0 
+|   | |   | +-- center-align@0.1.3 
+|   | |   | | +-- align-text@0.1.4 
+|   | |   | | | +-- kind-of@3.0.3 
+|   | |   | | | | `-- is-buffer@1.1.3 
+|   | |   | | | `-- longest@1.0.1 
+|   | |   | | `-- lazy-cache@1.0.4 
+|   | |   | +-- right-align@0.1.3 
+|   | |   | `-- wordwrap@0.0.2 
+|   | |   +-- decamelize@1.2.0 
+|   | |   +-- os-locale@1.4.0 
+|   | |   | `-- lcid@1.0.0 
+|   | |   |   `-- invert-kv@1.0.0 
+|   | |   +-- window-size@0.1.4 
+|   | |   `-- y18n@3.2.1 
+|   | +-- esprima-fb@15001.1001.0-dev-harmony-fb 
+|   | +-- recast@0.10.33 
+|   | | +-- ast-types@0.8.12 
+|   | | +-- esprima-fb@15001.1001.0-dev-harmony-fb 
+|   | | `-- source-map@0.5.6 
+|   | `-- through@2.3.8 
+|   +-- regexpu@1.3.0 
+|   | +-- esprima@2.7.2 
+|   | +-- regenerate@1.3.1 
+|   | +-- regjsgen@0.2.0 
+|   | `-- regjsparser@0.1.5 
+|   |   `-- jsesc@0.5.0 
+|   +-- repeating@1.1.3 
+|   +-- resolve@1.1.7 
+|   +-- shebang-regex@1.0.0 
+|   +-- slash@1.0.0 
+|   +-- source-map@0.5.6 
+|   +-- source-map-support@0.2.10 
+|   | `-- source-map@0.1.32 
+|   +-- trim-right@1.0.1 
+|   `-- try-resolve@1.0.1 
++-- grunt-cli@0.1.13 
+| +-- nopt@1.0.10 
+| `-- resolve@0.3.1 
++-- grunt-coffeelint@0.0.13  (git+https://github.com/atom/grunt-coffeelint.git#cfb99aa99811d52687969532bd5a98011ed95bfe)
+| +-- coffeelint@1.15.7 
+| | +-- glob@4.5.3 
+| | +-- ignore@3.1.2 
+| | +-- resolve@0.6.3 
+| | `-- strip-json-comments@1.0.4 
+| `-- coffeelint-stylish@0.1.2 
++-- grunt-contrib-coffee@0.12.0 
+| +-- chalk@0.5.1 
+| | +-- ansi-styles@1.1.0 
+| | +-- escape-string-regexp@1.0.5 
+| | +-- has-ansi@0.1.0 
+| | | `-- ansi-regex@0.2.1 
+| | +-- strip-ansi@0.3.0 
+| | `-- supports-color@0.2.0 
+| +-- coffee-script@1.8.0 
+| | `-- mkdirp@0.3.5 
+| +-- lodash@2.4.2 
+| `-- uri-path@0.0.2 
++-- grunt-contrib-csslint@0.2.0 
+| `-- csslint@0.10.0 
+|   `-- parserlib@0.2.5 
++-- grunt-contrib-less@0.8.3 
+| +-- grunt-lib-contrib@0.6.1 
+| | `-- zlib-browserify@0.0.1 
+| `-- less@1.5.1 
+|   +-- clean-css@2.0.8 
+|   | `-- commander@2.0.0 
+|   `-- mkdirp@0.3.5 
++-- grunt-cson@0.16.0 
+| `-- cson-parser@1.3.3 
++-- grunt-download-electron@2.1.4 
+| +-- decompress-zip@0.0.4 
+| | +-- mkpath@0.1.0 
+| | +-- nopt@2.1.2 
+| | +-- q@0.9.7 
+| | +-- readable-stream@1.1.14 
+| | `-- touch@0.0.2 
+| |   `-- nopt@1.0.10 
+| +-- progress@1.1.2 
+| `-- wrench@1.5.4 
++-- grunt-electron-installer@1.2.2 
++-- grunt-lesslint@0.17.0 
+| +-- cache-swap@0.0.6 
+| | +-- lodash@1.1.1 
+| | `-- rimraf@2.1.4 
+| |   `-- graceful-fs@1.2.3 
+| +-- less@1.6.3 
+| | `-- mkdirp@0.3.5 
+| `-- underscore@1.5.2 
++-- grunt-peg@1.1.0 
+| `-- pegjs@0.8.0 
++-- grunt-shell@0.3.1 
+| `-- stripcolorcodes@0.1.0 
++-- grunt-standard@2.0.0 
+| +-- chalk@1.1.1 
+| | +-- ansi-styles@2.2.1 
+| | +-- has-ansi@2.0.0 
+| | | `-- ansi-regex@2.0.0 
+| | +-- strip-ansi@3.0.1 
+| | `-- supports-color@2.0.0 
+| +-- promise@7.0.4 
+| | `-- asap@2.0.4 
+| +-- standard-format@1.6.8 
+| | +-- deglob@1.1.1 
+| | | +-- glob@6.0.4 
+| | | +-- run-parallel@1.1.6 
+| | | `-- uniq@1.0.1 
+| | +-- esformatter@0.7.3 
+| | | +-- debug@0.7.4 
+| | | +-- disparity@2.0.0 
+| | | | `-- diff@1.4.0 
+| | | +-- espree@1.12.3 
+| | | +-- minimist@1.2.0 
+| | | +-- mout@1.0.0 
+| | | +-- npm-run@1.1.1 
+| | | | +-- minimist@1.2.0 
+| | | | +-- npm-path@1.1.0 
+| | | | | `-- which@1.2.9 
+| | | | |   `-- isexe@1.1.2 
+| | | | +-- serializerr@1.0.2 
+| | | | | `-- protochain@1.0.3 
+| | | | `-- sync-exec@0.5.0 
+| | | +-- rocambole@0.7.0 
+| | | | `-- esprima@2.7.2 
+| | | +-- rocambole-indent@2.0.4 
+| | | | `-- mout@0.11.1 
+| | | +-- rocambole-linebreak@1.0.2 
+| | | | `-- semver@4.3.6 
+| | | +-- rocambole-node@1.0.0 
+| | | +-- rocambole-token@1.2.1 
+| | | +-- rocambole-whitespace@1.0.0 
+| | | | `-- repeat-string@1.5.4 
+| | | +-- strip-json-comments@0.1.3 
+| | | +-- supports-color@1.3.1 
+| | | `-- user-home@2.0.0 
+| | |   `-- os-homedir@1.0.1 
+| | +-- esformatter-eol-last@1.0.0 
+| | | `-- string.prototype.endswith@0.2.0 
+| | +-- esformatter-jsx@2.3.11 
+| | | +-- esformatter-ignore@0.1.3 
+| | | +-- extend@2.0.1 
+| | | +-- fresh-falafel@1.2.0 
+| | | | +-- acorn@1.2.2 
+| | | | +-- foreach@2.0.5 
+| | | | `-- object-keys@1.0.9 
+| | | `-- js-beautify@1.6.2 
+| | |   `-- config-chain@1.1.10 
+| | |     +-- ini@1.3.4 
+| | |     `-- proto-list@1.2.4 
+| | +-- esformatter-literal-notation@1.0.1 
+| | | `-- rocambole@0.3.6 
+| | +-- esformatter-quotes@1.0.3 
+| | +-- esformatter-semicolon-first@1.1.0 
+| | | `-- espree@2.2.5 
+| | +-- esformatter-spaced-lined-comment@2.0.1 
+| | +-- minimist@1.2.0 
+| | `-- stdin@0.0.1 
+| `-- text-table@0.2.0 
++-- legal-eagle@0.13.0 
+| +-- read-installed@3.1.3 
+| | +-- debuglog@1.0.1 
+| | +-- graceful-fs@3.0.8 
+| | +-- read-package-json@1.3.3 
+| | | +-- json-parse-helpfulerror@1.0.3 
+| | | | `-- jju@1.3.0 
+| | | `-- normalize-package-data@1.0.3 
+| | |   +-- github-url-from-git@1.4.0 
+| | |   `-- github-url-from-username-repo@1.0.2 
+| | +-- readdir-scoped-modules@1.0.2 
+| | | `-- graceful-fs@4.1.4 
+| | +-- semver@2.2.1 
+| | +-- slide@1.1.6 
+| | `-- util-extend@1.0.3 
+| `-- underscore@1.6.0 
++-- minidump@0.9.0 
++-- npm@2.13.3 
+| +-- abbrev@1.0.7 
+| +-- ansi@0.3.0 
+| +-- ansicolors@0.3.2 
+| +-- ansistyles@0.1.3 
+| +-- archy@1.0.0 
+| +-- async-some@1.0.2 
+| +-- block-stream@0.0.8 
+| +-- char-spinner@1.0.1 
+| +-- chmodr@0.1.1 
+| +-- chownr@0.0.2 
+| +-- cmd-shim@2.0.1 
+| | `-- graceful-fs@3.0.8 
+| +-- columnify@1.5.1 
+| | +-- strip-ansi@2.0.1 
+| | | `-- ansi-regex@1.1.1 
+| | `-- wcwidth@1.0.0 
+| |   `-- defaults@1.0.2 
+| |     `-- clone@0.1.19 
+| +-- config-chain@1.1.9 
+| | `-- proto-list@1.2.4 
+| +-- dezalgo@1.0.3 
+| | `-- asap@2.0.3 
+| +-- editor@1.0.0 
+| +-- fs-vacuum@1.2.6 
+| | `-- graceful-fs@3.0.8 
+| +-- fs-write-stream-atomic@1.0.3 
+| | `-- graceful-fs@3.0.8 
+| +-- fstream@1.0.7 
+| | `-- graceful-fs@3.0.8 
+| +-- fstream-npm@1.0.4 
+| | `-- fstream-ignore@1.0.2 
+| +-- github-url-from-git@1.4.0 
+| +-- github-url-from-username-repo@1.0.2 
+| +-- glob@5.0.14 
+| | `-- path-is-absolute@1.0.0 
+| +-- graceful-fs@4.1.2 
+| +-- hosted-git-info@2.1.4 
+| +-- inflight@1.0.4 
+| +-- inherits@2.0.1 
+| +-- ini@1.3.4 
+| +-- init-package-json@1.7.1 
+| | `-- promzard@0.3.0 
+| +-- lockfile@1.0.1 
+| +-- lru-cache@2.6.5 
+| +-- minimatch@2.0.10 
+| | `-- brace-expansion@1.1.0 
+| |   +-- balanced-match@0.2.0 
+| |   `-- concat-map@0.0.1 
+| +-- mkdirp@0.5.1 
+| | `-- minimist@0.0.8 
+| +-- node-gyp@2.0.2 
+| | +-- glob@4.5.3 
+| | | `-- minimatch@2.0.8 
+| | |   `-- brace-expansion@1.1.0 
+| | |     +-- balanced-match@0.2.0 
+| | |     `-- concat-map@0.0.1 
+| | +-- graceful-fs@3.0.8 
+| | +-- minimatch@1.0.0 
+| | | `-- sigmund@1.0.1 
+| | +-- path-array@1.0.0 
+| | | `-- array-index@0.1.1 
+| | |   `-- debug@2.2.0 
+| | |     `-- ms@0.7.1 
+| | +-- semver@4.3.6 
+| | `-- tar@1.0.3 
+| +-- nopt@3.0.3 
+| +-- normalize-git-url@3.0.1 
+| +-- normalize-package-data@2.3.1 
+| +-- npm-cache-filename@1.0.2 
+| +-- npm-install-checks@1.0.6 
+| +-- npm-package-arg@4.0.2 
+| +-- npm-registry-client@6.5.1 
+| | +-- concat-stream@1.5.0 
+| | | +-- readable-stream@2.0.2 
+| | | | +-- core-util-is@1.0.1 
+| | | | +-- isarray@0.0.1 
+| | | | +-- process-nextick-args@1.0.2 
+| | | | +-- string_decoder@0.10.31 
+| | | | `-- util-deprecate@1.0.1 
+| | | `-- typedarray@0.0.6 
+| | +-- graceful-fs@3.0.8 
+| | `-- npmlog@2.0.4 
+| |   +-- ansi@0.3.1 
+| |   +-- are-we-there-yet@1.1.2 
+| |   | `-- delegates@1.0.0 
+| |   `-- gauge@1.2.7 
+| |     +-- ansi@0.3.1 
+| |     +-- has-unicode@2.0.0 
+| |     +-- lodash.pad@4.4.0 
+| |     | +-- lodash._baseslice@4.0.0 
+| |     | +-- lodash._basetostring@4.12.0 
+| |     | `-- lodash.tostring@4.1.3 
+| |     +-- lodash.padend@4.5.0 
+| |     `-- lodash.padstart@4.5.0 
+| +-- npm-user-validate@0.1.2 
+| +-- npmlog@1.2.1 
+| | +-- are-we-there-yet@1.0.4 
+| | | `-- delegates@0.1.0 
+| | `-- gauge@1.2.0 
+| |   +-- has-unicode@1.0.0 
+| |   +-- lodash.pad@3.1.0 
+| |   | +-- lodash._basetostring@3.0.0 
+| |   | `-- lodash._createpadding@3.6.0 
+| |   |   `-- lodash.repeat@3.0.0 
+| |   +-- lodash.padleft@3.1.1 
+| |   `-- lodash.padright@3.1.1 
+| +-- once@1.3.2 
+| +-- opener@1.4.1 
+| +-- osenv@0.1.3 
+| | +-- os-homedir@1.0.0 
+| | `-- os-tmpdir@1.0.1 
+| +-- path-is-inside@1.0.1 
+| +-- read@1.0.6 
+| | `-- mute-stream@0.0.5 
+| +-- read-installed@4.0.2 
+| | +-- debuglog@1.0.1 
+| | +-- graceful-fs@3.0.8 
+| | +-- readdir-scoped-modules@1.0.1 
+| | `-- util-extend@1.0.1 
+| +-- read-package-json@2.0.0 
+| | +-- graceful-fs@3.0.8 
+| | `-- json-parse-helpfulerror@1.0.3 
+| |   `-- jju@1.2.0 
+| +-- readable-stream@1.1.13 
+| | +-- core-util-is@1.0.1 
+| | +-- isarray@0.0.1 
+| | `-- string_decoder@0.10.31 
+| +-- realize-package-specifier@3.0.1 
+| +-- request@2.60.0 
+| | +-- aws-sign2@0.5.0 
+| | +-- bl@1.0.0 
+| | | `-- readable-stream@2.0.2 
+| | |   +-- core-util-is@1.0.1 
+| | |   +-- isarray@0.0.1 
+| | |   +-- process-nextick-args@1.0.2 
+| | |   +-- string_decoder@0.10.31 
+| | |   `-- util-deprecate@1.0.1 
+| | +-- caseless@0.11.0 
+| | +-- combined-stream@1.0.5 
+| | | `-- delayed-stream@1.0.0 
+| | +-- extend@3.0.0 
+| | +-- forever-agent@0.6.1 
+| | +-- form-data@1.0.0-rc2 
+| | | `-- async@1.4.0 
+| | +-- har-validator@1.8.0 
+| | | +-- bluebird@2.9.34 
+| | | +-- chalk@1.1.0 
+| | | | +-- ansi-styles@2.1.0 
+| | | | +-- escape-string-regexp@1.0.3 
+| | | | +-- has-ansi@2.0.0 
+| | | | | `-- ansi-regex@2.0.0 
+| | | | +-- strip-ansi@3.0.0 
+| | | | | `-- ansi-regex@2.0.0 
+| | | | `-- supports-color@2.0.0 
+| | | +-- commander@2.8.1 
+| | | | `-- graceful-readlink@1.0.1 
+| | | `-- is-my-json-valid@2.12.0 
+| | |   +-- generate-function@2.0.0 
+| | |   +-- generate-object-property@1.2.0 
+| | |   | `-- is-property@1.0.2 
+| | |   +-- jsonpointer@1.1.0 
+| | |   `-- xtend@4.0.0 
+| | +-- hawk@3.1.0 
+| | | +-- boom@2.8.0 
+| | | +-- cryptiles@2.0.4 
+| | | +-- hoek@2.14.0 
+| | | `-- sntp@1.0.9 
+| | +-- http-signature@0.11.0 
+| | | +-- asn1@0.1.11 
+| | | +-- assert-plus@0.1.5 
+| | | `-- ctype@0.5.3 
+| | +-- isstream@0.1.2 
+| | +-- json-stringify-safe@5.0.1 
+| | +-- mime-types@2.1.3 
+| | | `-- mime-db@1.15.0 
+| | +-- node-uuid@1.4.3 
+| | +-- oauth-sign@0.8.0 
+| | +-- qs@4.0.0 
+| | +-- stringstream@0.0.4 
+| | +-- tough-cookie@2.0.0 
+| | `-- tunnel-agent@0.4.1 
+| +-- retry@0.6.1 
+| +-- rimraf@2.4.2 
+| +-- semver@5.0.1 
+| +-- sha@1.3.0 
+| | `-- graceful-fs@3.0.8 
+| +-- slide@1.1.6 
+| +-- sorted-object@1.0.0 
+| +-- spdx@0.4.1 
+| | `-- spdx-license-ids@1.0.1 
+| +-- tar@2.1.1 
+| +-- text-table@0.2.0 
+| +-- uid-number@0.0.6 
+| +-- umask@1.1.0 
+| +-- validate-npm-package-license@2.0.0 
+| | `-- spdx-correct@1.0.0 
+| +-- validate-npm-package-name@2.2.2 
+| | `-- builtins@0.0.7 
+| +-- which@1.1.1 
+| | `-- is-absolute@0.1.7 
+| |   `-- is-relative@0.1.3 
+| +-- wrappy@1.0.1 
+| `-- write-file-atomic@1.1.2 
+|   `-- graceful-fs@3.0.8 
++-- rcedit@0.3.0 
++-- request@2.27.0 
+| +-- aws-sign@0.3.0 
+| +-- cookie-jar@0.3.0 
+| +-- forever-agent@0.5.2 
+| +-- form-data@0.1.4 
+| | `-- async@0.9.2 
+| +-- hawk@1.0.0 
+| | +-- boom@0.4.2 
+| | +-- cryptiles@0.2.2 
+| | +-- hoek@0.9.1 
+| | `-- sntp@0.2.4 
+| +-- http-signature@0.10.1 
+| | +-- asn1@0.1.11 
+| | +-- assert-plus@0.1.5 
+| | `-- ctype@0.5.3 
+| +-- json-stringify-safe@5.0.1 
+| +-- mime@1.2.11 
+| +-- node-uuid@1.4.7 
+| +-- oauth-sign@0.3.0 
+| +-- qs@0.6.6 
+| `-- tunnel-agent@0.3.0 
++-- rimraf@2.2.8 
++-- runas@3.1.1 
+| `-- nan@2.3.5 
++-- standard@5.4.1 
+| +-- eslint-config-standard@4.4.0 
+| +-- eslint-config-standard-react@1.2.1 
+| +-- eslint-plugin-react@3.16.1 
+| +-- eslint-plugin-standard@1.3.2 
+| `-- standard-engine@2.2.5 
+|   +-- defaults@1.0.3 
+|   | `-- clone@1.0.2 
+|   +-- dezalgo@1.0.3 
+|   +-- eslint@1.9.0 
+|   | +-- concat-stream@1.5.1 
+|   | | +-- readable-stream@2.0.6 
+|   | | | +-- isarray@1.0.0 
+|   | | | `-- process-nextick-args@1.0.7 
+|   | | `-- typedarray@0.0.6 
+|   | +-- doctrine@0.7.2 
+|   | | `-- esutils@1.1.6 
+|   | +-- espree@2.2.5 
+|   | +-- estraverse-fb@1.3.1 
+|   | +-- file-entry-cache@1.2.4 
+|   | | `-- flat-cache@1.0.10 
+|   | |   +-- del@2.2.0 
+|   | |   | +-- globby@4.1.0 
+|   | |   | | +-- array-union@1.0.1 
+|   | |   | | | `-- array-uniq@1.0.2 
+|   | |   | | +-- arrify@1.0.1 
+|   | |   | | `-- glob@6.0.4 
+|   | |   | +-- is-path-cwd@1.0.0 
+|   | |   | +-- is-path-in-cwd@1.0.0 
+|   | |   | | `-- is-path-inside@1.0.0 
+|   | |   | +-- pify@2.3.0 
+|   | |   | `-- pinkie-promise@2.0.1 
+|   | |   |   `-- pinkie@2.0.4 
+|   | |   +-- graceful-fs@4.1.4 
+|   | |   +-- read-json-sync@1.1.1 
+|   | |   | `-- graceful-fs@4.1.4 
+|   | |   `-- write@0.2.1 
+|   | +-- handlebars@4.0.5 
+|   | | +-- async@1.5.2 
+|   | | +-- source-map@0.4.4 
+|   | | `-- uglify-js@2.6.2 
+|   | |   +-- source-map@0.5.6 
+|   | |   +-- uglify-to-browserify@1.0.2 
+|   | |   `-- yargs@3.10.0 
+|   | |     `-- window-size@0.1.0 
+|   | +-- inquirer@0.11.4 
+|   | | +-- ansi-escapes@1.4.0 
+|   | | +-- cli-cursor@1.0.2 
+|   | | | `-- restore-cursor@1.0.1 
+|   | | |   +-- exit-hook@1.1.1 
+|   | | |   `-- onetime@1.1.0 
+|   | | +-- cli-width@1.1.1 
+|   | | +-- readline2@1.0.1 
+|   | | | +-- code-point-at@1.0.0 
+|   | | | +-- is-fullwidth-code-point@1.0.0 
+|   | | | `-- mute-stream@0.0.5 
+|   | | +-- run-async@0.1.0 
+|   | | +-- rx-lite@3.1.2 
+|   | | `-- string-width@1.0.1 
+|   | +-- is-my-json-valid@2.13.1 
+|   | | +-- generate-function@2.0.0 
+|   | | +-- generate-object-property@1.2.0 
+|   | | | `-- is-property@1.0.2 
+|   | | `-- jsonpointer@2.0.0 
+|   | +-- is-resolvable@1.0.0 
+|   | | `-- tryit@1.0.2 
+|   | +-- js-yaml@3.6.1 
+|   | | +-- argparse@1.0.7 
+|   | | `-- esprima@2.7.2 
+|   | +-- json-stable-stringify@1.0.1 
+|   | | `-- jsonify@0.0.0 
+|   | +-- lodash.clonedeep@3.0.2 
+|   | | `-- lodash._baseclone@3.3.0 
+|   | +-- lodash.merge@3.3.2 
+|   | | +-- lodash._arraycopy@3.0.0 
+|   | | +-- lodash._arrayeach@3.0.0 
+|   | | +-- lodash.isplainobject@3.2.0 
+|   | | +-- lodash.istypedarray@3.0.6 
+|   | | `-- lodash.toplainobject@3.0.0 
+|   | +-- lodash.omit@3.1.0 
+|   | | +-- lodash._arraymap@3.0.0 
+|   | | `-- lodash._basedifference@3.0.3 
+|   | |   +-- lodash._baseindexof@3.1.0 
+|   | |   +-- lodash._cacheindexof@3.0.2 
+|   | |   `-- lodash._createcache@3.1.2 
+|   | +-- minimatch@3.0.0 
+|   | +-- optionator@0.6.0 
+|   | | +-- deep-is@0.1.3 
+|   | | +-- fast-levenshtein@1.0.7 
+|   | | +-- levn@0.2.5 
+|   | | +-- prelude-ls@1.1.2 
+|   | | `-- type-check@0.3.2 
+|   | +-- path-is-inside@1.0.1 
+|   | +-- shelljs@0.5.3 
+|   | +-- to-double-quotes@2.0.0 
+|   | +-- to-single-quotes@2.0.0 
+|   | +-- user-home@2.0.0 
+|   | `-- xml-escape@1.0.0 
+|   +-- find-root@0.1.2 
+|   +-- get-stdin@4.0.1 
+|   +-- minimist@1.2.0 
+|   +-- multiline@1.0.2 
+|   | `-- strip-indent@1.0.1 
+|   +-- pkg-config@1.1.1 
+|   | +-- debug-log@1.0.0 
+|   | `-- find-root@1.0.0 
+|   `-- xtend@4.0.1 
++-- tello@1.0.5 
+| +-- atomdoc@1.0.4 
+| | +-- marked@0.3.5 
+| | `-- underscore@1.6.0 
+| `-- underscore@1.6.0 
++-- temp@0.8.3 
+| `-- os-tmpdir@1.0.1 
++-- time-grunt@1.2.2 
+| +-- chalk@1.1.3 
+| +-- date-time@1.0.0 
+| +-- figures@1.7.0 
+| | `-- object-assign@4.1.0 
+| +-- number-is-nan@1.0.0 
+| `-- pretty-ms@2.1.0 
+|   +-- is-finite@1.0.1 
+|   +-- parse-ms@1.0.1 
+|   `-- plur@1.0.0 
++-- underscore-plus@1.6.6 
+| `-- underscore@1.6.0 
++-- unzip@0.1.11 
+| +-- binary@0.3.0 
+| | +-- buffers@0.1.1 
+| | `-- chainsaw@0.1.0 
+| |   `-- traverse@0.3.9 
+| +-- fstream@0.1.31 
+| +-- match-stream@0.0.2 
+| | `-- readable-stream@1.0.34 
+| +-- pullstream@0.4.1 
+| | +-- over@0.0.5 
+| | +-- readable-stream@1.0.34 
+| | `-- slice-stream@1.0.0 
+| |   `-- readable-stream@1.0.34 
+| +-- readable-stream@1.0.34 
+| | +-- core-util-is@1.0.2 
+| | +-- isarray@0.0.1 
+| | `-- string_decoder@0.10.31 
+| `-- setimmediate@1.0.4 
++-- vm-compatibility-layer@0.1.0 
+`-- webdriverio@2.4.5 
+  +-- archiver@0.6.1 
+  | +-- file-utils@0.1.5 
+  | | +-- glob@3.2.11 
+  | | | `-- minimatch@0.3.0 
+  | | +-- isbinaryfile@0.1.9 
+  | | +-- lodash@2.1.0 
+  | | `-- minimatch@0.2.14 
+  | +-- lazystream@0.1.0 
+  | | `-- readable-stream@1.0.34 
+  | +-- lodash@2.4.2 
+  | +-- readable-stream@1.0.34 
+  | `-- zip-stream@0.2.3 
+  |   +-- debug@0.7.4 
+  |   +-- lodash.defaults@2.4.1 
+  |   | +-- lodash._objecttypes@2.4.1 
+  |   | `-- lodash.keys@2.4.1 
+  |   |   +-- lodash._isnative@2.4.1 
+  |   |   +-- lodash._shimkeys@2.4.1 
+  |   |   `-- lodash.isobject@2.4.1 
+  |   `-- readable-stream@1.0.34 
+  +-- async@0.9.2 
+  +-- chainit@2.1.1 
+  | `-- queue@1.0.2 
+  +-- css-parse@1.7.0 
+  +-- css-value@0.0.1 
+  +-- deepmerge@0.2.10 
+  +-- pragma-singleton@1.0.3 
+  +-- q@1.4.1 
+  +-- request@2.34.0 
+  | +-- forever-agent@0.5.2 
+  | +-- form-data@0.1.4 
+  | +-- hawk@1.0.0 
+  | | +-- boom@0.4.2 
+  | | +-- cryptiles@0.2.2 
+  | | +-- hoek@0.9.1 
+  | | `-- sntp@0.2.4 
+  | +-- oauth-sign@0.3.0 
+  | +-- qs@0.6.6 
+  | `-- tunnel-agent@0.3.0 
+  +-- rgb2hex@0.1.0 
+  +-- url@0.10.3 
+  | +-- punycode@1.3.2 
+  | `-- querystring@0.2.0 
+  `-- wgxpath@0.23.0 
+
+npm WARN atom-build@ No license field.
+=> Took 181560ms.
+
+Installing apm...
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+npm WARN package.json atom-bundled-apm@ No license field.
+(node:1833) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+npm WARN deprecated wrench@1.5.9: wrench.js is deprecated! You should check out fs-extra (https://github.com/jprichardson/node-fs-extra) for any operations you were using wrench for. Thanks for all the usage over the years.
+
+> keytar@3.0.2 install /build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/keytar
+> node-gyp rebuild
+
+(node:1859) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1859) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+make: Entering directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/keytar/build'
+  CXX(target) Release/obj.target/keytar/src/main.o
+  CXX(target) Release/obj.target/keytar/src/keytar_posix.o
+  SOLINK_MODULE(target) Release/obj.target/keytar.node
+  COPY Release/keytar.node
+make: Leaving directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/keytar/build'
+
+> oniguruma@5.1.2 install /build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/first-mate/node_modules/oniguruma
+> node-gyp rebuild
+
+(node:1935) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:1935) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+make: Entering directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/first-mate/node_modules/oniguruma/build'
+  CC(target) Release/obj.target/oniguruma/deps/onig/regcomp.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regenc.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regerror.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regexec.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regext.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/reggnu.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regparse.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regposerr.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regposix.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regsyntax.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regtrav.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/regversion.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/st.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/ascii.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/big5.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/cp1251.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/euc_jp.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/euc_kr.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/euc_tw.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/gb18030.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_1.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_2.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_3.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_4.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_5.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_6.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_7.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_8.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_9.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_10.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_11.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_13.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_14.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_15.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/iso8859_16.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/koi8.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/koi8_r.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/mktable.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/sjis.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/unicode.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/utf16_be.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/utf16_le.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/utf32_be.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/utf32_le.o
+  CC(target) Release/obj.target/oniguruma/deps/onig/enc/utf8.o
+  AR(target) Release/obj.target/oniguruma.a
+  COPY Release/oniguruma.a
+  CXX(target) Release/obj.target/onig_scanner/src/onig-cache.o
+  CXX(target) Release/obj.target/onig_scanner/src/onig-result.o
+  CXX(target) Release/obj.target/onig_scanner/src/onig-reg-exp.o
+  CXX(target) Release/obj.target/onig_scanner/src/onig-scanner.o
+  CXX(target) Release/obj.target/onig_scanner/src/onig-scanner-worker.o
+  CXX(target) Release/obj.target/onig_scanner/src/onig-searcher.o
+  CXX(target) Release/obj.target/onig_scanner/src/onig-string-context.o
+  CXX(target) Release/obj.target/onig_scanner/src/unicode-utils-posix.o
+  SOLINK_MODULE(target) Release/obj.target/onig_scanner.node
+  COPY Release/onig_scanner.node
+make: Leaving directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/first-mate/node_modules/oniguruma/build'
+
+> git-utils@4.1.2 install /build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/git-utils
+> node-gyp rebuild
+
+(node:3040) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:3040) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+make: Entering directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/git-utils/build'
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/annotated_commit.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/attr.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/attr_file.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/attrcache.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/blame.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/blame_git.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/blob.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/branch.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/buf_text.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/buffer.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/cache.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/checkout.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/cherrypick.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/clone.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/commit.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/commit_list.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/config.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/config_cache.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/config_file.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/crlf.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/curl_stream.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/date.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/delta-apply.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/delta.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/describe.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/diff.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/diff_driver.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/diff_file.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/diff_patch.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/diff_print.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/diff_stats.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/diff_tform.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/diff_xdiff.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/errors.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/fetch.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/fetchhead.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/filebuf.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/fileops.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/filter.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/fnmatch.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/global.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/graph.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/hash.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/hashsig.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/ident.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/ignore.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/index.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/indexer.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/iterator.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/merge.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/merge_file.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/message.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/mwindow.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/netops.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/notes.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/object.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/object_api.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/odb.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/odb_loose.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/odb_mempack.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/odb_pack.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/oid.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/oidarray.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/openssl_stream.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/pack-objects.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/pack.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/path.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/pathspec.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/pool.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/posix.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/pqueue.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/push.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/rebase.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/refdb.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/refdb_fs.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/reflog.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/refs.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/refspec.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/remote.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/repository.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/reset.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/revert.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/revparse.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/revwalk.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/settings.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/sha1_lookup.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/signature.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/socket_stream.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/sortedcache.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/stash.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/status.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/stransport_stream.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/strmap.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/submodule.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/sysdir.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/tag.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/thread-utils.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/tls_stream.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/trace.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transaction.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transport.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/tree-cache.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/tree.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/tsort.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/util.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/vector.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/zstream.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/auth.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/auth_negotiate.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/cred.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/cred_helpers.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/git.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/http.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/local.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/smart.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/smart_pkt.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/smart_protocol.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/ssh.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/transports/winhttp.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/xdiff/xdiffi.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/xdiff/xemit.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/xdiff/xhistogram.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/xdiff/xmerge.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/xdiff/xpatience.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/xdiff/xprepare.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/xdiff/xutils.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/hash/hash_generic.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/unix/map.o
+  CC(target) Release/obj.target/libgit2/deps/libgit2/src/unix/realpath.o
+  AR(target) Release/obj.target/git2.a
+  COPY Release/git2.a
+  CC(target) Release/obj.target/zlib/deps/libgit2/deps/zlib/adler32.o
+  CC(target) Release/obj.target/zlib/deps/libgit2/deps/zlib/crc32.o
+  CC(target) Release/obj.target/zlib/deps/libgit2/deps/zlib/deflate.o
+  CC(target) Release/obj.target/zlib/deps/libgit2/deps/zlib/inffast.o
+  CC(target) Release/obj.target/zlib/deps/libgit2/deps/zlib/inflate.o
+../deps/libgit2/deps/zlib/inflate.c: In function 'inflateMark':
+../deps/libgit2/deps/zlib/inflate.c:1507:61: warning: left shift of negative value [-Wshift-negative-value]
+     if (strm == Z_NULL || strm->state == Z_NULL) return -1L << 16;
+                                                             ^~
+  CC(target) Release/obj.target/zlib/deps/libgit2/deps/zlib/inftrees.o
+  CC(target) Release/obj.target/zlib/deps/libgit2/deps/zlib/trees.o
+  CC(target) Release/obj.target/zlib/deps/libgit2/deps/zlib/zutil.o
+  AR(target) Release/obj.target/zlib.a
+  COPY Release/zlib.a
+  CC(target) Release/obj.target/http_parser/deps/libgit2/deps/http-parser/http_parser.o
+  AR(target) Release/obj.target/http_parser.a
+  COPY Release/http_parser.a
+  CXX(target) Release/obj.target/git/src/repository.o
+  SOLINK_MODULE(target) Release/obj.target/git.node
+  COPY Release/git.node
+make: Leaving directory '/build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager/node_modules/git-utils/build'
+
+> atom-package-manager@1.9.2 install /build/atom-editor-beta/src/atom-1.8.0-beta4/apm/node_modules/atom-package-manager
+> node ./script/download-node.js
+
+(node:5887) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:5887) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+(node:5887) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+atom-package-manager@1.9.2 node_modules/atom-package-manager
+├── async@0.2.10
+├── hosted-git-info@2.1.5
+├── colors@0.6.2
+├── q@0.9.7
+├── wordwrap@0.0.2
+├── open@0.0.4
+├── ncp@0.5.1
+├── exit@0.1.2
+├── underscore-plus@1.6.6 (underscore@1.6.0)
+├── wrench@1.5.9
+├── read@1.0.7 (mute-stream@0.0.6)
+├── fs-plus@2.9.1 (rimraf@2.2.8, mkdirp@0.3.5)
+├── temp@0.7.0 (rimraf@2.2.8)
+├── mv@2.0.0 (rimraf@2.2.8, ncp@0.4.2, mkdirp@0.3.5)
+├── plist@0.4.3 (xmlbuilder@0.4.3, xmldom@0.1.22)
+├── season@5.3.0 (optimist@0.4.0, cson-parser@1.0.9)
+├── yargs@3.32.0 (decamelize@1.2.0, y18n@3.2.1, camelcase@2.1.1, window-size@0.1.4, string-width@1.0.1, cliui@3.2.0, os-locale@1.4.0)
+├── asar-require@0.2.0 (asar@0.5.0)
+├── npm@2.13.3
+├── keytar@3.0.2 (nan@2.3.2)
+├── first-mate@5.1.1 (grim@1.5.0, event-kit@1.5.0, emissary@1.3.3, oniguruma@5.1.2)
+└── git-utils@4.1.2 (nan@2.3.5)
+=> Took 64234ms.
+
+Deleting old packages...
+=> Took 503ms.
+
+Installing modules [32m✓
+[39mInstalling atom-dark-syntax@0.27.0 [32m✓
+[39mInstalling atom-dark-ui@0.51.0 [32m✓
+[39mInstalling atom-light-syntax@0.28.0 [32m✓
+[39mInstalling atom-light-ui@0.43.0 [32m✓
+[39mInstalling base16-tomorrow-dark-theme@1.1.0 [32m✓
+[39mInstalling base16-tomorrow-light-theme@1.1.1 [32m✓
+[39mInstalling one-dark-ui@1.3.1 [32m✓
+[39mInstalling one-light-ui@1.3.1 [32m✓
+[39mInstalling one-dark-syntax@1.2.0 [32m✓
+[39mInstalling one-light-syntax@1.2.0 [32m✓
+[39mInstalling solarized-dark-syntax@1.0.2 [32m✓
+[39mInstalling solarized-light-syntax@1.0.2 [32m✓
+[39mInstalling archive-view@0.61.1 [32m✓
+[39mInstalling autocomplete-atom-api@0.10.0 [32m✓
+[39mInstalling autocomplete-css@0.11.1 [32m✓
+[39mInstalling autocomplete-html@0.7.2 [32m✓
+[39mInstalling autocomplete-plus@2.29.2 [32m✓
+[39mInstalling autocomplete-snippets@1.10.0 [32m✓
+[39mInstalling autoflow@0.27.0 [32m✓
+[39mInstalling autosave@0.23.1 [32m✓
+[39mInstalling background-tips@0.26.0 [32m✓
+[39mInstalling bookmarks@0.39.0 [32m✓
+[39mInstalling bracket-matcher@0.82.0 [32m✓
+[39mInstalling command-palette@0.38.0 [32m✓
+[39mInstalling deprecation-cop@0.54.1 [32m✓
+[39mInstalling dev-live-reload@0.47.0 [32m✓
+[39mInstalling encoding-selector@0.21.0 [32m✓
+[39mInstalling find-and-replace@0.199.0 [32m✓
+[39mInstalling fuzzy-finder@1.0.5 [32m✓
+[39mInstalling git-diff@1.0.1 [32m✓
+[39mInstalling go-to-line@0.30.0 [32m✓
+[39mInstalling grammar-selector@0.48.1 [32m✓
+[39mInstalling image-view@0.57.0 [32m✓
+[39mInstalling incompatible-packages@0.26.1 [32m✓
+[39mInstalling keybinding-resolver@0.35.0 [32m✓
+[39mInstalling line-ending-selector@0.4.1 [32m✓
+[39mInstalling link@0.31.1 [32m✓
+[39mInstalling markdown-preview@0.158.0 [32m✓
+[39mInstalling notifications@0.63.1 [32m✓
+[39mInstalling open-on-github@1.0.1 [32m✓
+[39mInstalling package-generator@1.0.0 [32m✓
+[39mInstalling settings-view@0.235.1 [32m✓
+[39mInstalling snippets@1.0.2 [32m✓
+[39mInstalling spell-check@0.67.1 [32m✓
+[39mInstalling status-bar@1.2.3 [32m✓
+[39mInstalling styleguide@0.45.2 [32m✓
+[39mInstalling symbols-view@0.112.0 [32m✓
+[39mInstalling tabs@0.96.0 [32m✓
+[39mInstalling timecop@0.33.1 [32m✓
+[39mInstalling tree-view@0.205.0 [32m✓
+[39mInstalling update-package-dependencies@0.10.0 [32m✓
+[39mInstalling welcome@0.34.0 [32m✓
+[39mInstalling whitespace@0.32.2 [32m✓
+[39mInstalling wrap-guide@0.38.1 [32m✓
+[39mInstalling language-c@0.51.3 [32m✓
+[39mInstalling language-clojure@0.20.0 [32m✓
+[39mInstalling language-coffee-script@0.46.1 [32m✓
+[39mInstalling language-csharp@0.12.1 [32m✓
+[39mInstalling language-css@0.36.1 [32m✓
+[39mInstalling language-gfm2@0.90.3 [32m✓
+[39mInstalling language-liquid@0.5.1 [32m✓
+[39mInstalling language-git@0.12.1 [32m✓
+[39mInstalling language-go@0.42.0 [32m✓
+[39mInstalling language-html@0.44.1 [32m✓
+[39mInstalling language-hyperlink@0.16.0 [32m✓
+[39mInstalling language-java@0.17.0 [32m✓
+[39mInstalling language-javascript@0.110.0 [32m✓
+[39mInstalling language-json@0.18.0 [32m✓
+[39mInstalling language-less@0.29.3 [32m✓
+[39mInstalling language-make@0.21.1 [32m✓
+[39mInstalling language-mustache@0.13.0 [32m✓
+[39mInstalling language-objective-c@0.15.1 [32m✓
+[39mInstalling language-perl@0.34.0 [32m✓
+[39mInstalling language-php@0.37.0 [32m✓
+[39mInstalling language-property-list@0.8.0 [32m✓
+[39mInstalling language-python@0.43.1 [32m✓
+[39mInstalling language-ruby@0.68.5 [32m✓
+[39mInstalling language-ruby-on-rails@0.25.0 [32m✓
+[39mInstalling language-sass@0.46.0 [32m✓
+[39mInstalling language-shellscript@0.21.1 [32m✓
+[39mInstalling language-source@0.9.0 [32m✓
+[39mInstalling language-sql@0.20.0 [32m✓
+[39mInstalling language-text@0.7.1 [32m✓
+[39mInstalling language-todo@0.27.0 [32m✓
+[39mInstalling language-toml@0.18.0 [32m✓
+[39mInstalling language-xml@0.34.4 [32m✓
+[39mInstalling language-yaml@0.25.2 [32m✓
+[39m=> Took 752627ms.
+
+Deduping modules [32m✓
+[39m=> Took 32241ms.
+
+(node:11525) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+[4mRunning "download-electron" task[24m
+
+
+[4mRunning "download-electron-chromedriver" task[24m
+
+
+[4mRunning "build" task[24m
+
+[4mRunning "babel:dist" (babel) task[24m
+
+[4mRunning "coffee:glob_to_multiple" (coffee) task[24m
+[32m>> [39m332 files created.
+
+[4mRunning "prebuild-less:src" (prebuild-less) task[24m
+(node:11525) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+[32m>> [39m1891 files compiled, 0 files reused
+
+[4mRunning "cson:glob_to_multiple" (cson) task[24m
+[32m>> [39m174 files compiled to JSON.
+
+[4mRunning "peg:glob_to_multiple" (peg) task[24m
+Generating parser from "node_modules/snippets/lib/snippet-body.pegjs"...
+Parser "/build/atom-editor-beta/src/atom-build/Atom Beta/resources/app/node_modules/snippets/lib/snippet-body.js" generated in 31ms.
+
+[4mRunning "generate-license:save" (generate-license) task[24m
+
+[4mRunning "generate-module-cache" task[24m
+
+[4mRunning "compile-packages-slug" task[24m
+
+[4mRunning "set-version" task[24m
+
+[4mRunning "generate-asar" task[24m
+
+[32mDone, without errors.[39m
+
+
+Execution Time (2016-06-01 15:51:24 UTC)
+loading tasks                       1.8s  ▇ 1%
+download-electron               1m 39.7s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 61%
+download-electron-chromedriver      8.1s  ▇▇ 5%
+build                               3.7s  ▇ 2%
+coffee:glob_to_multiple             7.2s  ▇▇ 4%
+prebuild-less:src                  25.9s  ▇▇▇▇▇ 16%
+cson:glob_to_multiple                 4s  ▇ 2%
+generate-module-cache               2.8s  ▇ 2%
+generate-asar                       6.4s  ▇▇ 4%
+Total 2m 43s
+

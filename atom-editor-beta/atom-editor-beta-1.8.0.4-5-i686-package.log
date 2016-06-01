@@ -1,0 +1,11 @@
+(node:16856) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+[4mRunning "install" task[24m
+
+[32mDone, without errors.[39m
+
+
+Execution Time (2016-06-01 15:54:08 UTC)
+loading tasks  1.8s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 61%
+install        1.1s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 39%
+Total 2.9s
+
