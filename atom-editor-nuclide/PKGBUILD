@@ -80,6 +80,7 @@ package() {
   install -Dm755 "$srcdir/${_pkgname}-${_version}" "$pkgdir/usr/bin/${_pkgname}"
 
   install -Dm644 "$srcdir/${_pkgname}-${_version}.desktop" "$pkgdir/usr/share/applications/${_pkgname}.desktop"
-  install -Dm644 "resources/app-icons/stable/png/1024.png" "$pkgdir/usr/share/pixmaps/${_pkgname}.png"
-  install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
+  install -Dm644 "$srcdir/${_version}.png" "$pkgdir/usr/share/pixmaps/${_pkgname}.png"
+  install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/atom-LICENSE.md"
+  install -Dm644 "node_modules/nuclide/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/nuclide-LICENSE.md"
 }
