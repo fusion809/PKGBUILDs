@@ -6,13 +6,14 @@ _version=nuclide
 # Module Versions
 _about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.16
+_atom_ver=1.7.4
 _electron_ver=0.36.12
 _language_gfm2_ver=0.90.3
 _language_liquid_ver=0.5.1
 _nuclide_ver=0.140.0
 
 pkgname=${_pkgname}-editor-${_version}
-pkgver=1.7.4
+pkgver=${_atom_ver}.n${_nuclide_ver}
 pkgrel=1
 pkgdesc="Facebook's Nuclide IDE, built on GitHub's Atom text editor."
 arch=('x86_64' 'i686')
@@ -23,17 +24,19 @@ optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 conflicts=('atom-editor-bin' 'atom-editor')
 install=${_pkgname}-${_version}.install
-source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
+source=("${_pkgname}-${_atom_ver}.tar.gz::$url/archive/v${_atom_ver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
 "${_pkgname}-${_version}.desktop"
+"${_version}.png"
 "${_pkgname}-${_version}")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             '1f9d3d560ab6374b38644e9c55a7c8fa0f8f581758fb2ee0b18c3f8c53aee44f'
-            '2ef6625bb3cf0a7192b183854603b133e24392d14ed0b4340c43feb9693b34c4'
+            '87071472ab03f7f8a755327bb596448eee94d290a3dbabbd70875b433ed66770'
+            '5921605d5898f217b774c481d5a8898da979717a1ea97e0e5ca47d86eb6d639b'
             '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
 
 prepare() {
-  cd "$srcdir/${_pkgname}-$pkgver"
+  cd "$srcdir/${_pkgname}-$_atom_ver"
 
   ## package.json edits
   sed -i -e "/exception-reporting/d" \
@@ -67,13 +70,13 @@ prepare() {
 }
 
 build() {
-  cd "$srcdir/${_pkgname}-$pkgver"
+  cd "$srcdir/${_pkgname}-${_atom_ver}"
   export PYTHON=/usr/bin/python2
   until ./script/build --build-dir "$srcdir/${_pkgname}-build"; do :; done
 }
 
 package() {
-  cd "$srcdir/${_pkgname}-$pkgver"
+  cd "$srcdir/${_pkgname}-${_atom_ver}"
 
   script/grunt install --build-dir "$srcdir/${_pkgname}-build" --install-dir "$pkgdir/usr"
 
@@ -82,5 +85,5 @@ package() {
   install -Dm644 "$srcdir/${_pkgname}-${_version}.desktop" "$pkgdir/usr/share/applications/${_pkgname}.desktop"
   install -Dm644 "$srcdir/${_version}.png" "$pkgdir/usr/share/pixmaps/${_pkgname}.png"
   install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/atom-LICENSE.md"
-  install -Dm644 "node_modules/nuclide/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/nuclide-LICENSE.md"
+  install -Dm644 "node_modules/nuclide/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/nuclide-LICENSE"
 }
