@@ -122,7 +122,7 @@ prepare() {
   sed -i -e "/\"language-toml\": \".*\",/a \
               \"language-viml\": \"${_language_viml_ver}\"," package.json   # Add VimL
 
-  sed -i -e "s/\"language-shellscript\": \".*\"/\"language-shellscript\": \"${_language_shellscript_ver}\"/g" package.json
+  sed -i -e "s/\"language-shellscript\": \".*\"/\"language-shellscript2\": \"${_language_shellscript_ver}\"/g" package.json
 
   sed -i -e "/\"language-shellscript\": \".*\",/i \
               \"language-rpm-spec2\": \"${_language_rpm_spec2_ver}\"," package.json
@@ -141,7 +141,7 @@ prepare() {
  ./script/build || die "Fail fixing verbosity of script/build"
 
  if ! [[ -d node_modules ]]; then
-  mkdir -p node_modules
+   mkdir -p node_modules
  else
    rm -rf node_modules/about-arch
    rm -rf node_modules/browser-plus-fix

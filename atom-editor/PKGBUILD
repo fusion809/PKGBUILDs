@@ -6,7 +6,8 @@ _pkgname=atom
 _about_arch_ver=1.5.16
 _language_gfm2_ver=0.90.3
 _language_liquid_ver=0.5.1
-_language_shellscript_ver=0.22.3
+_language_shellscript2_ver=0.22.3
+_language_shellscript2_url="https://github.com/fusion809/language-shellscript"
 
 pkgname=${_pkgname}-editor
 pkgver=1.7.4
@@ -32,8 +33,10 @@ prepare() {
          -e "/metrics/d" \
          -e 's/0.36.8/0.36.12/g' \
          -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",/g" \
-         -e "s/\"language-shellscript\": \".*\",/\"language-shellscript\": \"${_language_shellscript_ver}\",/g" \
+         -e "s/\"language-shellscript\": \".*\",/\"language-shellscript2\": \"${_language_shellscript2_ver}\",/g" \
          -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
+         -e "/\"dependencies\": {/a \
+                     \"language-shellscript2\": \"${_language_shellscript2_url}\","
          package.json
 
   chmod 755 -R package.json
