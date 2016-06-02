@@ -2,7 +2,7 @@
 # arg 2:  the old package version
 
 KERNEL_NAME=-ck
-KERNEL_VERSION=4.5.4-1-ck
+KERNEL_VERSION=4.5.6-1-ck
 
 post_install () {
   # updating module dependencies
