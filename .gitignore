@@ -28,3 +28,6 @@ node_modules
 browser-plus*
 language-rpm-spec
 linter
+*build.log*
+*prepare.log*
+*package.log*
