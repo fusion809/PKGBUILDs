@@ -22,3 +22,6 @@
 [submodule "blockify"]
 	path = blockify
 	url = https://github.com/fusion809/blockify
+[submodule "brackets"]
+	path = brackets
+	url = https://github.com/fusion809/brackets
