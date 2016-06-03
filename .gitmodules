@@ -52,3 +52,6 @@
 [submodule "ps_mem"]
 	path = ps_mem
 	url = git@github.com:fusion809/ps_mem
+[submodule "shadow-icon-theme"]
+	path = shadow-icon-theme
+	url = git@github.com:fusion809/shadow-icon-theme
