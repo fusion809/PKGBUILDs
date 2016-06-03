@@ -40,3 +40,6 @@
 [submodule "komodo-edit"]
 	path = komodo-edit
 	url = https://github.com/fusion809/komodo-edit
+[submodule "lighttable"]
+	path = lighttable
+	url = https://github.com/fusion809/lighttable
