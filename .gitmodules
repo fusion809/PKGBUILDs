@@ -1,48 +1,51 @@
 [submodule "atom-editor"]
 	path = atom-editor
-	url = https://github.com/fusion809/atom-editor
+	url = git@github.com:fusion809/atom-editor
 [submodule "atom-editor-beta"]
 	path = atom-editor-beta
-	url = https://github.com/fusion809/atom-editor-beta
+	url = git@github.com:fusion809/atom-editor-beta
 [submodule "atom-editor-fusion"]
 	path = atom-editor-fusion
-	url = https://github.com/fusion809/atom-editor-fusion
+	url = git@github.com:fusion809/atom-editor-fusion
 [submodule "atom-editor-git"]
 	path = atom-editor-git
-	url = https://github.com/fusion809/atom-editor-git
+	url = git@github.com:fusion809/atom-editor-git
+[submodule "atom-editor-platformio"]
+	path = atom-editor-nuclide
+	url = git@github.com:fusion809/atom-editor-nuclide
 [submodule "atom-editor-platformio"]
 	path = atom-editor-platformio
-	url = https://github.com/fusion809/atom-editor-platformio
+	url = git@github.com:fusion809/atom-editor-platformio
 [submodule "atom-editor-sync"]
 	path = atom-editor-sync
-	url = https://github.com/fusion809/atom-editor-sync
+	url = git@github.com:fusion809/atom-editor-sync
 [submodule "atom-editor-web"]
 	path = atom-editor-web
-	url = https://github.com/fusion809/atom-editor-web
+	url = git@github.com:fusion809/atom-editor-web
 [submodule "blockify"]
 	path = blockify
-	url = https://github.com/fusion809/blockify
+	url = git@github.com:fusion809/blockify
 [submodule "brackets"]
 	path = brackets
-	url = https://github.com/fusion809/brackets
+	url = git@github.com:fusion809/brackets
 [submodule "codebox"]
 	path = codebox
-	url = https://github.com/fusion809/codebox
+	url = git@github.com:fusion809/codebox
 [submodule "gvim-git"]
 	path = gvim-git
-	url = https://github.com/fusion809/gvim-git
+	url = git@github.com:fusion809/gvim-git
 [submodule "gvim"]
 	path = gvim
-	url = https://github.com/fusion809/gvim
+	url = git@github.com:fusion809/gvim
 [submodule "gvim-gtk3"]
 	path = gvim-gtk3
-	url = https://github.com/fusion809/gvim-gtk3
+	url = git@github.com:fusion809/gvim-gtk3
 [submodule "komodo-edit"]
 	path = komodo-edit
-	url = https://github.com/fusion809/komodo-edit
+	url = git@github.com:fusion809/komodo-edit
 [submodule "lighttable"]
 	path = lighttable
-	url = https://github.com/fusion809/lighttable
+	url = git@github.com:fusion809/lighttable
 [submodule "linux-ck"]
 	path = linux-ck
 	url = git@github.com:fusion809/linux-ck
