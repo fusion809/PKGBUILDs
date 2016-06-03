@@ -28,3 +28,6 @@
 [submodule "codebox"]
 	path = codebox
 	url = https://github.com/fusion809/codebox
+[submodule "gvim-git"]
+	path = gvim-git
+	url = https://github.com/fusion809/gvim-git
