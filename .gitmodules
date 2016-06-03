@@ -31,3 +31,6 @@
 [submodule "gvim-git"]
 	path = gvim-git
 	url = https://github.com/fusion809/gvim-git
+[submodule "gvim"]
+	path = gvim
+	url = https://github.com/fusion809/gvim
