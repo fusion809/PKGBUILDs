@@ -10,7 +10,7 @@ _atom_ver=1.7.4
 _electron_ver=0.36.12
 _language_gfm2_ver=0.90.3
 _language_liquid_ver=0.5.1
-_nuclide_ver=0.140.0
+_nuclide_ver=0.141.0
 
 pkgname=${_pkgname}-editor-${_version}
 pkgver=${_atom_ver}.n${_nuclide_ver}

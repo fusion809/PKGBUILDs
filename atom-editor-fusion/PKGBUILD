@@ -7,10 +7,10 @@ _version=fusion
 _about_url="https://github.com/fusion809/about"
 _about_arch_ver=1.5.16
 _atom_typescript_ver=8.10.2
-_dark_bint_syntax_ver=0.8.4
+_dark_bint_syntax_ver=0.8.5
 _electron_ver=0.36.12
 _file_icons_ver=1.7.13
-_fusion_ui_ver=0.10.3
+_fusion_ui_ver=0.10.5
 _git_plus_ver=5.14.0
 _git_time_machine_ver=1.5.3
 _language_asciidoc2_ver=1.5.0
@@ -22,8 +22,8 @@ _language_gentoo_ver=0.9.0
 _language_gfm2_ver=0.90.3
 _language_groovy_ver=0.6.0
 _language_haskell_ver=1.7.15
-_language_ini2_ver=1.17.2
-_language_ini2_url="https://github.com/fusion809/language-ini2"
+_language_ini_desktop_ver=1.18.0
+_language_ini_desktop_url="https://github.com/fusion809/language-ini-desktop"
 _language_julia_ver=0.6.0
 _language_liquid_ver=0.5.1
 _language_lisp_ver=0.2.0
@@ -35,11 +35,11 @@ _language_patch2_ver=0.1.3
 _language_rpm_spec2_ver=0.9.2
 _language_rpm_spec2_url="https://github.com/fusion809/language-rpm-spec2"
 _language_viml_ver=1.0.0
-_language_shellscript_ver=0.22.3
+_language_unix_shell_ver=0.23.0
 _markdown_scroll_sync_ver=2.1.2
 _markdown_toc_ver=0.4.1
 _minimap_ver=4.24.3
-_nuclide_ver=0.139.0
+_nuclide_ver=0.141.0
 _package_sync_ver=1.1.0
 _pigments_ver=0.29.1
 _script_ver=3.7.3
@@ -52,7 +52,7 @@ pkgdesc='Hackable text editor for the 21st Century, based on web technologies wi
 arch=('x86_64' 'i686')
 url="https://github.com/${_pkgname}/${_pkgname}"
 license=('MIT')
-depends=('alsa-lib' 'desktop-file-utils' 'gconf' 'gtk2' 'libgnome-keyring' 'libnotify' 'libxtst' 'nodejs' 'nss' 'python2')
+depends=('alsa-lib' 'desktop-file-utils' 'gconf' 'gnuplot' 'gtk2' 'libgnome-keyring' 'libnotify' 'libxtst' 'nodejs' 'nss' 'python2')
 optdepends=('gvfs: file deletion support')
 makedepends=('git' 'npm')
 conflicts=('atom-editor-bin' 'atom-editor')
@@ -61,27 +61,35 @@ source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
 "about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
 #"browser-plus-fix-${_browser_plus_fix_ver}.tar.gz::${_browser_plus_fix_url}/archive/v${_browser_plus_fix_ver}.tar.gz"
 "${_pkgname}.desktop"
-"${_pkgname}")
+"${_pkgname}"
+"theme.patch")
 sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
             '1f9d3d560ab6374b38644e9c55a7c8fa0f8f581758fb2ee0b18c3f8c53aee44f'
             'fb6527d029c5edffa89a5085cc1d3eaaa892e18cc2aefa8ce855be7612da4788'
-            '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
+            '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5'
+            '9e990a69b2ce007eac3054fdb5ae9e42f60811a767d8aa37a10da614a5dd68a3')
 
 prepare() {
   cd "$srcdir/${_pkgname}-$pkgver"
 
   ## package.json edits
   sed -i -e "/exception-reporting/d" \
-         -e "/metrics/d" package.json
+         -e "/metrics/d" \
+         -e "/-ui/d" \
+         -e "/-syntax/d" \
+         -e "/-theme/d" package.json
 
   sed -i -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" package.json # switching about with about-arch
 
   sed -i -e "s/\"electronVersion\": \".*\"/\"electronVersion\": \"${_electron_ver}\"/g" package.json              # change electron ver
 
-  sed -i -e "/\"atom-light-syntax\": \".*\"/a \
+  sed -i -e "/\"dependencies\": {/a \
+              \"dark-bint-syntax\": \"https://github.com/fusion809/dark-bint-syntax\"," package.json
+
+  sed -i -e "/\"packageDependencies\": {/a \
               \"dark-bint-syntax\": \"${_dark_bint_syntax_ver}\"," package.json # install dark-bint-syntax
 
-  sed -i -e "/\"atom-light-ui\": \".*\",/a \
+  sed -i -e "/\"dark-bint-syntax\": \"${_dark_bint_syntax_ver}\",/a \
              \"fusion-ui\": \"${_fusion_ui_ver}\"," package.json # install fusion-ui theme
 
   sed -i -e "/\"find-and-replace\": \".*\",/i \
@@ -102,7 +110,7 @@ prepare() {
               \"language-gentoo\": \"${_language_gentoo_ver}\"," package.json # gentoo
 
   sed -i -e "/\"language-hyperlink\": \".*\",/a \
-              \"language-ini2\": \"${_language_ini2_ver}\",\n    \"language-julia\": \"${_language_julia_ver}\"," package.json # Julia
+              \"language-ini-desktop\": \"${_language_ini_desktop_ver}\",\n    \"language-julia\": \"${_language_julia_ver}\"," package.json # Julia
 
   sed -i -e "/\"language-less\": \".*\",/a \
               \"language-liquid\": \"${_language_liquid_ver}\",\n    \"language-lisp\": \"${_language_lisp_ver}\",\n    \"language-lua\": \"${_language_lua_ver}\"," package.json # Add Liquid, Lisp, Lua
@@ -117,12 +125,12 @@ prepare() {
               \"language-patch2\": \"${_language_patch2_url}\"," package.json
 
   sed -i -e "/\"dependencies\": {/a \
-              \"language-asciidoc2\": \"${_language_asciidoc2_url}\",\n    \"language-ini2\": \"${_language_ini2_url}\",\n    \"language-patch2\": \"${_language_patch2_ver}\",\n    \"language-rpm-spec2\": \"${_language_rpm_spec2_url}\"," package.json
+              \"language-asciidoc2\": \"${_language_asciidoc2_url}\",\n    \"language-ini-desktop\": \"${_language_ini_desktop_url}\",\n    \"language-patch2\": \"${_language_patch2_ver}\",\n    \"language-rpm-spec2\": \"${_language_rpm_spec2_url}\"," package.json
 
   sed -i -e "/\"language-toml\": \".*\",/a \
               \"language-viml\": \"${_language_viml_ver}\"," package.json   # Add VimL
 
-  sed -i -e "s/\"language-shellscript\": \".*\"/\"language-shellscript2\": \"${_language_shellscript_ver}\"/g" package.json
+  sed -i -e "s/\"language-shellscript\": \".*\"/\"language-unix-shell\": \"${_language_unix_shell_ver}\"/g" package.json
 
   sed -i -e "/\"language-shellscript\": \".*\",/i \
               \"language-rpm-spec2\": \"${_language_rpm_spec2_ver}\"," package.json
@@ -146,13 +154,15 @@ prepare() {
    rm -rf node_modules/about-arch
    rm -rf node_modules/browser-plus-fix
    rm -rf node_modules/language-asciidoc2
-   rm -rf node_modules/language-rpm-spec
+   rm -rf node_modules/language-rpm-spec2
  fi
 
   mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
   mv $srcdir/about-arch node_modules
   sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
   sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
+
+  patch -Np1 < $srcdir/theme.patch
 }
 
 build() {
