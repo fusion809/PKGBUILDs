@@ -67,3 +67,6 @@
 [submodule "textadept"]
 	path = textadept
 	url = git@github.com:fusion809/textadept
+[submodule "visual-studio-code"]
+	path = visual-studio-code
+	url = git@github.com:fusion809/visual-studio-code
