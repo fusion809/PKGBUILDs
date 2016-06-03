@@ -16,3 +16,6 @@
 [submodule "atom-editor-sync"]
 	path = atom-editor-sync
 	url = https://github.com/fusion809/atom-editor-sync
+[submodule "atom-editor-web"]
+	path = atom-editor-web
+	url = https://github.com/fusion809/atom-editor-web
