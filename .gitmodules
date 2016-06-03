@@ -1,3 +1,6 @@
 [submodule "atom-editor"]
 	path = atom-editor
 	url = https://github.com/fusion809/atom-editor
+[submodule "atom-editor-beta"]
+	path = atom-editor-beta
+	url = https://github.com/fusion809/atom-editor-beta
