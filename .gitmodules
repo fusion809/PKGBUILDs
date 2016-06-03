@@ -55,3 +55,6 @@
 [submodule "shadow-icon-theme"]
 	path = shadow-icon-theme
 	url = git@github.com:fusion809/shadow-icon-theme
+[submodule "shadow-icon-theme-git"]
+	path = shadow-icon-theme-git
+	url = git@github.com:fusion809/shadow-icon-theme-git
