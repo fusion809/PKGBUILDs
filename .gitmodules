@@ -61,3 +61,6 @@
 [submodule "sublime-text"]
 	path = sublime-text
 	url = git@github.com:fusion809/sublime-text
+[submodule "sublime-text-dev"]
+	path = sublime-text-dev
+	url = git@github.com:fusion809/sublime-text-dev
