@@ -43,3 +43,6 @@
 [submodule "lighttable"]
 	path = lighttable
 	url = https://github.com/fusion809/lighttable
+[submodule "linux-ck"]
+	path = linux-ck
+	url = git@github.com:fusion809/linux-ck
