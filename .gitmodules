@@ -46,3 +46,6 @@
 [submodule "linux-ck"]
 	path = linux-ck
 	url = git@github.com:fusion809/linux-ck
+[submodule "messengerfordesktop"]
+	path = messengerfordesktop
+	url = git@github.com:fusion809/messengerfordesktop
