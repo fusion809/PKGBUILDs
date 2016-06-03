@@ -25,3 +25,6 @@
 [submodule "brackets"]
 	path = brackets
 	url = https://github.com/fusion809/brackets
+[submodule "codebox"]
+	path = codebox
+	url = https://github.com/fusion809/codebox
