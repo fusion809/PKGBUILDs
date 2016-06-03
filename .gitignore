@@ -20,8 +20,6 @@ atom/
 *.rpm
 npm*.log
 Shadow
-brackets/*
-brackets-shell/*
 */vscode
 */*/vscode
 node_modules
