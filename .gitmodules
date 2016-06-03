@@ -19,3 +19,6 @@
 [submodule "atom-editor-web"]
 	path = atom-editor-web
 	url = https://github.com/fusion809/atom-editor-web
+[submodule "blockify"]
+	path = blockify
+	url = https://github.com/fusion809/blockify
