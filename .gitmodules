@@ -10,3 +10,6 @@
 [submodule "atom-editor-git"]
 	path = atom-editor-git
 	url = https://github.com/fusion809/atom-editor-git
+[submodule "atom-editor-platformio"]
+	path = atom-editor-platformio
+	url = https://github.com/fusion809/atom-editor-platformio
