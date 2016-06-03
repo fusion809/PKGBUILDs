@@ -49,3 +49,6 @@
 [submodule "messengerfordesktop"]
 	path = messengerfordesktop
 	url = git@github.com:fusion809/messengerfordesktop
+[submodule "ps_mem"]
+	path = ps_mem
+	url = git@github.com:fusion809/ps_mem
