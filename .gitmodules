@@ -13,3 +13,6 @@
 [submodule "atom-editor-platformio"]
 	path = atom-editor-platformio
 	url = https://github.com/fusion809/atom-editor-platformio
+[submodule "atom-editor-sync"]
+	path = atom-editor-sync
+	url = https://github.com/fusion809/atom-editor-sync
