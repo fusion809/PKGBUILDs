@@ -34,3 +34,6 @@
 [submodule "gvim"]
 	path = gvim
 	url = https://github.com/fusion809/gvim
+[submodule "gvim-gtk3"]
+	path = gvim-gtk3
+	url = https://github.com/fusion809/gvim-gtk3
