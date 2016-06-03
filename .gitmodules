@@ -1,0 +1,3 @@
+[submodule "atom-editor"]
+	path = atom-editor
+	url = https://github.com/fusion809/atom-editor
