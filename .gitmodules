@@ -76,3 +76,6 @@
 [submodule "visual-studio-code-oss"]
 	path = visual-studio-code-oss
 	url = git@github.com:fusion809/visual-studio-code-oss
+[submodule "atom-editor-git"]
+	path = atom-editor-git
+	url = git@github.com:fusion809/atom-editor-git
