@@ -3,7 +3,9 @@ do
 	cd "$i"
 	git remote rm origin
 	git remote rm upstream
-	git remote add origin git@github.com:fusion809/$i.git
-	git remote add upstream git@github.com:fusion809/$i.git
+	CWD=${PWD##*/}
+	GWD="${CWD#.}"
+	git remote add origin git@github.com:fusion809/$GWD.git
+	git remote add upstream git@github.com:fusion809/$GWD.git
 	cd -
 done
