@@ -79,3 +79,6 @@
 [submodule "atom-editor-nuclide"]
 	path = atom-editor-nuclide
 	url = git@github.com:fusion809/atom-editor-nuclide
+[submodule "atom-editor-arch"]
+	path = atom-editor-arch
+	url = git@github.com:fusion809/atom-editor-arch.git
