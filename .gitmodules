@@ -1,12 +1,18 @@
 [submodule "atom-editor"]
 	path = atom-editor
 	url = git@github.com:fusion809/atom-editor
+[submodule "atom-editor-arch"]
+	path = atom-editor-arch
+	url = git@github.com:fusion809/atom-editor-arch.git
 [submodule "atom-editor-beta"]
 	path = atom-editor-beta
 	url = git@github.com:fusion809/atom-editor-beta
 [submodule "atom-editor-fusion"]
 	path = atom-editor-fusion
 	url = git@github.com:fusion809/atom-editor-fusion
+[submodule "atom-editor-nuclide"]
+	path = atom-editor-nuclide
+	url = git@github.com:fusion809/atom-editor-nuclide
 [submodule "atom-editor-platformio"]
 	path = atom-editor-platformio
 	url = git@github.com:fusion809/atom-editor-platformio
@@ -73,12 +79,3 @@
 [submodule "visual-studio-code-oss"]
 	path = visual-studio-code-oss
 	url = git@github.com:fusion809/visual-studio-code-oss
-[submodule "atom-editor-git"]
-	path = atom-editor-git
-	url = git@github.com:fusion809/atom-editor-git
-[submodule "atom-editor-nuclide"]
-	path = atom-editor-nuclide
-	url = git@github.com:fusion809/atom-editor-nuclide
-[submodule "atom-editor-arch"]
-	path = atom-editor-arch
-	url = git@github.com:fusion809/atom-editor-arch.git
