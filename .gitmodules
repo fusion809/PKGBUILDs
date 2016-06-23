@@ -85,3 +85,9 @@
 [submodule "atom-editor-beta-arch"]
 	path = atom-editor-beta-arch
 	url = https://github.com/fusion809/atom-editor-beta-arch
+[submodule "ubuntu-wallpapers"]
+	path = ubuntu-wallpapers
+	url = git@github.com:fusion809/ubuntu-wallpapers.git
+[submodule "linux-lts-ck"]
+	path = linux-lts-ck
+	url = git@github.com:fusion809/linux-lts-ck.git
