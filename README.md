@@ -1,6 +1,6 @@
 # Arch PKGBUILDs
 
-This repository is composed of PKGBUILDs I have written (or modified from existing packages in the Arch Build Service and Arch User Repository) to help me install packages not in the AUR or pacman repos, or in the case of packages already in either class of repository, these PKGBUILDs have amendments to make them better suit my purposes. The contents of this repository are licensed under GPLv3\. Despite this, you should probably be made aware of the fact that some of the packages these PKGBUILDs are for building are not necessarily FOSS. This repository was set up prior to when I set up my **Open Build Service Arch_Extra Branch** (**OBSAEB**) in March 2016\. Most PKGBUILDs in this repository ended up being moved to this branch. The only exceptions are those that for whatever reason are unsuitable for my OBSAEB. 
+This repository is composed of PKGBUILDs I have written (or modified from existing packages in the Arch Build Service and Arch User Repository) to help me install packages not in the AUR or pacman repos, or in the case of packages already in either class of repository, these PKGBUILDs have amendments to make them better suit my purposes. The contents of this repository are licensed under GPLv3\. Despite this, you should probably be made aware of the fact that some of the packages these PKGBUILDs are for building are not necessarily FOSS. This repository was set up prior to when I set up my **Open Build Service Arch_Extra Branch** (**OBSAEB**) in March 2016\. Most PKGBUILDs in this repository ended up being moved to this branch. The only exceptions are those that for whatever reason are unsuitable for my OBSAEB.
 
 While this repository is primarily designed to provide me with the packages I want, I am willing to turn it into a community repo with packages that others want too. Merely start a [new issue](https://github.com/fusion809/PKGBUILDs/issues/new) or file a pull request, if you want a new package added or have modification suggests for existing packages. I am even willing to add suitable packages to my OBSAEB. Despite this, I have written an [article](https://fusion809.github.io/package-development), in [*The Hornery*](https://fusion809.github.io) about how you can set up your own OBS Project and write PKGBUILDs.
 
@@ -93,33 +93,13 @@ stable builds also have the latest version of the [`language-shellscript`](https
 
 The `atom-editor-beta` package, unlike that in the AUR, should also persevere despite intermittent network connectivity issues and **can** be installed alongside `atom-editor` on the same machine. These two packages require Internet access during their build, so I cannot add them to my OBSAEB.
 
-### [-fusion](/atom-editor-fusion/)
-
-The `atom-editor-fusion` package has my preferred set of packages and themes pre-installed. The extra pre-installed themes include:
-
-- [`dark-bint-syntax`](https://atom.io/themes/dark-bint-syntax)
-- [`fusion-ui`](https://atom.io/themes/fusion-ui)<sup>M</sup> &mdash; my custom theme.
-
-while the extra pre-installed packages include:
-
-- [`file-icons`](https://atom.io/packages/file-icons) &mdash; a package that provides assigns icons to files in the tree view, according to their file type.
-- [`language-ini2`](https://atom.io/packages/language-ini2)<sup>M</sup> &mdash; my own fork of the [`language-ini`](https://atom.io/packages/language-ini) package with better syntax-highlighting of desktop configuration files.
-
 ### [-git](/atom-editor-git/)
 
 The `atom-editor-git` package, uses a different package version than that in the AUR.
 
-### [-nuclide](/atom-editor-nuclide/)
-
-The `atom-editor-nuclide` PKGBUILD builds Atom with the `nuclide` package (which is developed by Facebook to facilitate web development) pre-installed.
-
 ### [-sync](/atom-editor-sync/)
 
 `atom-editor-sync` builds Atom (the latest stable version) with the `package-sync` package pre-installed to allow for the easy installation of packages listed in a `packages.cson` file.
-
-### [-web](/atom-editor-web/)
-
-`atom-editor-web` builds Atom with several packages intended for web development, pre-installed, to allow for the easy diving into web development after installing Atom. These packages include:
 
 ## [brackets](/brackets/)
 
