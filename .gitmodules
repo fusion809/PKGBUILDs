@@ -91,3 +91,12 @@
 [submodule "linux-lts-ck"]
 	path = linux-lts-ck
 	url = git@github.com:fusion809/linux-lts-ck.git
+[submodule "code"]
+	path = code
+	url = git://github.com/fusion809/code.git
+[submodule "code-oss"]
+	path = code-oss
+	url = git://github.com/fusion809/code-oss.git
+[submodule "code-git"]
+	path = code-git
+	url = git://github.com/fusion809/code-git.git
