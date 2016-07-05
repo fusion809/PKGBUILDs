@@ -109,3 +109,6 @@
 [submodule "efl-git"]
 	path = efl-git
 	url = git://github.com/fusion809/efl-git.git
+[submodule "libudev.so.0"]
+	path = libudev.so.0
+	url = git://github.com/fusion809/libudev.so.0.git
