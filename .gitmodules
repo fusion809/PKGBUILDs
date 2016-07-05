@@ -100,3 +100,6 @@
 [submodule "code-git"]
 	path = code-git
 	url = git://github.com/fusion809/code-git.git
+[submodule "atom-editor-base"]
+	path = atom-editor-base
+	url = git://github.com/fusion809/atom-editor-base.git
