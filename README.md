@@ -18,6 +18,11 @@ While this repository is primarily designed to provide me with the packages I wa
 
 - [brackets](#brackets)
 
+- [code](#code)
+
+  - [-git](#code-git)
+  - [-oss](#code-oss)
+
 - [codebox](#codebox)
 
 - [komodo-edit/lighttable/sublime-text{,-dev}](#komodo-edit&mdash;lighttable&mdash;sublime-text-dev)
@@ -31,11 +36,6 @@ While this repository is primarily designed to provide me with the packages I wa
 - [textadept](#textadept)
 
 - [Vim](#vim)
-
-- [visual-studio-code](#visual-studio-code)
-
-  - [-git](#visual-studio-code-git)
-  - [-oss](#visual-studio-code-oss)
 
 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
 
@@ -53,6 +53,11 @@ The list of separate packages in this repository includes:
 
 - [brackets](/brackets/)
 
+- [code](/code/)
+
+  - [-git](/code-git/)
+  - [-oss](/code-oss/)
+
 - [codebox](/codebox/)
 
 - [gvim](/gvim/)
@@ -69,11 +74,6 @@ The list of separate packages in this repository includes:
   - [-dev](/sublime-text-dev/)
 
 - [textadept](/textadept/)
-
-- [visual-studio-code](/visual-studio-code/)
-
-  - [-git](/visual-studio-code-git/)
-  - [-oss](/visual-studio-code-oss/)
 
 ## [atom-editor](/atom-editor/)
 **Note:** <sup>M</sup> *superscript indicates packages/themes I created (worthwhile mentioning to date, however, none of my packages are original, rather they are all forks).*
@@ -104,6 +104,22 @@ The `atom-editor-git` package, uses a different package version than that in the
 ## [brackets](/brackets/)
 
 The `brackets` package has a few minor improvements over the one in the AUR. For example, it uses a customized desktop file, with support for several other text files.
+
+## [code](/code/)
+
+This PKGBUILD builds a Visual Studio Code (VScode) package from the pre-compiled Linux zip archives released officially by Microsoft. It is important to note, that while the packages built by `-git` and `-oss` PKGBUILDs are MIT-licensed, this package is **not** and is rather licensed under a proprietary
+
+<abbr title="End-User License Agreement">EULA</abbr>
+
+license.
+
+### [-git](/code-git/)
+
+This PKGBUILD builds the Visual Studio Code (VScode) text editor from the latest source code in its official git repository. It can be installed simultaneously with the stable version mentioned below (unlike the `code-git` package in the AUR which cannot be installed simultaneously with `code-oss`).
+
+### [-oss](/code-oss/)
+
+This PKGBUILD builds the latest stable release of VScode from source code. It fixes an error I noticed in the `code-oss` PKGBUILD of the AUR, that prevented it from building correctly (namely with respect to the amount of RAM accessible to `node`) and also provides a desktop configuration file with `MimeType` support for several extra file formats. It even builds the extension manager, that is not normally built with OSS builds of VSCode.
 
 ## [codebox](/codebox/)
 
@@ -142,19 +158,3 @@ makepkg -si &mdash;noconfirm
 The `gvim-git` package in this repository is a combination of the `gvim-git` and `vim-runtime-git` packages in the AUR. I merged these packages to save bandwidth and disk space, as both PKGBUILDs clone the same [GitHub repository](https://github.com/vim/vim). Likewise the `gvim` package in this repository is also a combination of the `gvim` and `vim-runtime` packages in the `[extra]` pacman repository, except it is updated more frequently. I have also added the `gvim` package to my [OBSAEB](https://build.opensuse.org/package/show/home:fusion809:arch_extra/gvim) it is also here because the OBS usually takes several hours before any commits I push there will result in an updated package in this repository.
 
 The desktop configuration files of [`gvim`](/gvim/), [`gvim-git`](/gvim-git/) and [`gvim-gtk3`](/gvim-gtk3/) have in-built MIME type support for several file formats.
-
-## [visual-studio-code](/visual-studio-code/)
-
-This PKGBUILD builds a Visual Studio Code (VScode) package from the pre-compiled Linux zip archives released officially by Microsoft. It is important to note, that while the packages built by `-git` and `-oss` PKGBUILDs are MIT-licensed, this package is **not** and is rather licensed under a proprietary
-
-<abbr title="End-User License Agreement">EULA</abbr>
-
-license.
-
-### [-git](/visual-studio-code-git/)
-
-This PKGBUILD builds the Visual Studio Code (VScode) text editor from the latest source code in its official git repository. It can be installed simultaneously with the stable version mentioned below (unlike the `visual-studio-code-git` package in the AUR which cannot be installed simultaneously with `visual-studio-code-oss`).
-
-### [-oss](/visual-studio-code-oss/)
-
-This PKGBUILD builds the latest stable release of VScode from source code. It fixes an error I noticed in the `visual-studio-code-oss` PKGBUILD of the AUR, that prevented it from building correctly (namely with respect to the amount of RAM accessible to `node`) and also provides a desktop configuration file with `MimeType` support for several extra file formats. It even builds the extension manager, that is not normally built with OSS builds of VSCode.
