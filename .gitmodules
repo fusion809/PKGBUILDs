@@ -112,3 +112,6 @@
 [submodule "libudev.so.0"]
 	path = libudev.so.0
 	url = git://github.com/fusion809/libudev.so.0.git
+[submodule "codelite"]
+	path = codelite
+	url = git://github.com/fusion809/codelite.git
