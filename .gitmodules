@@ -115,3 +115,12 @@
 [submodule "codelite"]
 	path = codelite
 	url = git://github.com/fusion809/codelite.git
+[submodule "nodejs"]
+	path = nodejs
+	url = git://github.com/fusion809/nodejs.git
+[submodule "nodejs-lts"]
+	path = nodejs-lts
+	url = git://github.com/fusion809/nodejs-lts.git
+[submodule "fusion809/osx-arc-white-git"]
+	path = fusion809/osx-arc-white-git
+	url = git://github.com/fusion809/octave.git
