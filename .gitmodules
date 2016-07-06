@@ -124,3 +124,12 @@
 [submodule "fusion809/osx-arc-white-git"]
 	path = fusion809/osx-arc-white-git
 	url = git://github.com/fusion809/octave.git
+[submodule "octave"]
+	path = octave
+	url = git://github.com/fusion809/octave.git
+[submodule "osx-arc-white-git"]
+	path = osx-arc-white-git
+	url = git://github.com/fusion809/osx-arc-white-git.git
+[submodule "virtualbox"]
+	path = virtualbox
+	url = git://github.com/fusion809/virtualbox.git
