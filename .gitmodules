@@ -133,3 +133,6 @@
 [submodule "virtualbox"]
 	path = virtualbox
 	url = git://github.com/fusion809/virtualbox.git
+[submodule "arch-atom"]
+	path = arch-atom
+	url = git://github.com/fusion809/arch-atom.git
