@@ -136,3 +136,6 @@
 [submodule "arch-atom"]
 	path = arch-atom
 	url = git://github.com/fusion809/arch-atom.git
+[submodule "github-release"]
+	path = github-release
+	url = git://github.com/fusion809/github-release.git
