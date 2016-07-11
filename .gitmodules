@@ -142,3 +142,6 @@
 [submodule "geany"]
 	path = geany
 	url = git://github.com/fusion809/geany.git
+[submodule "hugo"]
+	path = hugo
+	url = git://github.com/fusion809/hugo.git
