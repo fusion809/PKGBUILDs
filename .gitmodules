@@ -139,3 +139,6 @@
 [submodule "github-release"]
 	path = github-release
 	url = git://github.com/fusion809/github-release.git
+[submodule "geany"]
+	path = geany
+	url = git://github.com/fusion809/geany.git
