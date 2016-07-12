@@ -1,6 +1,6 @@
 # Arch PKGBUILDs
 
-This repository is composed of PKGBUILDs I have written (or modified from existing packages in the Arch Build Service and Arch User Repository) to help me install packages not in the AUR or pacman repos, or in the case of packages already in either class of repository, these PKGBUILDs have amendments to make them better suit my purposes. The contents of this repository are licensed under GPLv3\. Despite this, you should probably be made aware of the fact that some of the packages these PKGBUILDs are for building are not necessarily FOSS. This repository was set up prior to when I set up my **Open Build Service Arch_Extra Branch** (**OBSAEB**) in March 2016\. Most PKGBUILDs in this repository ended up being moved to this branch. The only exceptions are those that for whatever reason are unsuitable for my OBSAEB.
+This repository is composed of PKGBUILDs I have written (or modified from existing packages in the Arch Build Service and Arch User Repository) to help me install packages not in the AUR or pacman repos, or in the case of packages already in either class of repository, these PKGBUILDs have amendments to make them better suit my purposes. The contents of this repository are licensed under GPLv3. Despite this, you should probably be made aware of the fact that some of the packages these PKGBUILDs are for building are not necessarily FOSS. This repository was set up prior to when I set up my **Open Build Service Arch_Extra Branch** (**OBSAEB**) in March 2016. Most PKGBUILDs in this repository ended up being moved to this branch. The only exceptions are those that for whatever reason are unsuitable for my OBSAEB. Or ones that I wanted to hang onto. The OBS has a few issues that GitHub Arch repositories do not, see [this post on *The Hornery*](https://fusion809.github.io/how-to-create-archlinux-repository/) for details.
 
 While this repository is primarily designed to provide me with the packages I want, I am willing to turn it into a community repo with packages that others want too. Merely start a [new issue](https://github.com/fusion809/PKGBUILDs/issues/new) or file a pull request, if you want a new package added or have modification suggests for existing packages. I am even willing to add suitable packages to my OBSAEB. Despite this, I have written an [article](https://fusion809.github.io/package-development), in [*The Hornery*](https://fusion809.github.io) about how you can set up your own OBS Project and write PKGBUILDs.
 
@@ -25,6 +25,12 @@ While this repository is primarily designed to provide me with the packages I wa
 
 - [codebox](#codebox)
 
+- [geany](#geany)
+
+- [github-release](#github-release)
+
+- [gothub](#gothub)
+
 - [komodo-edit/lighttable/sublime-text{,-dev}](#komodo-edit&mdash;lighttable&mdash;sublime-text-dev)
 
 - [linux-ck](#linux-ck)
@@ -42,6 +48,10 @@ While this repository is primarily designed to provide me with the packages I wa
 ## List of Packages
 
 The list of separate packages in this repository includes:
+
+### GitHub Tools
+* [github-release](#github-release)
+* [gothub](#gothub)
 
 ### Integrated Development Environments / Text Editors
 
@@ -124,6 +134,12 @@ This PKGBUILD builds the latest stable release of VScode from source code. It fi
 ## [codebox](/codebox/)
 
 The `codebox` PKGBUILD is provided here with tweaks to make it build properly, unlike the one it is derived from in the AUR.
+
+## [github-release](/github-release/)
+The `github-release` package is an Arch Linux package for the [github-release](https://github.com/aktau/github-release) program written in Go by [@aktau](https://github.com/aktau). This program allows you to edit tagged releases, their notes and the attached binaries that come with them.
+
+## [gothub](/gothub/)
+The `gothub` package is an Arch Linux package for the [gothub](https://github.com/itchio/gothub) fork of aktau's github-release program. The upstream gothub package is more actively maintained than the github-release package and it includes an extra ability, namely the ability to replace binaries attached to a tagged release.
 
 ## [komodo-edit](/komodo-edit/) / [lighttable](/lighttable/) / [sublime-text](/sublime-text/){,[-dev](/sublime-text-dev/)}
 
