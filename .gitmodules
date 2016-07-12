@@ -145,3 +145,6 @@
 [submodule "hugo"]
 	path = hugo
 	url = git://github.com/fusion809/hugo.git
+[submodule "gothub"]
+	path = gothub
+	url = git://github.com/fusion809/gothub.git
