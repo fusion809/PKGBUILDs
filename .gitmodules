@@ -151,3 +151,6 @@
 [submodule "emacs-git-gtk2"]
 	path = emacs-git-gtk2
 	url = git://github.com/fusion809/emacs-git-gtk2.git
+[submodule "kilo-git"]
+	path = kilo-git
+	url = git://github.com/fusion809/kilo-git.git
