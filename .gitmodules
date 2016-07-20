@@ -154,3 +154,6 @@
 [submodule "kilo-git"]
 	path = kilo-git
 	url = git://github.com/fusion809/kilo-git.git
+[submodule "atom-editor-beta-base"]
+	path = atom-editor-beta-base
+	url = git://github.com/fusion809/atom-editor-beta-base.git
