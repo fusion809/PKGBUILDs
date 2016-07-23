@@ -84,7 +84,7 @@
 	url = git@github.com:fusion809/atom-editor-git
 [submodule "atom-editor-beta-arch"]
 	path = atom-editor-beta-arch
-	url = https://github.com/fusion809/atom-editor-beta-arch
+	url = git@github.com:fusion809/atom-editor-beta-arch
 [submodule "ubuntu-wallpapers"]
 	path = ubuntu-wallpapers
 	url = git@github.com:fusion809/ubuntu-wallpapers.git
