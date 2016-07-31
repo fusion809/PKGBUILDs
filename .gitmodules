@@ -157,3 +157,6 @@
 [submodule "atom-editor-beta-base"]
 	path = atom-editor-beta-base
 	url = git://github.com/fusion809/atom-editor-beta-base.git
+[submodule "openra-git"]
+	path = openra-git
+	url = git://github.com/fusion809/openra-git.git
