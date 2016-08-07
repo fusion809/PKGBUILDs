@@ -9,7 +9,7 @@
 	url = git@github.com:fusion809/atom-editor-beta
 [submodule "atom-editor-fusion"]
 	path = atom-editor-fusion
-	url = git@github.com:fusion809/atom-editor-fusion
+	url = git://github.com/fusion809/atom-editor-fusion.git
 [submodule "atom-editor-nuclide"]
 	path = atom-editor-nuclide
 	url = git@github.com:fusion809/atom-editor-nuclide
