@@ -160,3 +160,6 @@
 [submodule "openra-git"]
 	path = openra-git
 	url = git://github.com/fusion809/openra-git.git
+[submodule "openra"]
+	path = openra
+	url = git://github.com/fusion809/openra.git
