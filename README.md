@@ -4,7 +4,7 @@ This repository is composed of PKGBUILDs I have written (or modified from existi
 
 While this repository is primarily designed to provide me with the packages I want, I am willing to turn it into a community repo with packages that others want too. Merely start a [new issue](https://github.com/fusion809/PKGBUILDs/issues/new) or file a pull request, if you want a new package added or have modification suggests for existing packages. I am even willing to add suitable packages to my OBSAEB. Despite this, I have written an [article](https://fusion809.github.io/package-development), in [*The Hornery*](https://fusion809.github.io) about how you can set up your own OBS Project and write PKGBUILDs.
 
-Several of these packages are built as binaries and attached to the [current tag](https://github.com/fusion809/PKGBUILDs/releases/tag/current), alongside some package database files. This allows me to create a binary package repository from which users can download and install binaries using pacman. 
+Several of these packages are built as binaries and attached to the [current tag](https://github.com/fusion809/PKGBUILDs/releases/tag/current), alongside some package database files. This allows me to create a binary package repository from which users can download and install binaries using pacman.
 
 ## Table of Contents
 
@@ -12,12 +12,7 @@ Several of these packages are built as binaries and attached to the [current tag
 
   - [Integrated Development Environments / Text Editors](#integrated-development-environments&mdash;text-editors)
 
-- [arch-atom](#arch-atom)
-
-  - [apm-bleeding](#apm-bleeding)
-  - [atom-bleeding](#atom-bleeding)
-  - [electron](#electron)
-
+- [atom-bleeding](#atom-bleeding)
 - [atom-editor](#atom-editor)
 
   - [-beta](#-beta)
@@ -89,15 +84,17 @@ The list of separate packages in this repository includes:
 
 ### Integrated Development Environments / Text Editors
 
-- [arch-atom](/arch-atom/)
-
-  - [apm-bleeding](/apm-bleeding/)
-  - [atom-bleeding](/atom-bleeding/)
-  - [electron](/electron/)
+- [atom-bleeding](/atom-bleeding/)
 
 - [atom-editor](/atom-editor/)
 
+  - [-arch](/atom-editor-arch/)
+  - [-base](/atom-editor-base/)
   - [-beta](/atom-editor-beta/)
+  - [-beta-arch](/atom-editor-beta-arch/)
+  - [-beta-base](/atom-editor-beta-base/)
+  - [-beta-fusion](/atom-editor-beta-fusion/)
+  - [-fusion](/atom-editor-fusion/)
   - [-git](/atom-editor-git/)
   - [-sync](/atom-editor-sync/)
 
@@ -142,8 +139,8 @@ The list of separate packages in this repository includes:
 - [nodejs](/nodejs/)
 - [nodejs-lts](/nodejs-lts/)
 
-## [arch-atom](/arch-atom/)
-This submodule was forked from the [tensor5/arch-atom](tensor5/arch-atom) GitHub repository. The main difference is that they provide a more bleeding-edge version of Atom (`atom-bleeding`), with several core packages removed so that they can be managed with APM. The packages that I bundled with it are either (1) required for the successful building of the package or (2) need to compiled against the version of Electron that Atom uses in order to work. Packages that fit the mould of (2) are bundled with `atom-bleeding` because I have set up `atom-bleeding` to be installed simultaneously to `atom-editor-base`, which uses a different version of Electron. So if the package needs to be build against the version of Electron Atom is using then I would need to recompile these packages' build modules every time I switch between builds of Atom.
+## [atom-bleeding](/atom-bleeding/)
+This PKGBUILD builds Atom with the latest Electron and APM, and latest version of all of its bundled packages. Some extra custom bundled packages have been added to turn Atom into an IDE. 
 
 ## [atom-editor](/atom-editor/)
 **Note:** <sup>M</sup> *superscript indicates packages/themes I created (worthwhile mentioning to date, however, none of my packages are original, rather they are all forks).*
