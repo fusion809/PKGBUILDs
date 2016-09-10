@@ -163,3 +163,6 @@
 [submodule "openra"]
 	path = openra
 	url = git://github.com/fusion809/openra.git
+[submodule "atom-bleeding"]
+	path = atom-bleeding
+	url = git://github.com/fusion809/atom-bleeding.git
