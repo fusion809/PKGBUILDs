@@ -64,8 +64,6 @@ Several of these packages are built as binaries and attached to the [current tag
 
 - [Vim](#vim)
 
-- [virtualbox](#virtualbox)
-
 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
 
 ## List of Packages
@@ -140,7 +138,7 @@ The list of separate packages in this repository includes:
 - [nodejs-lts](/nodejs-lts/)
 
 ## [atom-bleeding](/atom-bleeding/)
-This PKGBUILD builds Atom with the latest Electron and APM, and latest version of all of its bundled packages. Some extra custom bundled packages have been added to turn Atom into an IDE. 
+This PKGBUILD builds Atom with the latest Electron and APM, and latest version of all of its bundled packages. Some extra custom bundled packages have been added to turn Atom into an IDE.
 
 ## [atom-editor](/atom-editor/)
 **Note:** <sup>M</sup> *superscript indicates packages/themes I created (worthwhile mentioning to date, however, none of my packages are original, rather they are all forks).*
@@ -248,6 +246,3 @@ makepkg -si &mdash;noconfirm
 The `gvim-git` package in this repository is a combination of the `gvim-git` and `vim-runtime-git` packages in the AUR. I merged these packages to save bandwidth and disk space, as both PKGBUILDs clone the same [GitHub repository](https://github.com/vim/vim). Likewise the `gvim` package in this repository is also a combination of the `gvim` and `vim-runtime` packages in the `[extra]` pacman repository, except it is updated more frequently. I have also added the `gvim` package to my [OBSAEB](https://build.opensuse.org/package/show/home:fusion809:arch_extra/gvim) it is also here because the OBS usually takes several hours before any commits I push there will result in an updated package in this repository.
 
 The desktop configuration files of [`gvim`](/gvim/), [`gvim-git`](/gvim-git/) and [`gvim-gtk3`](/gvim-gtk3/) have in-built MIME type support for several file formats.
-
-## [virtualbox](/virtualbox/)
-This PKGBUILD is a copy of the `virtualbox` in the `[community]` repository. I keep it as I know that VirtualBox packages tend to take a few days to get into the `[community]` repo.
