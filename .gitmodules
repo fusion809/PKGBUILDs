@@ -166,3 +166,6 @@
 [submodule "atom-bleeding"]
 	path = atom-bleeding
 	url = git://github.com/fusion809/atom-bleeding.git
+[submodule "atom-editor-beta-fusion"]
+	path = atom-editor-beta-fusion
+	url = git://github.com/fusion809/atom-editor-beta-fusion.git
