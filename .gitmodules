@@ -169,3 +169,6 @@
 [submodule "atom-editor-beta-fusion"]
 	path = atom-editor-beta-fusion
 	url = git://github.com/fusion809/atom-editor-beta-fusion.git
+[submodule "mono"]
+	path = mono
+	url = git://github.com/fusion809/mono.git
