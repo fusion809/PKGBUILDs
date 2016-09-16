@@ -172,3 +172,6 @@
 [submodule "mono"]
 	path = mono
 	url = git://github.com/fusion809/mono.git
+[submodule "monodevelop"]
+	path = monodevelop
+	url = git://github.com/fusion809/monodevelop.git
