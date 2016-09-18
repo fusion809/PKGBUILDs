@@ -178,3 +178,6 @@
 [submodule "supertux-git"]
 	path = supertux-git
 	url = git://github.com/fusion809/supertux-git.git
+[submodule "emacs-gtk2"]
+	path = emacs-gtk2
+	url = git://github.com/fusion809/emacs-gtk2.git
