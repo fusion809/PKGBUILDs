@@ -175,3 +175,6 @@
 [submodule "monodevelop"]
 	path = monodevelop
 	url = git://github.com/fusion809/monodevelop.git
+[submodule "supertux-git"]
+	path = supertux-git
+	url = git://github.com/fusion809/supertux-git.git
