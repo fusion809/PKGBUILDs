@@ -181,3 +181,6 @@
 [submodule "emacs-gtk2"]
 	path = emacs-gtk2
 	url = git://github.com/fusion809/emacs-gtk2.git
+[submodule "gvim-gtk2"]
+	path = gvim-gtk2
+	url = git://github.com/fusion809/gvim-gtk2.git
