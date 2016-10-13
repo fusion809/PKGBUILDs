@@ -184,3 +184,6 @@
 [submodule "gvim-gtk2"]
 	path = gvim-gtk2
 	url = git://github.com/fusion809/gvim-gtk2.git
+[submodule "messengerfordesktop-bin"]
+	path = messengerfordesktop-bin
+	url = git://github.com/fusion809/messengerfordesktop-bin.git
