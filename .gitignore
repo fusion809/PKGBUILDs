@@ -29,3 +29,5 @@ linter
 *build.log*
 *prepare.log*
 *package.log*
+*.db
+*.files
