@@ -39,7 +39,7 @@
 	url = git@github.com:fusion809/gvim
 [submodule "gvim-gtk3"]
 	path = gvim-gtk3
-	url = git@github.com:fusion809/gvim-gtk3
+	url = https://github.com/fusion809/gvim-gtk3
 [submodule "komodo-edit"]
 	path = komodo-edit
 	url = git@github.com:fusion809/komodo-edit
