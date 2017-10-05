@@ -1,36 +1,6 @@
-[submodule "atom-editor"]
-	path = atom-editor
-	url = git@github.com:fusion809/atom-editor
-[submodule "atom-editor-arch"]
-	path = atom-editor-arch
-	url = git@github.com:fusion809/atom-editor-arch.git
-[submodule "atom-editor-beta"]
-	path = atom-editor-beta
-	url = git@github.com:fusion809/atom-editor-beta
-[submodule "atom-editor-fusion"]
-	path = atom-editor-fusion
-	url = git://github.com/fusion809/atom-editor-fusion.git
-[submodule "atom-editor-nuclide"]
-	path = atom-editor-nuclide
-	url = git@github.com:fusion809/atom-editor-nuclide
-[submodule "atom-editor-platformio"]
-	path = atom-editor-platformio
-	url = git@github.com:fusion809/atom-editor-platformio
-[submodule "atom-editor-sync"]
-	path = atom-editor-sync
-	url = git@github.com:fusion809/atom-editor-sync
-[submodule "atom-editor-web"]
-	path = atom-editor-web
-	url = git@github.com:fusion809/atom-editor-web
 [submodule "blockify"]
 	path = blockify
 	url = git@github.com:fusion809/blockify
-[submodule "brackets"]
-	path = brackets
-	url = git@github.com:fusion809/brackets
-[submodule "codebox"]
-	path = codebox
-	url = git@github.com:fusion809/codebox
 [submodule "gvim-git"]
 	path = gvim-git
 	url = git@github.com:fusion809/gvim-git
@@ -40,150 +10,15 @@
 [submodule "gvim-gtk3"]
 	path = gvim-gtk3
 	url = https://github.com/fusion809/gvim-gtk3
-[submodule "komodo-edit"]
-	path = komodo-edit
-	url = git@github.com:fusion809/komodo-edit
-[submodule "lighttable"]
-	path = lighttable
-	url = git@github.com:fusion809/lighttable
-[submodule "linux-ck"]
-	path = linux-ck
-	url = git@github.com:fusion809/linux-ck
-[submodule "messengerfordesktop"]
-	path = messengerfordesktop
-	url = git@github.com:fusion809/messengerfordesktop
-[submodule "ps_mem"]
-	path = ps_mem
-	url = git@github.com:fusion809/ps_mem
-[submodule "shadow-icon-theme"]
-	path = shadow-icon-theme
-	url = git@github.com:fusion809/shadow-icon-theme
-[submodule "shadow-icon-theme-git"]
-	path = shadow-icon-theme-git
-	url = git@github.com:fusion809/shadow-icon-theme-git
-[submodule "sublime-text"]
-	path = sublime-text
-	url = git@github.com:fusion809/sublime-text
-[submodule "sublime-text-dev"]
-	path = sublime-text-dev
-	url = git@github.com:fusion809/sublime-text-dev
-[submodule "textadept"]
-	path = textadept
-	url = git@github.com:fusion809/textadept
-[submodule "visual-studio-code"]
-	path = visual-studio-code
-	url = git@github.com:fusion809/visual-studio-code
-[submodule "visual-studio-code-git"]
-	path = visual-studio-code-git
-	url = git@github.com:fusion809/visual-studio-code-git
-[submodule "visual-studio-code-oss"]
-	path = visual-studio-code-oss
-	url = git@github.com:fusion809/visual-studio-code-oss
-[submodule "atom-editor-git"]
-	path = atom-editor-git
-	url = git@github.com:fusion809/atom-editor-git
-[submodule "atom-editor-beta-arch"]
-	path = atom-editor-beta-arch
-	url = git@github.com:fusion809/atom-editor-beta-arch
-[submodule "ubuntu-wallpapers"]
-	path = ubuntu-wallpapers
-	url = git@github.com:fusion809/ubuntu-wallpapers.git
-[submodule "linux-lts-ck"]
-	path = linux-lts-ck
-	url = git@github.com:fusion809/linux-lts-ck.git
-[submodule "code"]
-	path = code
-	url = git://github.com/fusion809/code.git
-[submodule "code-oss"]
-	path = code-oss
-	url = git://github.com/fusion809/code-oss.git
-[submodule "code-git"]
-	path = code-git
-	url = git://github.com/fusion809/code-git.git
-[submodule "atom-editor-base"]
-	path = atom-editor-base
-	url = git://github.com/fusion809/atom-editor-base.git
-[submodule "enlightenment"]
-	path = enlightenment
-	url = git://github.com/fusion809/enlightenment.git
-[submodule "efl-git"]
-	path = efl-git
-	url = git://github.com/fusion809/efl-git.git
-[submodule "libudev.so.0"]
-	path = libudev.so.0
-	url = git://github.com/fusion809/libudev.so.0.git
-[submodule "codelite"]
-	path = codelite
-	url = git://github.com/fusion809/codelite.git
-[submodule "nodejs"]
-	path = nodejs
-	url = git://github.com/fusion809/nodejs.git
-[submodule "nodejs-lts"]
-	path = nodejs-lts
-	url = git://github.com/fusion809/nodejs-lts.git
-[submodule "fusion809/osx-arc-white-git"]
-	path = fusion809/osx-arc-white-git
-	url = git://github.com/fusion809/octave.git
-[submodule "octave"]
-	path = octave
-	url = git://github.com/fusion809/octave.git
-[submodule "osx-arc-white-git"]
-	path = osx-arc-white-git
-	url = git://github.com/fusion809/osx-arc-white-git.git
-[submodule "virtualbox"]
-	path = virtualbox
-	url = git://github.com/fusion809/virtualbox.git
-[submodule "arch-atom"]
-	path = arch-atom
-	url = git://github.com/fusion809/arch-atom.git
 [submodule "github-release"]
 	path = github-release
 	url = git://github.com/fusion809/github-release.git
-[submodule "geany"]
-	path = geany
-	url = git://github.com/fusion809/geany.git
-[submodule "hugo"]
-	path = hugo
-	url = git://github.com/fusion809/hugo.git
 [submodule "gothub"]
 	path = gothub
 	url = git://github.com/fusion809/gothub.git
-[submodule "emacs-git-gtk2"]
-	path = emacs-git-gtk2
-	url = git://github.com/fusion809/emacs-git-gtk2.git
 [submodule "kilo-git"]
 	path = kilo-git
 	url = git://github.com/fusion809/kilo-git.git
-[submodule "atom-editor-beta-base"]
-	path = atom-editor-beta-base
-	url = git://github.com/fusion809/atom-editor-beta-base.git
-[submodule "openra-git"]
-	path = openra-git
-	url = git://github.com/fusion809/openra-git.git
-[submodule "openra"]
-	path = openra
-	url = git://github.com/fusion809/openra.git
-[submodule "atom-bleeding"]
-	path = atom-bleeding
-	url = git://github.com/fusion809/atom-bleeding.git
-[submodule "atom-editor-beta-fusion"]
-	path = atom-editor-beta-fusion
-	url = git://github.com/fusion809/atom-editor-beta-fusion.git
-[submodule "mono"]
-	path = mono
-	url = git://github.com/fusion809/mono.git
-[submodule "monodevelop"]
-	path = monodevelop
-	url = git://github.com/fusion809/monodevelop.git
-[submodule "supertux-git"]
-	path = supertux-git
-	url = git://github.com/fusion809/supertux-git.git
-[submodule "emacs-gtk2"]
-	path = emacs-gtk2
-	url = git://github.com/fusion809/emacs-gtk2.git
 [submodule "gvim-gtk2"]
 	path = gvim-gtk2
 	url = git://github.com/fusion809/gvim-gtk2.git
-[submodule "messengerfordesktop-bin"]
-	path = messengerfordesktop-bin
-	url = git://github.com/fusion809/messengerfordesktop-bin.git
